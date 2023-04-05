@@ -1,0 +1,111 @@
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities;
+
+@font-face {
+  font-family: PressStart;
+  src: url('../public/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: DaysOne;
+  src: url('../public/fonts/DaysOne-Regular.ttf') format('truetype');
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  html {
+    @apply bg-gradient-to-t from-[#FF5722] to-[#A70606] bg-custom-black text-gray-100 font-primary uppercase;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  word-spacing: -2px;
+}
+
+p { }
+
+.medium-frame {
+  border: 25px solid transparent;
+  padding: 0px;
+  border-image: url("/images/medium-frame.png") 105 round;
+}
+
+.hh-name {
+  border: 25px solid transparent;
+  padding: 0px;
+  border-image: url("/images/button-hh-name.png") 50 round;
+  background-color: #202020;
+}
+
+/* scroll bar */
+.container { 
+  border: 45px solid transparent;
+  padding: 20px;
+  border-image: url("/images/container.png") 200 round;
+  background-color: #202020;
+}
+
+@media (max-width:480px)  {
+  .container { 
+    border: 45px solid transparent;
+    padding: 0px;
+    border-image: url("/images/container.png") 200 round;
+    background-color: #202020;
+  }
+}
+/* width */
+.container::-webkit-scrollbar {
+  width: auto;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #c4c2c3;
+  border: 2px solid #707070;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #202020;
+}
+
+.container-child { 
+
+}
+
+
+/* width */
+.container-child::-webkit-scrollbar {
+  width: auto;
+}
+
+/* Track */
+.container-child::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+.container-child::-webkit-scrollbar-thumb {
+  background: #c4c2c3;
+  border: 2px solid #707070;
+}
+
+/* Handle on hover */
+.container-child::-webkit-scrollbar-thumb:hover {
+  background: #202020;
+}
