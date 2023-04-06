@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
 
-const About: NextPage = () => {
+const More: NextPage = () => {
   return (
     <PageLayout>
       <motion.div
-        key="About"
+        key="More"
         className="w-full h-full flex flex-col items-center"
       >
-        About
+        More
       </motion.div>
     </PageLayout>
   );
 };
 
-export default About;
+export default More;

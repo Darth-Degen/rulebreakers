@@ -28,31 +28,17 @@ const PageHead = dynamic(()=> import("./molecules/PageHead"))
 const Logo = dynamic(()=> import("./molecules/Logo"))
 const ThemeChanger = dynamic(()=> import("./molecules/ThemeChanger"))
 const Dropdown = dynamic(()=> import("./molecules/Dropdown"))
-const ButtonBar = dynamic(()=> import("./molecules/ButtonBar"))
 const NavItem = dynamic(()=> import("./molecules/NavItem"))
 const TabBar = dynamic(()=> import("./molecules/TabBar"))
-const ListItem = dynamic(()=> import("./molecules/ListItem"))
 const ScrollItem = dynamic(()=> import("./molecules/ScrollItem"))
 const Modal = dynamic(()=> import("./molecules/Modal"))
-const GalleryItem = dynamic(()=> import("./molecules/GalleryItem"))
-const CollabItem = dynamic(()=> import("./molecules/CollabItem"))
 const Menu = dynamic(() => import("./molecules/Menu"))
-const InventoryItem = dynamic(() => import("./molecules/InventoryItem") )
-const InventoryTabNav = dynamic(() => import("./molecules/InventoryTabNav") )
+const IconBar = dynamic(() => import("./molecules/IconBar"))
 //organisms
 const Header = dynamic(()=> import("./organisms/Header"))
 const Footer = dynamic(()=> import("./organisms/Footer"))
-const Navigation = dynamic(()=> import("./organisms/Navigation"))
-const StepContainer = dynamic(()=> import("./organisms/StepContainer"))
-const Form = dynamic(() => import("./organisms/Form") )
-const MobileDisplay = dynamic(() => import("./organisms/MobileDisplay") )
-const Gallery = dynamic(() => import("./organisms/Gallery") )
-const Collab = dynamic(() => import("./organisms/Collab") )
-const InventoryTabs = dynamic(() => import("./organisms/InventoryTabs") )
-const InventoryItems = dynamic(() => import("./organisms/InventoryItems") )
 //templates
 const PageLayout = dynamic(()=> import("./templates/PageLayout"))
-const DownloadView = dynamic(()=> import("./templates/DownloadView"))
 
 export {
   PageHead,
@@ -63,7 +49,6 @@ export {
   SunIcon,
   MoonIcon,
   ThemeChanger,
-  StepContainer,
   Dropdown,
   DropdownButton,
   ArrowIcon,
@@ -72,35 +57,22 @@ export {
   TextInput,
   CheckBox,
   Button,
-  DownloadView,
   LoadAnimation,
-  Form,
-  MobileDisplay,
   TwitterIcon,
   DiscordIcon,
   LoadCircle,
-  ButtonBar,
   ExpIcon,
-  Navigation,
   MenuIcon,
   NavItem,
   TabBarItem,
   TabBar,
-  ListItem,
   ScrollItem,
   ExchangeIcon,
   CloseIcon,
   MenuCloseIcon,
   Modal,
-  GalleryItem,
-  Gallery,
-  Collab,
-  CollabItem,
   Underline,
   Menu,
-  InventoryTabs,
-  InventoryItem,
   DownloadIcon,
-  InventoryItems,
-  InventoryTabNav
+  IconBar
 }

@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
 
-const About: NextPage = () => {
+const Rulebreakers: NextPage = () => {
   return (
     <PageLayout>
       <motion.div
-        key="About"
+        key="Rulebreakers"
         className="w-full h-full flex flex-col items-center"
       >
-        About
+        Rulebreakers
       </motion.div>
     </PageLayout>
   );
 };
 
-export default About;
+export default Rulebreakers;

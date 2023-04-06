@@ -9,19 +9,18 @@ module.exports = {
         main: "url('/images/background.png')",
         button: "url('/images/button.png')",
         container: "url('/images/container-transparent.png') 30 round",
-        "white-text-gradient": `linear-gradient(360.58deg, #FFFFFF 43.76%, rgba(255, 255, 255, 0) 106.82%)`,
-        "red-text-gradient": `linear-gradient(360.3deg, #E77975 43.99%, rgba(255, 255, 255, 0) 105.7%)`,
+        "white-gradient": `linear-gradient(360.58deg, #FFFFFF 43.76%, rgba(255, 255, 255, 0) 106.82%)`,
+        "red-gradient": `linear-gradient(360.3deg, #E77975 43.99%, rgba(255, 255, 255, 0) 105.7%)`,
+        "orange-gradient": `linear-gradient(180deg, #F3B24E 0%, #EB4B46 100%)`,
       },
       fontFamily: {
-        primary: ["PressStart"],
-        pressStart: ["PressStart"],
-        daysOne: ["DaysOne"],
+        primary: ["MoonieEyes"],
+        secondary: ["Discgent"],
       },
       colors: {
-        lightRed: "#ff9596",
-        customRed: "#cf1714",
-        dark: "#121212",
         "custom-black": "#121212",
+        "custom-white": "#F3F1EA",
+
         "custom-dark-gray": "#202020",
         "custom-mid-gray": "#303030",
         "custom-light-gray": "#6F7273",
@@ -31,9 +30,6 @@ module.exports = {
         "custom-orange": "#FF5722",
         "custom-red": "#DF1D00",
         "custom-light-red": "#E77975",
-        // orange -> #fdba74
-        // red -> #f87171
-        // gray-300 -> #d1d5db
       },
       screens: {
         "3xl": "2160px",

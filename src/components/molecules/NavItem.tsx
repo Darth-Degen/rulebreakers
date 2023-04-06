@@ -1,5 +1,4 @@
-import { FC, ReactNode, useState } from "react";
-import { Underline } from "@components";
+import { FC, ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -8,9 +7,10 @@ interface Props {
   children: ReactNode;
   href: string;
   disabled?: boolean;
+  isExternal?: boolean;
 }
 const NavItem: FC<Props> = (props: Props) => {
-  const { children, href, disabled = false } = props;
+  const { children, href, disabled = false, isExternal = false } = props;
 
   const router = useRouter();
   const isCurrent = router.pathname === href;
@@ -20,7 +20,7 @@ const NavItem: FC<Props> = (props: Props) => {
       <div className={`opacity-0`}>
         <Image src="/images/arrow.png" alt="arrow" width={14} height={22} />
       </div>
-      <div className={`py-5 opacity-20 cursor-default `}>{children}</div>
+      <div className={`py-5 opacity-10 cursor-default `}>{children}</div>
     </div>
   );
 
@@ -28,6 +28,10 @@ const NavItem: FC<Props> = (props: Props) => {
     <>
       {disabled ? (
         <DisabledItem />
+      ) : isExternal ? (
+        <a href={href} rel="noreferrer" target="_blank">
+          <Item isCurrent={isCurrent}>{children}</Item>
+        </a>
       ) : (
         <Link href={href}>
           <Item isCurrent={isCurrent}>{children}</Item>
@@ -43,33 +47,16 @@ interface ItemProps {
 }
 const Item: FC<ItemProps> = (props: ItemProps) => {
   const { children, isCurrent } = props;
-  const [didHover, setDidHover] = useState<boolean>(false);
   return (
-    <div
-      className="flex gap-2 justify-center items-center"
-      onMouseEnter={() => setDidHover(true)}
-      onMouseLeave={() => setDidHover(false)}
-    >
-      <div className={`transition-all duration-500 `}>
-        <Image
-          src="/images/arrow.png"
-          alt="arrow"
-          width={14}
-          height={22}
-          className={`transition-all duration-300  ${
-            (!isCurrent && didHover) || isCurrent ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      </div>
+    <div className="flex gap-2 justify-center items-center">
       <div
-        className={`text-transparent bg-clip-text transition-all duration-500 my-5 p-0 ${
+        className={` transition-bg duration-200 my-5 p-0 ${
           isCurrent
-            ? "bg-red-text-gradient cursor-default"
-            : "bg-white-text-gradient hover:to-red-600 cursor-pointer"
+            ? "text-transparent bg-clip-text bg-orange-gradient cursor-default"
+            : " hover:text-transparent hover:bg-clip-text hover:bg-orange-gradient cursor-pointer"
         }`}
       >
         {children}
-        <Underline animate={isCurrent} />
       </div>
     </div>
   );

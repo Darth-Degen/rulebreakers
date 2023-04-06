@@ -52,7 +52,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          {/* <WalletMultiButton /> */}
           <Component {...pageProps} />
         </WalletModalProvider>
       </WalletProvider>
