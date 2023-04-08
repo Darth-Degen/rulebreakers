@@ -132,3 +132,11 @@ export const fadeVariants = {
   open: { opacity: 1, transition: { delay: 0.5, duration: 0.5 } },
 };
 
+export const menuAnimation = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.25, ease: "easeInOut" },
+  whileHover: { scale: 1.06 },
+  whileTap: { scale: 1 },
+};

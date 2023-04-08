@@ -1,21 +1,27 @@
-import { PageLayout, IconBar } from "@components";
-import { motion } from "framer-motion";
+import { PageLayout } from "@components";
 import { NextPage } from "next";
 import Image from "next/image";
+import { useWindowSize } from "@hooks";
 
 const About: NextPage = () => {
+  const [winWidth, winHeight] = useWindowSize();
   return (
-    <PageLayout fixed={true}>
+    <PageLayout
+      // fixed={winWidth > 1279 ? true : false}
+      // headerType={"scroll"}
+      footer={true}
+    >
       <div
         key="About"
-        className="w-full h-full flex flex-col-reverse lg:flex-row items-start justify-center absolute top-1/2 left-1/2 transform -translate-y-1/4 -translate-x-1/2 px-10 gap-8"
+        className="w-full flex flex-col mt-28 xl:mt-0 xl:flex-row items-center xl:items-start justify-center sm:px-10 gap-8 xl:gap-8 3xl:gap-32 overflow-hidden
+        xl:absolute xl:top-1/2 xl:left-1/2 xl:transform xl:-translate-y-1/2 xl:-translate-x-1/2"
       >
         {/* content */}
-        <div className="flex flex-col items-center justify-center gap-4 lg:w-1/2 text-center max-w-[550px]">
+        <div className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4 scale-90 lg:scale-100">
           <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase">
             About
           </h2>
-          <p className="font-secondary">
+          <p className="font-secondary text-sm md:text-base 3xl:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -25,15 +31,13 @@ const About: NextPage = () => {
           </p>
         </div>
         {/* image */}
-        <div className="lg:w-1/2">
-          <Image
-            src="/images/about_graphic.png"
-            alt="BRKRS"
-            width={841}
-            height={504}
-            className="-mt-9"
-          />
-        </div>
+        <Image
+          src="/images/about_graphic.png"
+          alt="BRKRS"
+          width={700}
+          height={419}
+          className="-mt-9 3xl:mt-0  scale-90 lg:scale-100 3xl:scale-125 mb-8 md:mb-0"
+        />
       </div>
     </PageLayout>
   );

@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { ExpIcon } from "@components";
+import { ExpIcon, IconBar } from "@components";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { midEnterAnimation } from "@constants";
@@ -19,12 +19,12 @@ const Footer: FC = () => {
 
   return (
     <motion.footer
-      className="px-8 py-4 abolute lg:fixed bottom-0 w-full bg-transparent"
+      className="px-8 py-4 bottom-0 w-full bg-transparent"
       key="footer"
       {...midEnterAnimation}
     >
-      <div className="flex flex-col md:flex-row items-center gap-4">
-        <div className="md:w-1/3">
+      <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="sm:w-1/3">
           <Link href="/">
             <Image
               src="/images/logo_md.png"
@@ -34,33 +34,36 @@ const Footer: FC = () => {
             />
           </Link>
         </div>
-        <div className="md:w-1/3 flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-14 text-3xl md:text-4xl text-white ">
-          <a
-            href="https://twitter.com/rulebreakers___"
-            rel="noreferrer"
-            target="_blank"
-            className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://twitter.com/rulebreakers___"
-            rel="noreferrer"
-            target="_blank"
-            className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
-          >
-            Discord
-          </a>
-          <a
-            href="https://twitter.com/rulebreakers___"
-            rel="noreferrer"
-            target="_blank"
-            className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
-          >
-            Marketplace
-          </a>
+        <div className="sm:w-1/3">
+          <IconBar className="xl:hidden" />
+          <div className="hidden xl:flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-14 text-3xl md:text-4xl text-white">
+            <a
+              href="https://twitter.com/rulebreakers___"
+              rel="noreferrer"
+              target="_blank"
+              className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
+            >
+              Twitter
+            </a>
+            <a
+              href="https://twitter.com/rulebreakers___"
+              rel="noreferrer"
+              target="_blank"
+              className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
+            >
+              Discord
+            </a>
+            <a
+              href="https://twitter.com/rulebreakers___"
+              rel="noreferrer"
+              target="_blank"
+              className="cursor-pointer hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent transition-bg duration-200"
+            >
+              Marketplace
+            </a>
+          </div>
         </div>
-        <div className="md:w-1/3 flex justify-end gap-2">
+        <div className="sm:w-1/3 flex justify-end gap-2">
           {/* exp */}
           <div className="flex xl:w-1/4 justify-end ">
             <a

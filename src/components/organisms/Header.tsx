@@ -1,21 +1,108 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Logo, Menu } from "@components";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, Variants } from "framer-motion";
 import Image from "next/image";
+import { menuAnimation } from "@constants";
 
-const menuAnimation = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-  transition: { duration: 0.25, ease: "easeInOut" },
-  whileHover: { scale: 1.06 },
-  whileTap: { scale: 1 },
+interface Props {
+  showHeader?: boolean; //used to show header if isStatic is false
+  headerType?: string;
+}
+
+const Header: FC<Props> = (props: Props) => {
+  const { headerType = "absolute", showHeader = false } = props;
+
+  const [header, setHeader] = useState<boolean>();
+
+  const scrollRef = useRef<number>();
+
+  const { scrollY, scrollYProgress } = useScroll();
+
+  const height = 104;
+  const headerVariants: Variants = {
+    show: {
+      y: 0,
+      transition: {
+        delay: 0.5,
+        duration: 0.69,
+        ease: "easeInOut",
+      },
+    },
+    hidden: {
+      y: -height,
+      transition: {
+        delay: 0.5,
+        duration: 0.69,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  //hide header on scroll down, show on scroll up
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      //top of page
+
+      //first instance
+      if (scrollRef.current === undefined) {
+        setHeader(false);
+        scrollRef.current = latest;
+        return;
+      }
+
+      //scroll down
+      if (scrollRef.current < latest) {
+        if (scrollRef.current + 30 < latest) {
+          setHeader(false);
+          scrollRef.current = latest;
+        }
+        return;
+      }
+
+      //scroll up
+      if (scrollRef.current > latest) {
+        if (scrollRef.current > latest + 80) {
+          setHeader(true);
+          scrollRef.current = latest;
+        }
+        return;
+      }
+    });
+  }, [scrollY]);
+
+  useEffect(() => {
+    setHeader(showHeader);
+  }, [showHeader]);
+
+  return (
+    <header
+      className={`top-0 z-20 transition-all duration-500 ${
+        headerType === "scroll" ? "fixed" : headerType
+      } `}
+      // ${headerType === "absolute" ? " opacity-100" : " opacity-90"} `}
+    >
+      {headerType !== "scroll" ? (
+        <HeaderItems />
+      ) : (
+        <motion.aside
+          variants={headerVariants}
+          initial={showHeader ? "show" : "hidden"}
+          animate={header ? "show" : "hidden"}
+        >
+          <HeaderItems />
+        </motion.aside>
+      )}
+    </header>
+  );
 };
 
-const Header: FC = () => {
+// interface HIProps {
+//   openMenu
+// }
+const HeaderItems: FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <header className="absolute z-10 p-4 sm:p-6 flex justify-between items-center w-full">
+    <div className="w-screen flex items-center justify-between px-4 md:px-6 py-4">
       <Logo />
       <AnimatePresence mode="wait">
         {!openMenu ? (
@@ -49,8 +136,7 @@ const Header: FC = () => {
       </AnimatePresence>
 
       <Menu toggleMenu={setOpenMenu} open={openMenu} />
-    </header>
+    </div>
   );
 };
-
 export default Header;

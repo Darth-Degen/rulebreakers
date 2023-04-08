@@ -19,11 +19,7 @@ const PageLayout: FC<Props> = (props: Props) => {
 
   return (
     // <div className="bg-main bg-cover bg-fixed relative flex flex-col justify-start lg:h-screen transition-colors ease-in-out duration-300 overflow-none">
-    <div
-      className={`bg-main bg-cover bg-fixed flex flex-col justify-start lg:min-h-screen overflow-none ${
-        fixed ? "fixed inset-0 " : ""
-      }`}
-    >
+    <div className="bg-main bg-cover flex flex-col justify-between overflow-none sm:absolute sm:inset-0 ">
       <PageHead
         title="BRKRS"
         description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
