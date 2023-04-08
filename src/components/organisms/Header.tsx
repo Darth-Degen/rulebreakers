@@ -10,9 +10,9 @@ interface Props {
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { headerType = "absolute", showHeader = false } = props;
+  const { headerType = "absolute", showHeader = true } = props;
 
-  const [header, setHeader] = useState<boolean>();
+  const [header, setHeader] = useState<boolean>(true);
 
   const scrollRef = useRef<number>();
 
@@ -96,9 +96,6 @@ const Header: FC<Props> = (props: Props) => {
   );
 };
 
-// interface HIProps {
-//   openMenu
-// }
 const HeaderItems: FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Logo: FC = () => {
   return (
-    <div className="my-0 flex items-center gap-2 text-gray-200 cursor-pointer">
+    <div className="my-0 flex items-center gap-2 cursor-pointer">
       <Link href="/">
         <motion.div {...midClickAnimation}>
           <Image

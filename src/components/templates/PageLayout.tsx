@@ -7,10 +7,16 @@ interface Props {
   children: ReactNode;
   footer?: boolean;
   fixed?: boolean;
+  headerType?: string;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
-  const { footer = true, fixed = false, children } = props;
+  const {
+    footer = true,
+    fixed = false,
+    headerType = "absolute",
+    children,
+  } = props;
   const [didMount, setDidMount] = useState<boolean>(false);
 
   useEffect(() => {
@@ -19,13 +25,17 @@ const PageLayout: FC<Props> = (props: Props) => {
 
   return (
     // <div className="bg-main bg-cover bg-fixed relative flex flex-col justify-start lg:h-screen transition-colors ease-in-out duration-300 overflow-none">
-    <div className="bg-main bg-cover flex flex-col justify-between overflow-none sm:absolute sm:inset-0 ">
+    <div
+      className={`bg-main bg-cover flex flex-col justify-between overflow-none   ${
+        fixed ? "absolute inset-0" : "sm:absolute sm:inset-0"
+      }`}
+    >
       <PageHead
         title="BRKRS"
         description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
       />
 
-      <Header />
+      <Header headerType={headerType} />
       <motion.main
         className="background flex h-full w-full"
         {...enterAnimation}

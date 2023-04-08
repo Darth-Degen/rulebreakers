@@ -52,7 +52,7 @@ const Menu: FC<Props> = (props: Props) => {
             opacity: 1,
           }}
           transition={{ duration: 0.7 }}
-          className=" bg-custom-black fixed top-0 right-0 z-50 shadow-lg font-daysOne shadow-[#F3B24E]"
+          className=" bg-custom-black fixed top-0 right-0 z-50 lg:shadow font-daysOne lg:shadow-[#F3B24E]"
           onClick={() => toggleMenu(false)}
           ref={ref}
         >
