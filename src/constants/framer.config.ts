@@ -140,3 +140,24 @@ export const menuAnimation = {
   whileHover: { scale: 1.06 },
   whileTap: { scale: 1 },
 };
+
+export const slideDown = {
+  initial: { y: -300, opacity: 0 },
+  animate: { y:0, opacity: 1 },
+  transition: { duration: 1.5, ease: "easeInOut" },
+};
+export const slideUp = {
+  initial: { y:300, opacity: 0 },
+  animate: { y:0, opacity: 1 },
+  transition: { duration: 1.5, ease: "easeInOut" },
+};
+export const slideLeft = {
+  initial: { x: 300, opacity: 0 },
+  animate: { x:0, opacity: 1 },
+  transition: { duration: 1.5, ease: "easeInOut" },
+};
+export const slideRight = {
+  initial: { x: -300, opacity: 0 },
+  animate: { x:0, opacity: 1 },
+  transition: { duration: 1.5, ease: "easeInOut" },
+};

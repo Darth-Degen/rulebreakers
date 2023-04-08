@@ -1,6 +1,12 @@
 import { FC, useEffect, useRef, useState } from "react";
 import { Logo, Menu } from "@components";
-import { AnimatePresence, motion, useScroll, Variants } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  Variants,
+} from "framer-motion";
 import Image from "next/image";
 import { menuAnimation } from "@constants";
 
@@ -23,52 +29,50 @@ const Header: FC<Props> = (props: Props) => {
     show: {
       y: 0,
       transition: {
-        delay: 0.5,
-        duration: 0.69,
+        delay: 0.25,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
     hidden: {
       y: -height,
       transition: {
-        delay: 0.5,
-        duration: 0.69,
+        delay: 0.25,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
   };
 
   //hide header on scroll down, show on scroll up
-  useEffect(() => {
-    return scrollY.onChange((latest) => {
-      //top of page
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    //top of page
 
-      //first instance
-      if (scrollRef.current === undefined) {
+    //first instance
+    if (scrollRef.current === undefined) {
+      setHeader(false);
+      scrollRef.current = latest;
+      return;
+    }
+
+    //scroll down
+    if (scrollRef.current < latest) {
+      if (scrollRef.current + 10 < latest) {
         setHeader(false);
         scrollRef.current = latest;
-        return;
       }
+      return;
+    }
 
-      //scroll down
-      if (scrollRef.current < latest) {
-        if (scrollRef.current + 30 < latest) {
-          setHeader(false);
-          scrollRef.current = latest;
-        }
-        return;
+    //scroll up
+    if (scrollRef.current > latest) {
+      if (scrollRef.current > latest + 10) {
+        setHeader(true);
+        scrollRef.current = latest;
       }
-
-      //scroll up
-      if (scrollRef.current > latest) {
-        if (scrollRef.current > latest + 80) {
-          setHeader(true);
-          scrollRef.current = latest;
-        }
-        return;
-      }
-    });
-  }, [scrollY]);
+      return;
+    }
+  });
 
   useEffect(() => {
     setHeader(showHeader);
@@ -99,7 +103,7 @@ const Header: FC<Props> = (props: Props) => {
 const HeaderItems: FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <div className="w-screen flex items-center justify-between px-4 md:px-6 py-4">
+    <div className="w-screen flex items-center justify-between px-4 md:px-6 py-4 z-50">
       <Logo />
       <AnimatePresence mode="wait">
         {!openMenu ? (

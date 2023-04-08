@@ -19,9 +19,9 @@ const Footer: FC = () => {
 
   return (
     <motion.footer
-      className="px-8 py-4 bottom-0 w-full bg-transparent"
+      className="px-8 py-4 w-full bg-transparent z-0"
       key="footer"
-      {...midEnterAnimation}
+      // {...midEnterAnimation}
     >
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <div className="sm:w-1/3">

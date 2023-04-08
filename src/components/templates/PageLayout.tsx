@@ -8,6 +8,7 @@ interface Props {
   footer?: boolean;
   fixed?: boolean;
   headerType?: string;
+  mainClass?: string;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -16,6 +17,7 @@ const PageLayout: FC<Props> = (props: Props) => {
     fixed = false,
     headerType = "absolute",
     children,
+    mainClass = "",
   } = props;
   const [didMount, setDidMount] = useState<boolean>(false);
 
@@ -26,7 +28,7 @@ const PageLayout: FC<Props> = (props: Props) => {
   return (
     // <div className="bg-main bg-cover bg-fixed relative flex flex-col justify-start lg:h-screen transition-colors ease-in-out duration-300 overflow-none">
     <div
-      className={`bg-main bg-cover flex flex-col justify-between overflow-none   ${
+      className={`flex flex-col justify-between overflow-none   ${
         fixed ? "absolute inset-0" : "sm:absolute sm:inset-0"
       }`}
     >
@@ -37,12 +39,12 @@ const PageLayout: FC<Props> = (props: Props) => {
 
       <Header headerType={headerType} />
       <motion.main
-        className="background flex h-full w-full"
+        className={`flex flex-col h-full w-full ${mainClass} overflow-x-clip`}
         {...enterAnimation}
       >
         {children}
       </motion.main>
-      <AnimatePresence mode="wait">{footer && <Footer />}</AnimatePresence>
+      {footer && <Footer />}
     </div>
   );
 };

@@ -37,6 +37,8 @@ const IconBar = dynamic(() => import("./molecules/IconBar"))
 //organisms
 const Header = dynamic(()=> import("./organisms/Header"))
 const Footer = dynamic(()=> import("./organisms/Footer"))
+const BrkrsLanding = dynamic(()=> import("./organisms/BrkrsLanding"))
+const Gallery = dynamic(()=> import("./organisms/Gallery"))
 //templates
 const PageLayout = dynamic(()=> import("./templates/PageLayout"))
 
@@ -74,5 +76,7 @@ export {
   Underline,
   Menu,
   DownloadIcon,
-  IconBar
+  IconBar,
+  BrkrsLanding,
+  Gallery
 }

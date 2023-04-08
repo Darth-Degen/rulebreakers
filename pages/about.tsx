@@ -1,23 +1,23 @@
 import { PageLayout } from "@components";
+import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Image from "next/image";
+import { slideLeft, slideRight } from "@constants";
 import { useWindowSize } from "@hooks";
 
 const About: NextPage = () => {
-  // const [winWidth, winHeight] = useWindowSize();
+  const [winWidth, winHeight] = useWindowSize();
   return (
-    <PageLayout
-      // fixed={winWidth > 1279 ? true : false}
-      headerType={"scroll"}
-      footer={true}
-    >
+    <PageLayout headerType={winWidth < 768 ? "scroll" : "absolute"}>
       <div
-        key="About"
-        className="w-full flex flex-col mt-20 xl:mt-0 xl:flex-row items-center xl:items-start justify-center sm:px-10 gap-8 xl:gap-8 3xl:gap-32 overflow-hidden
+        className="w-full flex flex-col mt-28 xl:mt-0 xl:flex-row items-center xl:items-start justify-center sm:px-10 gap-8 xl:gap-8 3xl:gap-32 overflow-hidden
         xl:absolute xl:top-1/2 xl:left-1/2 xl:transform xl:-translate-y-1/2 xl:-translate-x-1/2"
       >
         {/* content */}
-        <div className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4 scale-90 lg:scale-100">
+        <motion.div
+          className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4 scale-90 lg:scale-100"
+          {...slideRight}
+        >
           <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
             About
           </h2>
@@ -29,15 +29,17 @@ const About: NextPage = () => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint.
           </p>
-        </div>
+        </motion.div>
         {/* image */}
-        <Image
-          src="/images/about_graphic.png"
-          alt="BRKRS"
-          width={700}
-          height={419}
-          className="-mt-9 3xl:mt-0  scale-90 lg:scale-100 3xl:scale-125 mb-8 md:mb-0"
-        />
+        <motion.div {...slideLeft}>
+          <Image
+            src="/images/about_graphic.png"
+            alt="BRKRS"
+            width={700}
+            height={419}
+            className="-mt-9 3xl:mt-0  scale-90 lg:scale-100 3xl:scale-125 mb-8 md:mb-0"
+          />
+        </motion.div>
       </div>
     </PageLayout>
   );

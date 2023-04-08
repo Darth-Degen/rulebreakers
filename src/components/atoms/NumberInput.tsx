@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes, useEffect } from "react";
 import debounce from "lodash.debounce";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
@@ -27,6 +27,12 @@ const NumberInput: FC<Props> = (props: Props) => {
       debouncer(Number((event.target as HTMLInputElement).value));
     }
   };
+
+  useEffect(() => {
+    return () => {
+      debouncer.cancel();
+    };
+  }, [debouncer]);
 
   return (
     <div>
