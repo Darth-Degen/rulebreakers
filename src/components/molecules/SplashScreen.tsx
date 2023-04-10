@@ -54,7 +54,7 @@ const SplashScreen: FC<Props> = (props: Props) => {
     debouncer(!didLoad);
     closeDebouncer(!didLoad);
     contentDebouncer(didLoad);
-  }, [assets, closeDebouncer, debouncer, setShowView]);
+  }, [assets, closeDebouncer, contentDebouncer, debouncer]);
 
   useEffect(() => {
     checkLoadStatus();
