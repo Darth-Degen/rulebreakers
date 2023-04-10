@@ -4,11 +4,16 @@ import { NextPage } from "next";
 import Image from "next/image";
 import { slideLeft, slideRight } from "@constants";
 import { useWindowSize } from "@hooks";
+import { useState } from "react";
 
 const About: NextPage = () => {
   const [winWidth, winHeight] = useWindowSize();
+  const [assets, setAssets] = useState<boolean[]>([false]);
   return (
-    <PageLayout headerType={winWidth < 768 ? "scroll" : "absolute"}>
+    <PageLayout
+      headerType={winWidth < 768 ? "scroll" : "absolute"}
+      assets={assets}
+    >
       <div
         className="w-full flex flex-col mt-28 xl:mt-0 xl:flex-row items-center xl:items-start justify-center sm:px-10 gap-8 xl:gap-8 3xl:gap-32 overflow-hidden
         xl:absolute xl:top-1/2 xl:left-1/2 xl:transform xl:-translate-y-1/2 xl:-translate-x-1/2"
@@ -38,6 +43,9 @@ const About: NextPage = () => {
             width={700}
             height={419}
             className="-mt-9 3xl:mt-0  scale-90 lg:scale-100 3xl:scale-125 mb-8 md:mb-0"
+            onLoadingComplete={() =>
+              setAssets((prevState) => [(prevState[0] = true)])
+            }
           />
         </motion.div>
       </div>

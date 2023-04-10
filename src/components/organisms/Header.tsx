@@ -20,10 +20,9 @@ const Header: FC<Props> = (props: Props) => {
 
   const [header, setHeader] = useState<boolean>(true);
 
+  //scroll variables
   const scrollRef = useRef<number>();
-
   const { scrollY, scrollYProgress } = useScroll();
-
   const height = 104;
   const headerVariants: Variants = {
     show: {
@@ -80,7 +79,7 @@ const Header: FC<Props> = (props: Props) => {
 
   return (
     <header
-      className={`top-0 z-20 transition-all duration-500 ${
+      className={`top-0 z-10 transition-all duration-500 ${
         headerType === "scroll" ? "fixed" : headerType
       } `}
       // ${headerType === "absolute" ? " opacity-100" : " opacity-90"} `}
@@ -103,7 +102,7 @@ const Header: FC<Props> = (props: Props) => {
 const HeaderItems: FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
-    <div className="w-screen flex items-center justify-between px-4 md:px-6 py-4 z-50">
+    <div className="w-screen flex items-center justify-between px-4 md:px-6 py-4 z-20">
       <Logo />
       <AnimatePresence mode="wait">
         {!openMenu ? (
@@ -118,6 +117,7 @@ const HeaderItems: FC = () => {
               height={216 / 4}
               width={216 / 4}
               alt="menu"
+              priority
             />
           </motion.div>
         ) : (
@@ -131,6 +131,7 @@ const HeaderItems: FC = () => {
               height={216 / 3.3}
               width={216 / 3.3}
               alt="menu"
+              priority
             />
           </motion.div>
         )}

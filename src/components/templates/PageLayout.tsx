@@ -1,7 +1,17 @@
-import { FC, ReactNode, useEffect, useState } from "react";
-import { PageHead, Header, Footer } from "@components";
-import { enterAnimation } from "@constants";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  cloneElement,
+  FC,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
+import { PageHead, Header, Footer, SplashScreen } from "@components";
+import { enterAnimation, ViewContext } from "@constants";
+import { motion } from "framer-motion";
+import debounce from "lodash.debounce";
 
 interface Props {
   children: ReactNode;
@@ -9,6 +19,7 @@ interface Props {
   fixed?: boolean;
   headerType?: string;
   mainClass?: string;
+  assets?: boolean[];
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -18,34 +29,48 @@ const PageLayout: FC<Props> = (props: Props) => {
     headerType = "absolute",
     children,
     mainClass = "",
+    assets = [],
   } = props;
-  const [didMount, setDidMount] = useState<boolean>(false);
+
+  // const { showView, setShowView } = useContext(ViewContext);
+  const [showView, setShowView] = useState<boolean>(false);
+  const value = { showView, setShowView };
 
   useEffect(() => {
-    setDidMount(true);
-  }, []);
+    console.log("2. ", value.showView);
+  }, [value.showView]);
 
   return (
     // <div className="bg-main bg-cover bg-fixed relative flex flex-col justify-start lg:h-screen transition-colors ease-in-out duration-300 overflow-none">
-    <div
-      className={`flex flex-col justify-between overflow-none   ${
-        fixed ? "absolute inset-0" : "sm:absolute sm:inset-0"
-      }`}
-    >
-      <PageHead
-        title="BRKRS"
-        description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
-      />
-
-      <Header headerType={headerType} />
-      <motion.main
-        className={`flex flex-col h-full w-full ${mainClass} overflow-x-clip`}
-        {...enterAnimation}
+    <ViewContext.Provider value={value}>
+      <div
+        className={`flex flex-col justify-between overflow-none   ${
+          fixed ? "absolute inset-0" : "sm:absolute sm:inset-0"
+        }`}
       >
-        {children}
-      </motion.main>
-      {footer && <Footer />}
-    </div>
+        <PageHead
+          title="BRKRS"
+          description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
+        />
+
+        <Header headerType={headerType} />
+        <motion.main
+          className={`flex flex-col h-full w-full ${mainClass} overflow-x-clip`}
+          {...enterAnimation}
+        >
+          {children}
+        </motion.main>
+        {footer && <Footer />}
+        {assets && (
+          <SplashScreen
+            // showWindow={showWindow}
+            // showAnimation={showAnimation}
+            // animationExit={animationExit}
+            assets={assets}
+          />
+        )}
+      </div>
+    </ViewContext.Provider>
   );
 };
 

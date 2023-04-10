@@ -141,11 +141,12 @@ export const menuAnimation = {
   whileTap: { scale: 1 },
 };
 
-export const slideDown = {
+export const slideDown = (animate: boolean) =>  ({
   initial: { y: -300, opacity: 0 },
-  animate: { y:0, opacity: 1 },
+  animate: { y: animate ? 0 : -300, opacity: animate ? 1 : 0 },
   transition: { duration: 1.5, ease: "easeInOut" },
-};
+})
+
 export const slideUp = {
   initial: { y:300, opacity: 0 },
   animate: { y:0, opacity: 1 },

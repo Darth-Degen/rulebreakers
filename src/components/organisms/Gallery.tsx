@@ -16,30 +16,7 @@ const Gallery: FC = () => {
       <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
         gallery
       </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
-      <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-        gallery
-      </h2>
+      <div className="h-[800px] bg-custom-black w-1/2">gallery</div>
     </motion.div>
   );
 };

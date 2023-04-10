@@ -2,7 +2,6 @@ import { FC, useState } from "react";
 import { ExpIcon, IconBar } from "@components";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { midEnterAnimation } from "@constants";
 import Link from "next/link";
 
 const Footer: FC = () => {
@@ -31,6 +30,7 @@ const Footer: FC = () => {
               width={531 / 4}
               height={261 / 4}
               alt="Logo"
+              priority
             />
           </Link>
         </div>

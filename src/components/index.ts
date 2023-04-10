@@ -34,6 +34,7 @@ const ScrollItem = dynamic(()=> import("./molecules/ScrollItem"))
 const Modal = dynamic(()=> import("./molecules/Modal"))
 const Menu = dynamic(() => import("./molecules/Menu"))
 const IconBar = dynamic(() => import("./molecules/IconBar"))
+const SplashScreen = dynamic(() => import("./molecules/SplashScreen"))
 //organisms
 const Header = dynamic(()=> import("./organisms/Header"))
 const Footer = dynamic(()=> import("./organisms/Footer"))
@@ -78,5 +79,6 @@ export {
   DownloadIcon,
   IconBar,
   BrkrsLanding,
-  Gallery
+  Gallery,
+  SplashScreen
 }

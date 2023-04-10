@@ -14,6 +14,7 @@ const Logo: FC = () => {
             height={216 / 2.75}
             width={216 / 2.75}
             alt="BRKR"
+            priority
           />
         </motion.div>
       </Link>

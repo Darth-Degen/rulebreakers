@@ -41,13 +41,13 @@ const Dropdown: FC<Props> = (props: Props) => {
       <AnimatePresence mode="wait">
         {didHover && (
           <motion.div
-            className="absolute z-50 pt-2"
+            className="absolute z-10 pt-2"
             key="dropdown-list"
             variants={dropdownAnimations}
             initial="hidden"
             animate="show"
           >
-            <motion.ul className="rounded divide-y-4 divide-custom-light-gray-2 border-4 border-custom-light-gray-2 shadow max-h-[200px] overflow-y-auto z-50 ">
+            <motion.ul className="rounded divide-y-4 divide-custom-light-gray-2 border-4 border-custom-light-gray-2 shadow max-h-[200px] overflow-y-auto z-10 ">
               <DropdownItem
                 item={{ id: -1, src: "", url: "" }}
                 handleClick={handleClick}
