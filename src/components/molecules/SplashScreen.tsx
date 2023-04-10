@@ -39,22 +39,22 @@ const SplashScreen: FC<Props> = (props: Props) => {
     (value) => setShowAnimation(value),
     animationDelay
   );
-  const closeDebouncer = debounce(
-    (value) => setShowWindow(value),
-    animationDelay + animationTransition
-  );
-  const contentDebouncer = debounce(
-    (value) => setShowView(value),
-    animationDelay / 1.25
-  );
+  // const closeDebouncer = debounce(
+  //   (value) => setShowWindow(value),
+  //   animationDelay + animationTransition
+  // );
+  // const contentDebouncer = debounce(
+  //   (value) => setShowView(value),
+  //   animationDelay / 1
+  // );
 
   //checks if all assets are loaded
   const checkLoadStatus = useCallback(() => {
     const didLoad = assets.every((value) => value === true);
     debouncer(!didLoad);
-    closeDebouncer(!didLoad);
-    contentDebouncer(didLoad);
-  }, [assets, closeDebouncer, contentDebouncer, debouncer]);
+    // closeDebouncer(!didLoad);
+    // contentDebouncer(didLoad);
+  }, [assets, debouncer]);
 
   useEffect(() => {
     checkLoadStatus();
@@ -67,19 +67,19 @@ const SplashScreen: FC<Props> = (props: Props) => {
   }, [debouncer]);
 
   useEffect(() => {
-    return () => {
-      closeDebouncer.cancel();
-    };
-  }, [closeDebouncer]);
-  useEffect(() => {
-    return () => {
-      contentDebouncer.cancel();
-    };
-  }, [contentDebouncer]);
+    setShowView(!showAnimation);
+  }, [setShowView, showAnimation]);
 
   // useEffect(() => {
-  //   setShowView(!showAnimation);
-  // }, [setShowView, showAnimation]);
+  //   return () => {
+  //     closeDebouncer.cancel();
+  //   };
+  // }, [closeDebouncer]);
+  // useEffect(() => {
+  //   return () => {
+  //     contentDebouncer.cancel();
+  //   };
+  // }, [contentDebouncer]);
 
   //stop page scroll (when modal or menu open)
   useEffect(() => {
@@ -89,7 +89,7 @@ const SplashScreen: FC<Props> = (props: Props) => {
 
   return (
     <AnimatePresence mode="wait">
-      {showWindow && (
+      {showAnimation && (
         <motion.div
           className={`backdrop-blur-xl ${
             showAnimation ? "fixed z-50 inset-0" : "hidden -z-50"

@@ -3,6 +3,7 @@ import { ExpIcon, IconBar } from "@components";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { enterAnimation } from "@constants";
 
 const Footer: FC = () => {
   const [animate, setAnimate] = useState<boolean>(false);
@@ -23,7 +24,7 @@ const Footer: FC = () => {
       // {...midEnterAnimation}
     >
       <div className="flex flex-col sm:flex-row items-center gap-4">
-        <div className="sm:w-1/3">
+        <motion.div className="sm:w-1/3" {...enterAnimation}>
           <Link href="/">
             <Image
               src="/images/logo_md.png"
@@ -33,7 +34,7 @@ const Footer: FC = () => {
               priority
             />
           </Link>
-        </div>
+        </motion.div>
         <div className="sm:w-1/3">
           <IconBar className="xl:hidden" />
           <div className="hidden xl:flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-14 text-3xl md:text-4xl text-white">
@@ -65,25 +66,26 @@ const Footer: FC = () => {
         </div>
         <div className="sm:w-1/3 flex justify-end gap-2">
           {/* exp */}
-          <div className="flex xl:w-1/4 justify-end ">
+          <motion.div
+            className="flex xl:w-1/4 justify-end "
+            {...enterAnimation}
+          >
             <a
               className="relative cursor-pointer whitespace-nowrap"
               href="https://twitter.com/sol_exp"
               target="_blank"
               rel="noreferrer"
             >
-              <div className=" flex flex-row-reverse md:flex-col gap-2 md:gap-0 items-center font-daysOne">
-                <motion.div
-                  className="rounded"
-                  {...containerAnimation}
-                  onMouseEnter={() => setAnimate(true)}
-                  onMouseLeave={() => setAnimate(false)}
-                >
-                  <ExpIcon color={"white"} />
-                </motion.div>
-              </div>
+              <motion.div
+                className="rounded"
+                {...containerAnimation}
+                onMouseEnter={() => setAnimate(true)}
+                onMouseLeave={() => setAnimate(false)}
+              >
+                <ExpIcon color={"white"} />
+              </motion.div>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.footer>

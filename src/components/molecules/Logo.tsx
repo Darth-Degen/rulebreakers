@@ -1,12 +1,15 @@
 import { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { midClickAnimation } from "@constants";
+import { midClickAnimation, enterAnimation } from "@constants";
 import Link from "next/link";
 
 const Logo: FC = () => {
   return (
-    <div className="my-0 flex items-center gap-2 cursor-pointer">
+    <motion.div
+      className="my-0 flex items-center gap-2 cursor-pointer"
+      {...enterAnimation}
+    >
       <Link href="/">
         <motion.div {...midClickAnimation}>
           <Image
@@ -18,7 +21,7 @@ const Logo: FC = () => {
           />
         </motion.div>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 export default Logo;

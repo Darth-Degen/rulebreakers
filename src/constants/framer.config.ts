@@ -1,4 +1,4 @@
-import { Variants } from "framer-motion"
+import { Variants } from "framer-motion";
 
 //click animations
 export const largeClickAnimation = {
@@ -8,7 +8,7 @@ export const largeClickAnimation = {
 export const midClickAnimation = {
   whileHover: { scale: 1.06 },
   whileTap: { scale: 1 },
-  transition:{ duration: 0.25, ease: "easeInOut" },
+  transition: { duration: 0.25, ease: "easeInOut" },
 };
 export const smallClickAnimation = {
   whileHover: { scale: 1.02 },
@@ -23,57 +23,57 @@ export const linkClickAnimation = {
 //tap animations
 export const tapAnimation = {
   whileTap: { scale: 0.97 },
-}
+};
 
 //opacity animations
 export const exitAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  exit:{ opacity: 0 },
-  transition:{ duration: 0.7, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.7, ease: "easeInOut" },
+};
 export const midExitAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  exit:{ opacity: 0 },
-  transition:{ duration: 0.4, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.4, ease: "easeInOut" },
+};
 export const fastExitAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  exit:{ opacity: 0 },
-  transition:{ duration: 0.25, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.25, ease: "easeInOut" },
+};
 export const vFastExitAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  exit:{ opacity: 0 },
-  transition:{ duration: 0.05, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.05, ease: "easeInOut" },
+};
 
 export const enterAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  transition:{ duration: 1.4, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 1.4, ease: "easeInOut" },
+};
 
 export const midEnterAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  transition:{ duration: 0.7, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.7, ease: "easeInOut" },
+};
 export const fastEnterAnimation = {
-  initial:{ opacity: 0 },
-  animate:{ opacity: 1 },
-  transition:{ duration: 0.3, ease: "easeInOut" },
-}
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.3, ease: "easeInOut" },
+};
 
 export const scaleExitAnimation = {
-  initial:{ opacity: 0, scale: 0.5 },
-  animate:{ opacity: 1, scale: 1 },
-  exit:{ opacity: 0, scale: 0.5 },
-  transition:{ duration: 0.4, ease: "easeInOut" },
-}
+  initial: { opacity: 0, scale: 0.5 },
+  animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.5 },
+  transition: { duration: 0.4, ease: "easeInOut" },
+};
 //variants
 export const arrowVariants: Variants = {
   start: {
@@ -90,15 +90,14 @@ export const arrowVariants: Variants = {
   },
 };
 
-
 //background
 export const backgroundAnimations = {
   whileHover: { backgroundColor: "#f87171" },
-  whileTap: { backgroundColor: "#f87171", },
-  transition:{ duration: 0.4, ease: "easeInOut" },
-}
+  whileTap: { backgroundColor: "#f87171" },
+  transition: { duration: 0.4, ease: "easeInOut" },
+};
 
-//dropdown 
+//dropdown
 export const dropdownAnimations: Variants = {
   hidden: { y: -25, opacity: 0 },
   show: {
@@ -111,9 +110,9 @@ export const dropdownAnimations: Variants = {
       ease: "easeInOut",
     },
   },
-}
+};
 export const dropdownItemsAnimations = {
-  hidden: {  opacity: 1 },
+  hidden: { opacity: 1 },
   show: { opacity: 1 },
   transition: {
     duration: 0.4,
@@ -122,7 +121,7 @@ export const dropdownItemsAnimations = {
     stiffness: 300,
     damping: 24,
   },
-}
+};
 
 export const fadeVariants = {
   closed: {
@@ -141,24 +140,24 @@ export const menuAnimation = {
   whileTap: { scale: 1 },
 };
 
-export const slideDown = (animate: boolean) =>  ({
+export const slideDown = (animate: boolean) => ({
   initial: { y: -300, opacity: 0 },
   animate: { y: animate ? 0 : -300, opacity: animate ? 1 : 0 },
   transition: { duration: 1.5, ease: "easeInOut" },
-})
+});
 
-export const slideUp = {
-  initial: { y:300, opacity: 0 },
-  animate: { y:0, opacity: 1 },
+export const slideUp = (animate: boolean) => ({
+  initial: { y: 300, opacity: 0 },
+  animate: { y: animate ? 0 : 300, opacity: animate ? 1 : 0 },
   transition: { duration: 1.5, ease: "easeInOut" },
-};
-export const slideLeft = {
+});
+export const slideLeft = (animate: boolean) => ({
   initial: { x: 300, opacity: 0 },
-  animate: { x:0, opacity: 1 },
+  animate: { x: animate ? 0 : 300, opacity: animate ? 1 : 0 },
   transition: { duration: 1.5, ease: "easeInOut" },
-};
-export const slideRight = {
+});
+export const slideRight = (animate: boolean) => ({
   initial: { x: -300, opacity: 0 },
-  animate: { x:0, opacity: 1 },
+  animate: { x: animate ? 0 : -300, opacity: animate ? 1 : 0 },
   transition: { duration: 1.5, ease: "easeInOut" },
-};
+});

@@ -32,13 +32,9 @@ const PageLayout: FC<Props> = (props: Props) => {
     assets = [],
   } = props;
 
-  // const { showView, setShowView } = useContext(ViewContext);
+  //context for splash screen
   const [showView, setShowView] = useState<boolean>(false);
   const value = { showView, setShowView };
-
-  useEffect(() => {
-    console.log("2. ", value.showView);
-  }, [value.showView]);
 
   return (
     // <div className="bg-main bg-cover bg-fixed relative flex flex-col justify-start lg:h-screen transition-colors ease-in-out duration-300 overflow-none">
@@ -61,14 +57,7 @@ const PageLayout: FC<Props> = (props: Props) => {
           {children}
         </motion.main>
         {footer && <Footer />}
-        {assets && (
-          <SplashScreen
-            // showWindow={showWindow}
-            // showAnimation={showAnimation}
-            // animationExit={animationExit}
-            assets={assets}
-          />
-        )}
+        {assets && <SplashScreen assets={assets} />}
       </div>
     </ViewContext.Provider>
   );

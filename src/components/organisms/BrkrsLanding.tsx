@@ -2,19 +2,20 @@ import {
   useScroll,
   useTransform,
   motion,
-  AnimatePresence,
   useMotionValueEvent,
-  MotionValue,
 } from "framer-motion";
-import { FC, useState } from "react";
+import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import { useWindowSize } from "@hooks";
 import Image from "next/image";
 import { exitAnimation, slideUp } from "src/constants";
 import { debounce } from "lodash";
 
-const BrkrsLanding: FC = () => {
-  const [show, setShow] = useState<boolean>(true);
-  const [scrollProgress, setScrollProgress] = useState<number>(0);
+interface Props {
+  setAssets?: Dispatch<SetStateAction<boolean[]>>;
+  showView: boolean;
+}
+const BrkrsLanding: FC<Props> = (props: Props) => {
+  const { setAssets, showView } = props;
 
   const [winWidth, winHeight] = useWindowSize();
   const { scrollY, scrollYProgress } = useScroll();
@@ -23,58 +24,44 @@ const BrkrsLanding: FC = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
-  const debouncer = debounce((value) => setScrollProgress(value), 100);
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    debouncer(latest as number);
-  });
-
   return (
     <motion.div
       className="md:h-screen w-screen"
       initial={{ opacity: 1 }}
-      // animate={{ opacity: 1 - scrollProgress }}
       style={{
         y,
         scale,
         opacity,
       }}
     >
-      <AnimatePresence mode="wait">
-        {show && (
-          <motion.div
-            key="landing"
-            className="flex flex-col justify-between items-center gap-4 pt-32 h-full w-full px-10 overflow-clip"
-            {...exitAnimation}
-          >
-            <Image
-              src="/images/logo_md_white.png"
-              width={1510 / 5}
-              height={621 / 5}
-              alt="Logo"
-            />
-            <motion.div {...slideUp}>
-              <Image
-                src="/images/rulebreakers_graphic.png"
-                width={804}
-                height={676}
-                alt="Logo"
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.div
+        key="landing"
+        className="flex flex-col justify-between items-center gap-4 pt-32 h-full w-full px-10 overflow-clip"
+        {...exitAnimation}
+      >
+        <Image
+          src="/images/logo_md_white.png"
+          width={1510 / 5}
+          height={621 / 5}
+          alt="Logo"
+          onLoadingComplete={() =>
+            setAssets && setAssets((prevState) => [(prevState[0] = true)])
+          }
+        />
+        <motion.div {...slideUp(showView)}>
+          <Image
+            src="/images/rulebreakers_graphic.png"
+            width={804}
+            height={676}
+            alt="Logo"
+            onLoadingComplete={() =>
+              setAssets && setAssets((prevState) => [(prevState[1] = true)])
+            }
+          />
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 };
 
 export default BrkrsLanding;
-function useEffect(
-  arg0: () => () => void,
-  arg1: import("framer-motion").MotionValue<number>[]
-) {
-  throw new Error("Function not implemented.");
-}
-function useRef() {
-  throw new Error("Function not implemented.");
-}
