@@ -43,10 +43,12 @@ const Header: FC<Props> = (props: Props) => {
     },
   };
 
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest > 0.95) setHeader(true);
+  });
+
   //hide header on scroll down, show on scroll up
   useMotionValueEvent(scrollY, "change", (latest) => {
-    //top of page
-
     //first instance
     if (scrollRef.current === undefined) {
       setHeader(false);
@@ -56,7 +58,7 @@ const Header: FC<Props> = (props: Props) => {
 
     //scroll down
     if (scrollRef.current < latest) {
-      if (scrollRef.current + 10 < latest) {
+      if (scrollRef.current + 30 < latest) {
         setHeader(false);
         scrollRef.current = latest;
       }
@@ -65,7 +67,7 @@ const Header: FC<Props> = (props: Props) => {
 
     //scroll up
     if (scrollRef.current > latest) {
-      if (scrollRef.current > latest + 10) {
+      if (scrollRef.current > latest + 30) {
         setHeader(true);
         scrollRef.current = latest;
       }

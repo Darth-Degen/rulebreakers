@@ -23,6 +23,7 @@ const LoadAnimation = dynamic(() => import("./atoms/LoadAnimation"));
 const LoadCircle = dynamic(() => import("./atoms/LoadCircle"));
 const TabBarItem = dynamic(() => import("./atoms/TabBarItem"));
 const Underline = dynamic(() => import("./atoms/Underline"));
+const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const Logo = dynamic(() => import("./molecules/Logo"));
@@ -87,4 +88,5 @@ export {
   LandingView,
   AboutView,
   RulebreakersView,
+  ImageShimmer
 };

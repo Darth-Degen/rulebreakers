@@ -1,12 +1,14 @@
 import { FC, useState } from "react";
 import { ExpIcon, IconBar } from "@components";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { enterAnimation } from "@constants";
 
 const Footer: FC = () => {
   const [animate, setAnimate] = useState<boolean>(false);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, 300]);
 
   const containerAnimation = {
     animate: {
@@ -19,9 +21,10 @@ const Footer: FC = () => {
 
   return (
     <motion.footer
-      className="px-8 py-4 w-full bg-transparent z-0"
+      className="px-8 py-4 w-full bg-transparent z-0  bottom-0"
       key="footer"
       // {...midEnterAnimation}
+      style={{ y }}
     >
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <motion.div className="sm:w-1/3" {...enterAnimation}>

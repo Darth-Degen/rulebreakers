@@ -161,3 +161,10 @@ export const slideRight = (animate: boolean) => ({
   animate: { x: animate ? 0 : -300, opacity: animate ? 1 : 0 },
   transition: { duration: 1.5, ease: "easeInOut" },
 });
+
+export const imageLoadAnimation = (animate: boolean) => ({
+  initial: { opacity: 0 },
+  animate: { opacity: animate ? 1 : 0 },
+  exit: { opacity: 0 },
+  transition: { duration: 0.7, ease: "easeInOut" },
+})
