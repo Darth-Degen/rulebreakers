@@ -41,6 +41,7 @@ const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
 const BrkrsLanding = dynamic(() => import("./organisms/BrkrsLanding"));
 const Gallery = dynamic(() => import("./organisms/Gallery"));
+const GalleryModal = dynamic(() => import("./organisms/GalleryModal"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -88,5 +89,6 @@ export {
   LandingView,
   AboutView,
   RulebreakersView,
-  ImageShimmer
+  ImageShimmer,
+  GalleryModal
 };

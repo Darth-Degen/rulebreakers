@@ -1,17 +1,13 @@
+import { FC, ReactNode, useState } from "react";
 import {
-  cloneElement,
-  FC,
-  ReactElement,
-  ReactNode,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import { PageHead, Header, Footer, SplashScreen } from "@components";
+  PageHead,
+  Header,
+  Footer,
+  SplashScreen,
+  GalleryModal,
+} from "@components";
 import { enterAnimation, ViewContext } from "@constants";
-import { motion } from "framer-motion";
-import debounce from "lodash.debounce";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
   children: ReactNode;
@@ -32,12 +28,12 @@ const PageLayout: FC<Props> = (props: Props) => {
     assets = [],
   } = props;
 
-  //context for splash screen
+  //context for splash screen & modal
   const [showView, setShowView] = useState<boolean>(false);
-  const value = { showView, setShowView };
+  const [galleryModalId, setGalleryModalId] = useState<number>(-1);
+  const value = { showView, setShowView, galleryModalId, setGalleryModalId };
 
   return (
-    // <div className="bg-main bg-cover bg-fixed relative flex flex-col justify-start lg:h-screen transition-colors ease-in-out duration-300 overflow-none">
     <ViewContext.Provider value={value}>
       <div
         className={`flex flex-col justify-between overflow-none   ${
@@ -58,9 +54,17 @@ const PageLayout: FC<Props> = (props: Props) => {
         </motion.main>
         {footer && <Footer />}
         {assets && <SplashScreen assets={assets} />}
+        <AnimatePresence mode="wait">
+          {galleryModalId !== -1 && (
+            <GalleryModal
+              imageId={galleryModalId}
+              setImageId={setGalleryModalId}
+              key="gallery-modal"
+            />
+          )}
+        </AnimatePresence>
       </div>
     </ViewContext.Provider>
   );
 };
-
 export default PageLayout;

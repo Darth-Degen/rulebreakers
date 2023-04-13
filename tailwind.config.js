@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         "custom-black": "#121212",
         "custom-white": "#F3F1EA",
+        "cusotm-white-2": "#EBE6E6",
 
         "custom-dark-gray": "#202020",
         "custom-mid-gray": "#303030",

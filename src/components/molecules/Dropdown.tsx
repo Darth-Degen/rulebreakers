@@ -1,6 +1,6 @@
 import { dropdownAnimations, dropdownItemsAnimations } from "@constants";
 import { DropdownButton, DropdownItem } from "@components";
-import { Collection } from "@types";
+import { Rulebreakers } from "@types";
 import { Dispatch, FC, SetStateAction, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOutsideAlerter } from "@hooks";
@@ -9,7 +9,7 @@ interface Props {
   setDidHover: Dispatch<SetStateAction<boolean>>;
   didHover: boolean;
   label: string;
-  collections: Collection[];
+  collections: Rulebreakers[];
   disabled?: boolean;
 }
 
@@ -47,7 +47,7 @@ const Dropdown: FC<Props> = (props: Props) => {
             initial="hidden"
             animate="show"
           >
-            <motion.ul className="rounded divide-y-4 divide-custom-light-gray-2 border-4 border-custom-light-gray-2 shadow max-h-[200px] overflow-y-auto z-10 ">
+            {/* <motion.ul className="rounded divide-y-4 divide-custom-light-gray-2 border-4 border-custom-light-gray-2 shadow max-h-[200px] overflow-y-auto z-10 ">
               <DropdownItem
                 item={{ id: -1, src: "", url: "" }}
                 handleClick={handleClick}
@@ -62,7 +62,7 @@ const Dropdown: FC<Props> = (props: Props) => {
                     variants={dropdownItemsAnimations}
                   />
                 ))}
-            </motion.ul>
+            </motion.ul> */}
           </motion.div>
         )}
       </AnimatePresence>

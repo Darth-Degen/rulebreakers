@@ -166,5 +166,5 @@ export const imageLoadAnimation = (animate: boolean) => ({
   initial: { opacity: 0 },
   animate: { opacity: animate ? 1 : 0 },
   exit: { opacity: 0 },
-  transition: { duration: 0.7, ease: "easeInOut" },
+  transition: { duration: 0.25, ease: "easeInOut" },
 })

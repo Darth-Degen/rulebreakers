@@ -1,4 +1,4 @@
-import { HTMLMotionProps, motion } from "framer-motion";
+import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
 import { FC, HTMLAttributes, useState } from "react";
 import Image from "next/image";
 import { imageLoadAnimation } from "@constants";
@@ -12,31 +12,52 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
     initial?: any;
     animate?: any;
     transition?: any;
+    exit?: any;
   };
+  hover?: boolean;
 }
 
 const ImageShimmer: FC<Props> = (props: Props) => {
-  const { src, width, height, alt, className, animation, ...componentProps } =
-    props;
+  const {
+    src,
+    width,
+    height,
+    alt,
+    animation,
+    hover = false,
+    className,
+    ...componentProps
+  } = props;
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   return (
     <motion.div
-      className={`relative rounded ${className}`}
+      className={`relative rounded overflow-hidden ${className}`}
       initial={animation?.initial}
       animate={animation?.animate}
       transition={animation?.transition}
+      exit={animation?.exit}
+      onClick={componentProps.onClick}
     >
-      {!imageLoaded && (
-        <motion.div
-          className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded opacity-50"
-          style={{
-            backgroundSize: "200% 100%",
-            animation: "shimmer 1.5s ease-in-out infinite",
-          }}
-          {...imageLoadAnimation(!imageLoaded)}
-        />
-      )}
-      <motion.div className="" {...imageLoadAnimation(imageLoaded)}>
+      <AnimatePresence mode="wait">
+        {!imageLoaded && (
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded opacity-40"
+            style={{
+              backgroundSize: "200% 100%",
+              animation: "shimmer 1.5s ease-in-out infinite",
+            }}
+            {...imageLoadAnimation(!imageLoaded)}
+          />
+        )}
+      </AnimatePresence>
+      <motion.div
+        className={`${
+          hover
+            ? "transition-all duration-300 hover:scale-110 cursor-pointer"
+            : ""
+        }`}
+        // {...imageLoadAnimation(imageLoaded)}
+      >
         <Image
           src={src}
           width={width}

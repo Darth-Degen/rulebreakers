@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { motion, Variants } from "framer-motion";
-import { Collection } from "@types";
+import { Rulebreakers } from "@types";
 import { backgroundAnimations } from "@constants";
 
 interface Props {
-  item: Collection;
+  item: Rulebreakers;
   handleClick: (id: number) => void;
   variants: Variants;
 }

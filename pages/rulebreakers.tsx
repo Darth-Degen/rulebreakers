@@ -1,9 +1,10 @@
 import { PageLayout, RulebreakersView } from "@components";
 import { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Rulebreakers: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false, false]);
+
   return (
     <PageLayout headerType={"scroll"} mainClass="!h-auto" assets={assets}>
       <RulebreakersView setAssets={setAssets} />
