@@ -13,8 +13,13 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
 
   const [winWidth, winHeight] = useWindowSize();
   const { scrollY, scrollYProgress } = useScroll();
+  const showTransform = winWidth >= 768;
   // transform values
-  const y = useTransform(scrollY, [0, winHeight * 2], [0, winHeight * 1.25]);
+  const y = useTransform(
+    scrollY,
+    [0, showTransform ? winHeight * 2 : 0],
+    [0, showTransform ? winHeight * 1.25 : 0]
+  );
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 

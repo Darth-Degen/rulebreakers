@@ -14,14 +14,16 @@ const RulebreakersView: FC<Props> = (props: Props) => {
 
   const [winWidth, winHeight] = useWindowSize();
   const { scrollY, scrollYProgress } = useScroll();
+
+  const showTransform = winWidth >= 768;
   const y = useTransform(scrollY, [0, winHeight], [0, 300]);
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-start sm:px-10 ">
       <BrkrsLanding setAssets={setAssets} showView={showView} />
       <motion.div
-        className="h-[60vh] md:h-[85vh] flex flex-col justify-start items-center gap-4 w-screen mt-52"
-        style={{ y }}
+        className="h-[60vh] md:h-[85vh] flex flex-col justify-start items-center gap-4 w-screen md:mt-52"
+        style={{ y: showTransform ? y : 0 }}
       >
         <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0 my-10 px-5">
           gallery

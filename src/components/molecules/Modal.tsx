@@ -9,7 +9,7 @@ import {
 } from "react";
 import { scaleExitAnimation } from "@constants";
 import { CloseIcon } from "@components";
-
+import Image from "next/image";
 interface Props extends HTMLAttributes<HTMLDivElement> {
   show: boolean;
   children: ReactNode;
@@ -37,21 +37,23 @@ const Modal: FC<Props> = (props: Props) => {
       onClick={componentProps.onClick}
       {...scaleExitAnimation}
     >
-      {/* <div
-        className={`h-[320px] w-[320px] md:h-[700px] md:w-[700px] bg-opacity-50 md:bg-opacity-90
-              md:rounded-lg absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 `}
-        onClick={(e) => e.stopPropagation()}
-      > */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`md:bg-opacity-90 md:rounded-lg absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ${className}`}
+        className={`md:bg-opacity-90 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
+        bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-screen h-[80vh] lg:h-[60vh] lg:w-[100vh] ${className}`}
       >
         <motion.div
-          className=""
+          className="absolute top-5 right-6"
           onClick={componentProps.onClick}
           whileTap={{ scale: 0.96 }}
         >
-          <CloseIcon color="#121212" />
+          <Image
+            src="/images/icons/close.png"
+            height={216 / 3.3}
+            width={216 / 3.3}
+            alt="menu"
+            priority
+          />
         </motion.div>
         {children}
       </div>

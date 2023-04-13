@@ -4,12 +4,25 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { enterAnimation } from "@constants";
+import { useRouter } from "next/router";
+import { useWindowSize } from "@hooks";
 
 const Footer: FC = () => {
   const [animate, setAnimate] = useState<boolean>(false);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, 300]);
 
+  const [winWidth, winHeight] = useWindowSize();
+  const { scrollY } = useScroll();
+  const router = useRouter();
+  const showTransform = router.asPath === "/rulebreakers" && winWidth >= 768;
+
+  //matches parralax on screens so that it is consistent with layout
+  const y = useTransform(
+    scrollY,
+    [0, showTransform ? 300 : 0],
+    [0, showTransform ? 300 : 0]
+  );
+
+  //exp hover animation
   const containerAnimation = {
     animate: {
       opacity: 1,

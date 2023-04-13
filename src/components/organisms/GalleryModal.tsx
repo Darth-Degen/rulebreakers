@@ -1,5 +1,8 @@
 import { Dispatch, SetStateAction, FC, useState, useEffect } from "react";
 import { Modal } from "@components";
+import { menuAnimation, rulebreakers } from "@constants";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface Props {
   imageId: number;
@@ -21,9 +24,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
         setId(-1);
       }}
     >
-      <div className="bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-screen h-screen lg:h-[60vh] lg:w-[100vh]">
-        Hello There {id}
-      </div>
+      <></>
     </Modal>
   );
 };

@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  ButtonHTMLAttributes,
-  Dispatch,
-  FC,
-  SetStateAction,
-  useContext,
-  useRef,
-  useState,
-} from "react";
+import { ButtonHTMLAttributes, FC, useContext, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
 import { ImageShimmer } from "@components";
 import { rulebreakers, ViewContext } from "@constants";
@@ -30,9 +22,7 @@ const Gallery: FC = () => {
   const next = (): void => {
     animationRef.current = "left";
     setImageId((prevState) => {
-      if (imageId < rulebreakers.length - 1)
-        //  rulebreakers[imageId + 3])
-        return prevState + 1;
+      if (imageId < rulebreakers.length - 1) return prevState + 1;
       return prevState;
     });
   };
@@ -49,6 +39,7 @@ const Gallery: FC = () => {
     }
     return false;
   };
+
   const imageSlideAnimation = (
     animate: boolean,
     delay?: number,
@@ -61,7 +52,7 @@ const Gallery: FC = () => {
   });
 
   return (
-    <div className="flex items-center relative p-2 gap-8 my-20 md:mb-10">
+    <div className="flex items-center relative p-2 gap-8 md:my-20">
       <GalleryArrowButton
         direction="left"
         onClick={() => back()}
