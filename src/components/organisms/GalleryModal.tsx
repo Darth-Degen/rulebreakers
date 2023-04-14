@@ -5,10 +5,15 @@ import {
   useState,
   useEffect,
   useCallback,
+  useRef,
+  DetailedHTMLProps,
+  HTMLAttributes,
+  LegacyRef,
 } from "react";
 import { ImageShimmer, Modal } from "@components";
-import { menuAnimation, rulebreakers, slideUp } from "@constants";
+import { midClickAnimation, rulebreakers } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
+import download from "downloadjs";
 
 interface Props {
   imageId: number;
@@ -24,24 +29,21 @@ const GalleryModal: FC<Props> = (props: Props) => {
 
   const folder = formatImageSrc(imageId);
   const mainImage = `/images/rulebreakers/${folder}.png`;
+  const brkr = rulebreakers[imageId - 1];
 
   const getImage = useCallback((): string => {
     const image = formatImageSrc(selected);
     let src = "";
-    console.log("selected ", selected);
     switch (selected) {
       case 0:
-        // console.log(`/images/rulebreakers/${image}.png`);
         src = `/images/rulebreakers/${folder}.png`;
         break;
       default:
-        // console.log(`/images/rulebreakers/${image}/${image}.png`);
         src = `/images/rulebreakers/${folder}/${image}.png`;
         break;
     }
-    console.log("src ", src);
     return src;
-  }, [selected]);
+  }, [folder, selected]);
 
   useEffect(() => {
     const image = getImage();
@@ -55,50 +57,81 @@ const GalleryModal: FC<Props> = (props: Props) => {
         setImageId(-1);
       }}
     >
-      <div className="flex gap-3 items-center justify-center h-full w-full">
-        {/* images */}
-        <div className="flex flex-col lg:flex-row items-center gap-4">
-          {/* picker */}
-          <div className="flex flex-row lg:flex-col gap-3">
-            {rulebreakers[imageId - 1]?.extras.map((item, index) => (
-              <ImageShimmer
-                key={index}
-                src={`/images/rulebreakers/${folder}/${formatImageSrc(
-                  index + 1
-                )}.png`}
-                alt="BRKRS"
-                width={75}
-                height={75}
-                className={`cursor-pointer ${
-                  selected === index + 1 ? "outline" : ""
-                }`}
-                hover
-                onClick={() => setSelected(index + 1)}
-              />
-            ))}
-          </div>
-          <AnimatePresence mode="wait">
-            {imageId > -1 && (
-              <motion.div
-                className="flex flex-col gap-4 items-center"
-                key="main"
-                transition={{ duration: 1 }}
-                exit={{ opacity: 0 }}
-                // {...slideUp(true)}
-              >
+      <div className="flex gap-3 flex-col-reverse lg:flex-row items-center justify-center h-full w-full mt-10 lg:mt-0 p-10 overflow-y-auto lg:overflow-hidden">
+        {/* col 1 - images */}
+        <div className="flex flex-col gap-4 items-center justify-center h-full mt-4 lg:mt-12 mb-52 lg:mb-0">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-6">
+            {/* picker */}
+            <div className="flex flex-row lg:flex-col gap-4 h-full justify-center">
+              {brkr?.extras.map((item, index) => (
                 <ImageShimmer
-                  src={src ?? mainImage}
+                  key={index}
+                  src={`/images/rulebreakers/${folder}/${formatImageSrc(
+                    index + 1
+                  )}.png`}
                   alt="BRKRS"
-                  width={400}
-                  height={400}
-                  className=""
-                  // onLoadingComplete={() =>
-                  //   setAssets && setAssets((prevState) => [(prevState[0] = true)])
-                  // }
+                  width={75}
+                  height={75}
+                  className={`cursor-pointer ${
+                    selected === index + 1 ? "outline outline-[#F3B24E]" : ""
+                  }`}
+                  hover
+                  onClick={() => setSelected(index + 1)}
                 />
-              </motion.div>
-            )}
-          </AnimatePresence>
+              ))}
+            </div>
+            {/* main image */}
+            <AnimatePresence mode="wait">
+              {imageId > -1 && (
+                <motion.div
+                  transition={{ duration: 1 }}
+                  exit={{ opacity: 0 }}
+                  key="main"
+                >
+                  <ImageShimmer
+                    src={src ?? mainImage}
+                    alt="BRKRS"
+                    width={400}
+                    height={400}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          {/* download */}
+          {src && (
+            <motion.div
+              className="cursor-pointer"
+              {...midClickAnimation}
+              onClick={() => download(src)}
+            >
+              <ImageShimmer
+                src="/images/icons/download.png"
+                height={40}
+                width={40}
+                alt="menu"
+              />
+            </motion.div>
+          )}
+        </div>
+        {/* col 2 - text */}
+        <div className="flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10 lg:mt-6">
+          <h2 className="text-5xl whitespace-nowrap sm:text-7xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
+            {brkr.name}
+          </h2>
+          <p className="font-secondary text-sm md:text-base  ">
+            {brkr.description}
+          </p>
+          <motion.div className="cursor-pointer" {...midClickAnimation}>
+            <a href={""} rel="noreferrer" target="_blank">
+              <ImageShimmer
+                src="/images/icons/exchange.png"
+                height={80}
+                width={80}
+                alt="menu"
+              />
+            </a>
+          </motion.div>
         </div>
       </div>
     </Modal>

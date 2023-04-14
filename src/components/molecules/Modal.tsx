@@ -1,14 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion";
-import {
-  SetStateAction,
-  Dispatch,
-  FC,
-  ReactNode,
-  useEffect,
-  HTMLAttributes,
-} from "react";
+import { motion } from "framer-motion";
+import { FC, ReactNode, useEffect, HTMLAttributes } from "react";
 import { midClickAnimation, scaleExitAnimation } from "@constants";
-import { CloseIcon } from "@components";
 import Image from "next/image";
 interface Props extends HTMLAttributes<HTMLDivElement> {
   show: boolean;
@@ -39,18 +31,18 @@ const Modal: FC<Props> = (props: Props) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`md:bg-opacity-90 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
-        bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-screen h-[80vh] lg:h-[60vh] lg:w-[100vh] ${className}`}
+        className={`md:bg-opacity-90 absolute left-1/2 top-1 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 overflow-clip
+        bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-[98%] h-[85%] md:h-[90%] lg:h-[60vh] lg:w-[100vh] 3xl:h-[50vh] 3xl:w-[70vh] ${className}`}
       >
         <motion.div
-          className="absolute top-5 right-6 cursor-pointer"
+          className="fixed top-1 md:top-5 right-1 md:right-6 cursor-pointer"
           onClick={componentProps.onClick}
           {...midClickAnimation}
         >
           <Image
             src="/images/icons/close.png"
-            height={216 / 3.3}
-            width={216 / 3.3}
+            height={40}
+            width={40}
             alt="close"
             priority
           />
