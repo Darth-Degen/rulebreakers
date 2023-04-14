@@ -63,6 +63,17 @@ const GalleryModal: FC<Props> = (props: Props) => {
           <div className="flex flex-col-reverse lg:flex-row items-center gap-6">
             {/* picker */}
             <div className="flex flex-row lg:flex-col gap-4 h-full justify-center">
+              <ImageShimmer
+                src={mainImage}
+                alt="BRKRS"
+                width={75}
+                height={75}
+                className={`cursor-pointer ${
+                  selected === 0 ? "outline outline-[#F3B24E]" : ""
+                }`}
+                hover
+                onClick={() => setSelected(0)}
+              />
               {brkr?.extras.map((item, index) => (
                 <ImageShimmer
                   key={index}

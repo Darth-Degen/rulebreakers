@@ -44,7 +44,7 @@ const Header: FC<Props> = (props: Props) => {
   };
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0.95) setHeader(true);
+    // if (latest > 0.95) setHeader(true);
     if (latest < 0.1) setHeader(true);
   });
 
