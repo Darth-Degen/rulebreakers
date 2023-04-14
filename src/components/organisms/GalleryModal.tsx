@@ -22,17 +22,8 @@ const GalleryModal: FC<Props> = (props: Props) => {
 
   const formatImageSrc = (id: number): string => `${id < 10 ? "00" : "0"}${id}`;
 
-  const mainImage = `/images/rulebreakers/00${imageId}.png`;
   const folder = formatImageSrc(imageId);
-  //0 - main image
-  //1 - bg 1
-  //2 - bg 2
-  //3 - bg3
-
-  // setSrc(
-  //   `/images/hotheads/hothead_character_${
-  //     tokenId < 10 ? "00" : "0"
-  //   }${tokenId}.png`
+  const mainImage = `/images/rulebreakers/${folder}.png`;
 
   const getImage = useCallback((): string => {
     const image = formatImageSrc(selected);
@@ -96,7 +87,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
                 // {...slideUp(true)}
               >
                 <ImageShimmer
-                  src={src}
+                  src={src ?? mainImage}
                   alt="BRKRS"
                   width={400}
                   height={400}
