@@ -7,7 +7,7 @@ import {
   useEffect,
   HTMLAttributes,
 } from "react";
-import { scaleExitAnimation } from "@constants";
+import { midClickAnimation, scaleExitAnimation } from "@constants";
 import { CloseIcon } from "@components";
 import Image from "next/image";
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -43,15 +43,15 @@ const Modal: FC<Props> = (props: Props) => {
         bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-screen h-[80vh] lg:h-[60vh] lg:w-[100vh] ${className}`}
       >
         <motion.div
-          className="absolute top-5 right-6"
+          className="absolute top-5 right-6 cursor-pointer"
           onClick={componentProps.onClick}
-          whileTap={{ scale: 0.96 }}
+          {...midClickAnimation}
         >
           <Image
             src="/images/icons/close.png"
             height={216 / 3.3}
             width={216 / 3.3}
-            alt="menu"
+            alt="close"
             priority
           />
         </motion.div>

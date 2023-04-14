@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { ButtonHTMLAttributes, FC, useContext, useRef, useState } from "react";
+import {
+  ButtonHTMLAttributes,
+  FC,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useWindowSize } from "@hooks";
 import { ImageShimmer } from "@components";
 import { rulebreakers, ViewContext } from "@constants";
 
 const Gallery: FC = () => {
-  const [imageId, setImageId] = useState<number>(0);
+  const [imageIndex, setImageIndex] = useState<number>(1);
   const [winWidth, winHeight] = useWindowSize();
 
   const animationRef = useRef<string>("");
@@ -13,28 +20,28 @@ const Gallery: FC = () => {
 
   const back = (): void => {
     animationRef.current = "right";
-    setImageId((prevState) => {
-      if (imageId > 0) return prevState - 1;
+    setImageIndex((prevState) => {
+      if (imageIndex > 0) return prevState - 1;
       return prevState;
     });
   };
 
   const next = (): void => {
     animationRef.current = "left";
-    setImageId((prevState) => {
-      if (imageId < rulebreakers.length - 1) return prevState + 1;
+    setImageIndex((prevState) => {
+      if (imageIndex < rulebreakers.length - 1) return prevState + 1;
       return prevState;
     });
   };
 
   const isForwardDisabled = (): boolean => {
-    if (winWidth >= 1024 && imageId + 2 === rulebreakers.length - 1) {
+    if (winWidth >= 1024 && imageIndex + 2 === rulebreakers.length - 1) {
       return true;
     }
-    if (winWidth >= 768 && imageId + 1 === rulebreakers.length - 1) {
+    if (winWidth >= 768 && imageIndex + 1 === rulebreakers.length - 1) {
       return true;
     }
-    if (imageId === rulebreakers.length - 1) {
+    if (imageIndex === rulebreakers.length - 1) {
       return true;
     }
     return false;
@@ -51,65 +58,75 @@ const Gallery: FC = () => {
     transition: { duration: 0.15, ease: "easeInOut", delay: delay ?? 0 },
   });
 
+  const formatImageSrc = (id: number): string => `${id < 10 ? "00" : "0"}${id}`;
+
   return (
     <div className="flex items-center relative p-2 gap-8 md:my-20">
       <GalleryArrowButton
         direction="left"
         onClick={() => back()}
-        disabled={imageId === 0}
+        disabled={imageIndex === 0}
       />
       <div className="flex gap-8 ">
         {rulebreakers.map((image, index) => {
           return (
             <>
-              {index === rulebreakers[imageId].id && (
+              {index + 1 === rulebreakers[imageIndex].id && (
                 <ImageShimmer
-                  src={rulebreakers[imageId].src}
+                  src={`/images/rulebreakers/${formatImageSrc(
+                    imageIndex + 1
+                  )}.png`}
                   alt="valentinez"
                   height={300}
                   width={300}
                   key={index}
                   animation={imageSlideAnimation(
                     true,
-                    animationRef.current === "right" ? 0.2 : 0,
-                    animationRef.current
-                  )}
-                  hover
-                  onClick={() => setGalleryModalId(index)}
-                />
-              )}
-              {winWidth >= 768 && index === rulebreakers[imageId].id + 1 && (
-                <ImageShimmer
-                  src={rulebreakers[imageId + 1].src}
-                  alt="valentinez"
-                  height={300}
-                  width={300}
-                  key={index + 1}
-                  animation={imageSlideAnimation(
-                    true,
-                    0.1,
-                    animationRef.current
-                  )}
-                  hover
-                  onClick={() => setGalleryModalId(index)}
-                />
-              )}
-              {winWidth >= 1024 && index === rulebreakers[imageId].id + 2 && (
-                <ImageShimmer
-                  src={rulebreakers[imageId + 2].src}
-                  alt="valentinez"
-                  height={300}
-                  width={300}
-                  key={index + 2}
-                  animation={imageSlideAnimation(
-                    true,
                     animationRef.current === "left" ? 0.2 : 0,
                     animationRef.current
                   )}
                   hover
-                  onClick={() => setGalleryModalId(index)}
+                  onClick={() => setGalleryModalId(imageIndex + 1)}
                 />
               )}
+              {winWidth >= 768 &&
+                index + 1 === rulebreakers[imageIndex].id + 1 && (
+                  <ImageShimmer
+                    src={`/images/rulebreakers/${formatImageSrc(
+                      imageIndex + 2
+                    )}.png`}
+                    alt="valentinez"
+                    height={300}
+                    width={300}
+                    key={index + 1}
+                    animation={imageSlideAnimation(
+                      true,
+                      0.1,
+                      animationRef.current
+                    )}
+                    hover
+                    onClick={() => setGalleryModalId(imageIndex + 2)}
+                  />
+                )}
+              {winWidth >= 1024 &&
+                index + 1 === rulebreakers[imageIndex].id + 2 && (
+                  <ImageShimmer
+                    src={`/images/rulebreakers/${formatImageSrc(
+                      imageIndex + 3
+                    )}.png`}
+                    alt="valentinez"
+                    height={300}
+                    width={300}
+                    key={index + 2}
+                    animation={imageSlideAnimation(
+                      true,
+                      animationRef.current === "right" ? 0.2 : 0,
+                      animationRef.current
+                    )}
+                    hover
+                    onClick={() => setGalleryModalId(imageIndex + 3)}
+                  />
+                )}
             </>
           );
         })}
