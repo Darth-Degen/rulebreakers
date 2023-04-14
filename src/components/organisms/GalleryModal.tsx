@@ -5,13 +5,10 @@ import {
   useState,
   useEffect,
   useCallback,
-  useRef,
-  DetailedHTMLProps,
-  HTMLAttributes,
-  LegacyRef,
+  useContext,
 } from "react";
 import { ImageShimmer, Modal } from "@components";
-import { midClickAnimation, rulebreakers } from "@constants";
+import { midClickAnimation, rulebreakers, ViewContext } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
 import download from "downloadjs";
 
@@ -30,6 +27,8 @@ const GalleryModal: FC<Props> = (props: Props) => {
   const folder = formatImageSrc(imageId);
   const mainImage = `/images/rulebreakers/${folder}.png`;
   const brkr = rulebreakers[imageId - 1];
+
+  const { galleryModalId } = useContext(ViewContext);
 
   const getImage = useCallback((): string => {
     const image = formatImageSrc(selected);
@@ -52,7 +51,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
 
   return (
     <Modal
-      show={imageId !== -1}
+      show={galleryModalId !== -1}
       onClick={() => {
         setImageId(-1);
       }}
