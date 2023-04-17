@@ -47,6 +47,7 @@ const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
 const AboutView = dynamic(() => import("./templates/AboutView"));
 const RulebreakersView = dynamic(() => import("./templates/RulebreakersView"));
+const AssetsView = dynamic(() => import("./templates/AssetsView"));
 
 export {
   PageHead,
@@ -90,5 +91,6 @@ export {
   AboutView,
   RulebreakersView,
   ImageShimmer,
-  GalleryModal
+  GalleryModal,
+  AssetsView,
 };

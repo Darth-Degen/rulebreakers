@@ -5,27 +5,23 @@ import { backgroundAnimations } from "@constants";
 
 interface Props {
   item: Rulebreakers;
-  handleClick: (id: number) => void;
+  handleClick: (item: Rulebreakers) => void;
   variants: Variants;
 }
 
 const DropdownItem: FC<Props> = (props: Props) => {
   const { item, handleClick, variants } = props;
-  const styles: string = "w-40 h-10 bg-custom-dark-gray text-xs z-10";
 
   return (
     <motion.li
       key={item?.id}
-      className={`${styles} px-2 cursor-pointer flex items-center hover:bg-dark`}
+      className={`p-2 cursor-pointer flex items-center justify-center bg-transparent active:bg-custom-black text-3xl transition-all duration-300 bg-mid-gray hover:bg-opacity-0`}
       // {...backgroundAnimations}
-      onClick={() => handleClick(item?.id)}
+      onClick={() => handleClick(item)}
     >
       <motion.span variants={variants}>
-        {item.id === -1
-          ? "CLEAR"
-          : item.id < 10
-          ? `00${item.id}`
-          : `0${item.id}`}
+        {/* {item.id < 10 ? `00${item.id}` : `0${item.id}`} */}
+        {item.name}
       </motion.span>
     </motion.li>
   );

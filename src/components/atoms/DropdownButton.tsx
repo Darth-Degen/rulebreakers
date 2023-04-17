@@ -1,4 +1,4 @@
-import { ArrowIcon } from "@components";
+import { ArrowIcon, ImageShimmer } from "@components";
 import { arrowVariants } from "@constants";
 import { ButtonHTMLAttributes, FC } from "react";
 import { motion } from "framer-motion";
@@ -11,12 +11,12 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const DropdownButton: FC<Props> = (props: Props) => {
   const { isActive, label, ...componentProps } = props;
 
-  const styles: string = "w-40 h-10 bg-custom-dark-gray";
+  const styles: string = "";
 
   return (
     <motion.button
-      className={`relative flex justify-between ${styles} border-4 border-custom-light-gray-2  rounded-sm items-center p-2 transition-colors duration-500  ${
-        isActive ? "border-red-400" : ""
+      className={`relative flex flex-col w-64 md:whitespace-nowrap  bg-transparent text-7xl rounded-xl items-center transition-colors duration-500  ${
+        isActive ? "" : ""
       }
       ${
         componentProps.disabled
@@ -28,7 +28,13 @@ const DropdownButton: FC<Props> = (props: Props) => {
     >
       {label}
       <motion.div animate={isActive ? "end" : "start"} variants={arrowVariants}>
-        <ArrowIcon color={"#d1d5db"} />
+        {/* <ArrowIcon color={"#d1d5db"} /> */}
+        <ImageShimmer
+          src="/images/icons/arrow_left.png"
+          width={69}
+          height={69}
+          alt="Left Arrow"
+        />
       </motion.div>
     </motion.button>
   );

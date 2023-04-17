@@ -58,7 +58,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
     >
       <div className="flex gap-3 flex-col-reverse lg:flex-row items-center justify-center h-full w-full mt-10 lg:mt-0 p-10 overflow-y-auto lg:overflow-hidden">
         {/* col 1 - images */}
-        <div className="flex flex-col gap-4 items-center justify-center h-full mt-4 lg:mt-12 mb-52 lg:mb-0">
+        <div className="flex flex-col gap-4 items-center justify-center h-full mt-4 lg:mt-12 mb-64 lg:mb-0">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-6">
             {/* picker */}
             <div className="flex flex-row lg:flex-col gap-4 h-full justify-center">
@@ -68,7 +68,9 @@ const GalleryModal: FC<Props> = (props: Props) => {
                 width={75}
                 height={75}
                 className={`cursor-pointer ${
-                  selected === 0 ? "outline outline-[#F3B24E]" : ""
+                  selected === 0
+                    ? "outline outline-light-orange outline-offset-2"
+                    : ""
                 }`}
                 hover
                 onClick={() => setSelected(0)}
@@ -83,7 +85,9 @@ const GalleryModal: FC<Props> = (props: Props) => {
                   width={75}
                   height={75}
                   className={`cursor-pointer ${
-                    selected === index + 1 ? "outline outline-[#F3B24E]" : ""
+                    selected === index + 1
+                      ? "outline outline-light-orange outline-offset-2"
+                      : ""
                   }`}
                   hover
                   onClick={() => setSelected(index + 1)}

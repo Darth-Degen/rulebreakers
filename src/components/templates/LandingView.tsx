@@ -20,7 +20,7 @@ const LandingView: FC<Props> = (props: Props) => {
           alt="RULEBREAKERS"
           width={1113}
           height={721}
-          className="px-2 lg:p-0"
+          className="px-2 lg:px-20 2xl:px-0"
           onLoadingComplete={() =>
             setAssets && setAssets((prevState) => [(prevState[0] = true)])
           }

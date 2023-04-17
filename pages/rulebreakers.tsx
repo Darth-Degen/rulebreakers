@@ -1,6 +1,6 @@
 import { PageLayout, RulebreakersView } from "@components";
 import { NextPage } from "next";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 const Rulebreakers: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false, false]);

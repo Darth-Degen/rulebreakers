@@ -35,7 +35,7 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
     >
       <motion.div
         key="landing"
-        className="flex flex-col justify-between items-center gap-4 pt-32 h-full w-full px-10 overflow-clip"
+        className="flex flex-col justify-between items-center gap-4 pt-32 h-full w-full px-10"
         {...exitAnimation}
       >
         <motion.div {...enterAnimation}>
@@ -49,11 +49,11 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
             }
           />
         </motion.div>
-        <motion.div {...slideUp(showView)}>
+        <motion.div {...slideUp(showView)} className="mb-12 lg:-mb-32">
           <Image
             src="/images/rulebreakers_graphic.png"
-            width={804}
-            height={676}
+            width={800}
+            height={800}
             alt="Logo"
             onLoadingComplete={() =>
               setAssets && setAssets((prevState) => [(prevState[1] = true)])
