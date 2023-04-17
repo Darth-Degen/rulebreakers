@@ -36,9 +36,9 @@ const Dropdown: FC<Props> = (props: Props) => {
       onMouseEnter={() => {
         if (!disabled) setDidHover(true);
       }}
-      onMouseLeave={() => {
-        if (!disabled) setDidHover(false);
-      }}
+      // onMouseLeave={() => {
+      //   if (!disabled) setDidHover(false);
+      // }}
       className={`relative ${className}`}
       ref={ref}
     >
@@ -46,13 +46,13 @@ const Dropdown: FC<Props> = (props: Props) => {
       <AnimatePresence mode="wait">
         {didHover && (
           <motion.div
-            className="absolute  z-10"
+            className="absolute z-10"
             key="dropdown-list"
             variants={dropdownAnimations}
             initial="hidden"
             animate="show"
           >
-            <motion.ul className="rounded-sm shadow max-h-[250px] w-[256px] overflow-y-auto z-10 font-secondary bg-mid-gray">
+            <motion.ul className="rounded-sm shadow max-h-[250px] w-screen md:w-96 overflow-y-auto z-10 font-secondary bg-mid-gray">
               {collections &&
                 collections.map((item: Rulebreakers) => (
                   <DropdownItem

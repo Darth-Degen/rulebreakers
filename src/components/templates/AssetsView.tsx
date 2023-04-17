@@ -32,31 +32,23 @@ const AssetsView: FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center sm:px-10 mt-24 gap-4">
-      {/* <motion.h2
-        className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0"
-        {...enterAnimation}
-      >
-        Assets
-      </motion.h2> */}
-      <motion.div
-        className="flex flex-col justify-center items-center md:items-start gap-4 xl:gap-6"
-        {...enterAnimation}
-      >
-        <Dropdown
-          handleClick={handleSelect}
-          label={!selectedAsset ? "Select Asset" : selectedAsset.name}
-          collections={rulebreakers}
-          className="mt-3"
-        />
-      </motion.div>
-
-      <TabSelector
-        tabs={["pfp crop", "banner", "wallpaper"]}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
+    <motion.div
+      className="w-full h-full flex flex-col items-center justify-start sm:px-10 mt-24 3xl:mt-32 gap-10"
+      {...enterAnimation}
+    >
+      <Dropdown
+        handleClick={handleSelect}
+        label={!selectedAsset ? "Select Asset" : selectedAsset.name}
+        collections={rulebreakers}
+        className="mt-3"
       />
-      <div className="py-10 md:py-10 2xl:pt-10 px-2">
+
+      <div className="flex flex-col items-center justify-evenly 3xl:justify-center 3xl:gap-14 gap-4 h-full">
+        <TabSelector
+          tabs={["pfp crop", "banner", "wallpaper"]}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
         <ImageShimmer
           src="/images/assets/laptop/pencilz.png"
           // width={5217 / 7}
@@ -64,10 +56,10 @@ const AssetsView: FC<Props> = (props: Props) => {
           fill
           objectFit="contain"
           alt="asset"
-          className="h-[40vh] md:h-[50vh] w-screen md:w-[80vh]"
+          className="h-[40vh] lg:h-[45vh] w-screen md:w-[80vh] -z-10 py-10 md:py-10 2xl:pt-10 px-2"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -6,7 +6,7 @@ const Assets: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>();
 
   return (
-    <PageLayout headerType={"scroll"} mainClass="!h-auto" assets={assets}>
+    <PageLayout headerType={"scroll"} mainClass="" assets={assets}>
       {/* <AssetsView setAssets={setAssets} /> */}
       <AssetsView />
     </PageLayout>
