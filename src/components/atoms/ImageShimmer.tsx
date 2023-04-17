@@ -3,10 +3,18 @@ import { FC, HTMLAttributes, useState } from "react";
 import Image from "next/image";
 import { imageLoadAnimation } from "@constants";
 
+enum ObjectFit {
+  "contain",
+  "cover",
+  "fill",
+  "none",
+  "scale-down",
+}
+
 interface Props extends HTMLAttributes<HTMLDivElement> {
   src: string;
-  width: number;
-  height: number;
+  width?: number; // width & height or fill & objectFit
+  height?: number;
   alt: string;
   animation?: {
     initial?: any;
@@ -15,6 +23,8 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
     exit?: any;
   };
   hover?: boolean;
+  fill?: boolean; //fill & objectFit or width & height
+  objectFit?: string;
 }
 
 const ImageShimmer: FC<Props> = (props: Props) => {
@@ -25,6 +35,8 @@ const ImageShimmer: FC<Props> = (props: Props) => {
     alt,
     animation,
     hover = false,
+    fill = false,
+    objectFit = "cover",
     className,
     ...componentProps
   } = props;
@@ -58,14 +70,27 @@ const ImageShimmer: FC<Props> = (props: Props) => {
         }`}
         // {...imageLoadAnimation(imageLoaded)}
       >
-        <Image
-          src={src}
-          width={width}
-          height={height}
-          alt={alt}
-          className={`rounded`}
-          onLoadingComplete={() => setImageLoaded(true)}
-        />
+        {fill && (
+          <Image
+            src={src}
+            fill
+            //@ts-ignore
+            style={{ objectFit: objectFit }}
+            alt={alt}
+            className={`rounded`}
+            onLoadingComplete={() => setImageLoaded(true)}
+          />
+        )}
+        {width && height && (
+          <Image
+            src={src}
+            width={width}
+            height={height}
+            alt={alt}
+            className={`rounded`}
+            onLoadingComplete={() => setImageLoaded(true)}
+          />
+        )}
       </motion.div>
     </motion.div>
   );

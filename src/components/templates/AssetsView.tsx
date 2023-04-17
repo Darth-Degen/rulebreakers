@@ -8,7 +8,7 @@ import {
 } from "@constants";
 import { motion } from "framer-motion";
 import { useWindowSize } from "@hooks";
-import { Dropdown, TabSelector } from "@components";
+import { Dropdown, ImageShimmer, TabSelector } from "@components";
 import { Rulebreakers } from "@types";
 
 interface Props {
@@ -32,36 +32,41 @@ const AssetsView: FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-cen sm:px-10 mt-24 gap-4 lg:gap-0 2xl:gap-4">
-      <motion.h2
+    <div className="w-full h-full flex flex-col items-center justify-center sm:px-10 mt-24 gap-4">
+      {/* <motion.h2
         className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0"
         {...enterAnimation}
       >
         Assets
-      </motion.h2>
+      </motion.h2> */}
       <motion.div
         className="flex flex-col justify-center items-center md:items-start gap-4 xl:gap-6"
         {...enterAnimation}
       >
         <Dropdown
           handleClick={handleSelect}
-          label={!selectedAsset ? "Select" : selectedAsset.name}
+          label={!selectedAsset ? "Select Asset" : selectedAsset.name}
           collections={rulebreakers}
           className="mt-3"
         />
       </motion.div>
 
-      <div className="flex flex-col items-center justify-center">
-        <TabSelector
-          tabs={["pfp crop", "banner", "wallpaper"]}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
+      <TabSelector
+        tabs={["pfp crop", "banner", "wallpaper"]}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+      <div className="py-10 md:py-10 2xl:pt-10 px-2">
+        <ImageShimmer
+          src="/images/assets/laptop/pencilz.png"
+          // width={5217 / 7}
+          // height={3401 / 7}
+          fill
+          objectFit="contain"
+          alt="asset"
+          className="h-[40vh] md:h-[50vh] w-screen md:w-[80vh]"
         />
       </div>
-      {/* setDidHover,
-    ,
-    label,
-    collections,/> */}
     </div>
   );
 };

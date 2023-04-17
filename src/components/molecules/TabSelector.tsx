@@ -15,7 +15,7 @@ const TabSelector: FC<Props> = (props: Props) => {
     >
       {tabs.map((item: string, index) => (
         <div
-          className={`flex items-center cursor-pointer transition-all duration-300 text-6xl py-1.5 px-4 rounded gap-1.5 font- hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent uppercase ${
+          className={`flex items-center cursor-pointer transition-all duration-300 text-5xl md:text-6xl py-1.5 px-4 rounded gap-1.5 font- hover:bg-clip-text hover:bg-orange-gradient hover:text-transparent uppercase ${
             activeTab === index
               ? "bg-clip-text bg-orange-gradient text-transparent uppercase"
               : "text-white"

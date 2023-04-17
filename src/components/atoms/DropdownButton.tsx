@@ -15,7 +15,7 @@ const DropdownButton: FC<Props> = (props: Props) => {
 
   return (
     <motion.button
-      className={`relative flex flex-col w-[256px] md:whitespace-nowrap text-6xl rounded-xl items-center transition-colors duration-500  ${
+      className={`relative flex flex-row   md:whitespace-nowrap text-6xl lg:text-7xl rounded-xl items-center transition-colors duration-500  ${
         isActive ? "" : ""
       }
       ${
@@ -29,18 +29,14 @@ const DropdownButton: FC<Props> = (props: Props) => {
       <p className="bg-clip-text bg-orange-gradient text-transparent uppercase">
         {label}
       </p>
-      <motion.div
-        animate={isActive ? "end" : "start"}
-        variants={arrowVariants}
-        className="pt-3"
-      >
-        {/* <ArrowIcon color={"#d1d5db"} /> */}
-        <Image
+      <motion.div animate={isActive ? "end" : "start"} variants={arrowVariants}>
+        <ArrowIcon color={"#d1d5db"} />
+        {/* <Image
           src="/images/icons/arrow_left.png"
-          width={50}
-          height={50}
+          width={75}
+          height={75}
           alt="Left Arrow"
-        />
+        /> */}
       </motion.div>
     </motion.button>
   );
