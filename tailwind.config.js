@@ -23,6 +23,7 @@ module.exports = {
         "custom-white-2": "#EBE6E6",
         "light-orange": "#F3B24E",
         "dark-orange": "#EB4B46",
+        "mid-orange": "#ee6a49",
         "mid-gray": "#302E2E",
 
         "custom-dark-gray": "#202020",

@@ -8,7 +8,7 @@ import {
 } from "@constants";
 import { motion } from "framer-motion";
 import { useWindowSize } from "@hooks";
-import { Dropdown } from "@components";
+import { Dropdown, TabSelector } from "@components";
 import { Rulebreakers } from "@types";
 
 interface Props {
@@ -18,6 +18,8 @@ interface Props {
 const AssetsView: FC<Props> = (props: Props) => {
   const { setAssets } = props;
   const { showView } = useContext(ViewContext);
+
+  const [activeTab, setActiveTab] = useState<number>(0);
 
   const [selectedAsset, setSelectedAsset] = useState<
     Rulebreakers | undefined
@@ -30,25 +32,32 @@ const AssetsView: FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-cen sm:px-10 mt-28 2xl:mt-32 gap-4 xl:gap-8">
+    <div className="w-full h-full flex flex-col items-center justify-cen sm:px-10 mt-24 gap-4 lg:gap-0 2xl:gap-4">
       <motion.h2
-        className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0 px-5"
-        // {...slideDown(showView)}
+        className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0"
         {...enterAnimation}
       >
         Assets
       </motion.h2>
       <motion.div
-        className="flex flex-col md:flex-row gap-4 justify-center items-center"
-        // {...slideUp(showView)}
+        className="flex flex-col justify-center items-center md:items-start gap-4 xl:gap-6"
         {...enterAnimation}
       >
         <Dropdown
           handleClick={handleSelect}
           label={!selectedAsset ? "Select" : selectedAsset.name}
           collections={rulebreakers}
+          className="mt-3"
         />
       </motion.div>
+
+      <div className="flex flex-col items-center justify-center">
+        <TabSelector
+          tabs={["pfp crop", "banner", "wallpaper"]}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        />
+      </div>
       {/* setDidHover,
     ,
     label,

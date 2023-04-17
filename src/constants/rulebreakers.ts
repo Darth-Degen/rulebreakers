@@ -12,7 +12,7 @@ export const rulebreakers: Rulebreakers[] = [
     },
   {
     id: 2,
-    name:"pencilz 1 ",
+    name:"pencilz rock cunt III ",
     src: "/images/rulebreakers/002.png",
     extras:[],
     description:

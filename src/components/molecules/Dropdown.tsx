@@ -1,11 +1,11 @@
 import { dropdownAnimations, dropdownItemsAnimations } from "@constants";
 import { DropdownButton, DropdownItem } from "@components";
 import { Rulebreakers } from "@types";
-import { FC, useRef, useState } from "react";
+import { FC, HTMLAttributes, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOutsideAlerter } from "@hooks";
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   handleClick: (item: Rulebreakers) => void;
   label: string;
   collections: Rulebreakers[];
@@ -13,12 +13,23 @@ interface Props {
 }
 
 const Dropdown: FC<Props> = (props: Props) => {
-  const { handleClick, label, collections, disabled = false } = props;
+  const {
+    handleClick,
+    label,
+    collections,
+    disabled = false,
+    className,
+  } = props;
 
   const [didHover, setDidHover] = useState<boolean>(false);
 
   const ref = useRef(null);
   useOutsideAlerter(ref, () => setDidHover(false));
+
+  const onSelect = (item: Rulebreakers) => {
+    handleClick(item);
+    setDidHover(false);
+  };
 
   return (
     <div
@@ -28,25 +39,25 @@ const Dropdown: FC<Props> = (props: Props) => {
       onMouseLeave={() => {
         if (!disabled) setDidHover(false);
       }}
-      className="lg:self-end"
+      className={`relative ${className}`}
       ref={ref}
     >
       <DropdownButton isActive={didHover} label={label} disabled={disabled} />
       <AnimatePresence mode="wait">
         {didHover && (
           <motion.div
-            className="absolute z-10"
+            className="absolute  z-10"
             key="dropdown-list"
             variants={dropdownAnimations}
             initial="hidden"
             animate="show"
           >
-            <motion.ul className="rounded-sm shadow max-h-[250px] w-64 overflow-y-auto z-10 font-secondary">
+            <motion.ul className="rounded-sm shadow max-h-[250px] w-[256px] overflow-y-auto z-10 font-secondary bg-mid-gray">
               {collections &&
                 collections.map((item: Rulebreakers) => (
                   <DropdownItem
                     item={item}
-                    handleClick={handleClick}
+                    handleClick={onSelect}
                     key={item.id}
                     variants={dropdownItemsAnimations}
                   />

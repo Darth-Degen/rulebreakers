@@ -36,6 +36,7 @@ const Modal = dynamic(() => import("./molecules/Modal"));
 const Menu = dynamic(() => import("./molecules/Menu"));
 const IconBar = dynamic(() => import("./molecules/IconBar"));
 const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
+const TabSelector = dynamic(() => import("./molecules/TabSelector"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
@@ -93,4 +94,5 @@ export {
   ImageShimmer,
   GalleryModal,
   AssetsView,
+  TabSelector
 };
