@@ -32,7 +32,7 @@ const Modal: FC<Props> = (props: Props) => {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`md:bg-opacity-90 absolute left-1/2 top-1 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 overflow-clip
-        bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-[98%] h-[85%] md:h-[90%] lg:h-[60vh] lg:w-[100vh] 3xl:h-[50vh] 3xl:w-[70vh] ${className}`}
+        bg-main bg-cover rounded-3xl border-[3px] border-custom-white-2 w-[98%] h-[85%] md:h-[90%] lg:h-[60vh] lg:w-[100vh] xl:w-[120vh] 3xl:h-[50vh] 3xl:w-[70vh] ${className}`}
       >
         <motion.div
           className="fixed top-1 md:top-5 right-1 md:right-6 cursor-pointer"

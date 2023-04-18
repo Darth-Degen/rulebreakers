@@ -1,15 +1,8 @@
 import { motion } from "framer-motion";
-import {
-  ButtonHTMLAttributes,
-  FC,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { ButtonHTMLAttributes, FC, useContext, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
 import { ImageShimmer } from "@components";
-import { rulebreakers, ViewContext } from "@constants";
+import { rulebreakers, ViewContext, imageSlideAnimation } from "@constants";
 
 const Gallery: FC = () => {
   const [imageIndex, setImageIndex] = useState<number>(1);
@@ -47,17 +40,6 @@ const Gallery: FC = () => {
     return false;
   };
 
-  const imageSlideAnimation = (
-    animate: boolean,
-    delay?: number,
-    direction?: string
-  ) => ({
-    initial: { x: direction === "right" ? -0 : 0, opacity: 0.75 },
-    animate: { x: animate ? 0 : 0, opacity: 1 },
-    exit: { x: -40 },
-    transition: { duration: 0.15, ease: "easeInOut", delay: delay ?? 0 },
-  });
-
   const formatImageSrc = (id: number): string => `${id < 10 ? "00" : "0"}${id}`;
 
   return (
@@ -76,7 +58,7 @@ const Gallery: FC = () => {
                   src={`/images/rulebreakers/${formatImageSrc(
                     imageIndex + 1
                   )}.png`}
-                  alt="valentinez"
+                  alt="brkrs"
                   height={300}
                   width={300}
                   key={index}
@@ -95,7 +77,7 @@ const Gallery: FC = () => {
                     src={`/images/rulebreakers/${formatImageSrc(
                       imageIndex + 2
                     )}.png`}
-                    alt="valentinez"
+                    alt="brkrs"
                     height={300}
                     width={300}
                     key={index + 1}
@@ -114,7 +96,7 @@ const Gallery: FC = () => {
                     src={`/images/rulebreakers/${formatImageSrc(
                       imageIndex + 3
                     )}.png`}
-                    alt="valentinez"
+                    alt="brkrs"
                     height={300}
                     width={300}
                     key={index + 2}

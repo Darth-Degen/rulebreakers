@@ -7,7 +7,6 @@ const Assets: NextPage = () => {
 
   return (
     <PageLayout headerType={"scroll"} mainClass="" assets={assets}>
-      {/* <AssetsView setAssets={setAssets} /> */}
       <AssetsView />
     </PageLayout>
   );

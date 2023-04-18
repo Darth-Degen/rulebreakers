@@ -1,5 +1,5 @@
 import { ArrowIcon } from "@components";
-import { arrowVariants } from "@constants";
+import { arrowVariants, smallClickAnimation } from "@constants";
 import { ButtonHTMLAttributes, FC } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -11,12 +11,10 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const DropdownButton: FC<Props> = (props: Props) => {
   const { isActive, label, ...componentProps } = props;
 
-  const styles: string = "";
-
   return (
     <motion.button
-      className={`relative flex flex-row md:whitespace-nowrap text-6xl lg:text-7xl rounded-xl items-center transition-colors duration-500  ${
-        isActive ? "" : ""
+      className={`relative flex flex-col md:whitespace-nowrap text-6xl lg:text-7xl rounded-xl items-center transition-colors duration-500  ${
+        isActive ? "text-white" : "text-white"
       }
       ${
         componentProps.disabled
@@ -24,19 +22,24 @@ const DropdownButton: FC<Props> = (props: Props) => {
           : "hover:bg-dark cursor-pointer "
       }`}
       // whileTap={{ scale: 0.97 }}
+      {...smallClickAnimation}
       disabled={componentProps.disabled}
     >
       <p className="bg-clip-text bg-orange-gradient text-transparent uppercase">
         {label}
       </p>
-      <motion.div animate={isActive ? "end" : "start"} variants={arrowVariants}>
-        <ArrowIcon color={"#d1d5db"} />
-        {/* <Image
+      <motion.div
+        animate={isActive ? "end" : "start"}
+        variants={arrowVariants}
+        className="pt-3"
+      >
+        {/* <ArrowIcon color={"#d1d5db"} /> */}
+        <Image
           src="/images/icons/arrow_left.png"
-          width={75}
-          height={75}
+          width={50}
+          height={50}
           alt="Left Arrow"
-        /> */}
+        />
       </motion.div>
     </motion.button>
   );

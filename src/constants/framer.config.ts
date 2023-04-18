@@ -6,13 +6,13 @@ export const largeClickAnimation = {
   whileTap: { scale: 1 },
 };
 export const midClickAnimation = {
-  whileHover: { scale: 1.06 },
+  whileHover: { scale: 1.05 },
   whileTap: { scale: 1 },
   transition: { duration: 0.25, ease: "easeInOut" },
 };
 export const smallClickAnimation = {
   whileHover: { scale: 1.02 },
-  whileTap: { scale: 1 },
+  whileTap: { scale: 0.97 },
 };
 
 export const linkClickAnimation = {
@@ -168,3 +168,24 @@ export const imageLoadAnimation = (animate: boolean) => ({
   exit: { opacity: 0 },
   transition: { duration: 0.25, ease: "easeInOut" },
 })
+
+export const imageSlideAnimation = (
+  animate: boolean,
+  delay?: number,
+  direction?: string
+) => ({
+  initial: { x: direction === "right" ? -0 : 0, opacity: 0.75 },
+  animate: { x: animate ? 0 : 0, opacity: 1 },
+  exit: { x: -40 },
+  transition: { duration: 0.15, ease: "easeInOut", delay: delay ?? 0 },
+});
+
+export const imageDropAnimation = (
+  animate: boolean,
+  delay?: number,
+) => ({
+  initial: { y: -40, opacity: 0.25 },
+  animate: { y: animate ? -20 : 0, opacity: 1 },
+  eyit: { x: -40 },
+  transition: { duration: 0.45, ease: "easeInOut", delay: delay ?? 0 },
+});
