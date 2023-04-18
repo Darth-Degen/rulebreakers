@@ -24,6 +24,7 @@ const LoadCircle = dynamic(() => import("./atoms/LoadCircle"));
 const TabBarItem = dynamic(() => import("./atoms/TabBarItem"));
 const Underline = dynamic(() => import("./atoms/Underline"));
 const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
+const TextHeader = dynamic(() => import("./atoms/TextHeader"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const Logo = dynamic(() => import("./molecules/Logo"));
@@ -37,18 +38,21 @@ const Menu = dynamic(() => import("./molecules/Menu"));
 const IconBar = dynamic(() => import("./molecules/IconBar"));
 const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
 const TabSelector = dynamic(() => import("./molecules/TabSelector"));
+const CollabItem = dynamic(() => import("./molecules/CollabItem"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
 const BrkrsLanding = dynamic(() => import("./organisms/BrkrsLanding"));
 const Gallery = dynamic(() => import("./organisms/Gallery"));
 const GalleryModal = dynamic(() => import("./organisms/GalleryModal"));
+const Collabs = dynamic(() => import("./organisms/Collabs"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
 const AboutView = dynamic(() => import("./templates/AboutView"));
 const RulebreakersView = dynamic(() => import("./templates/RulebreakersView"));
 const AssetsView = dynamic(() => import("./templates/AssetsView"));
+const MoreView = dynamic(() => import("./templates/MoreView"));
 
 export {
   PageHead,
@@ -94,5 +98,9 @@ export {
   ImageShimmer,
   GalleryModal,
   AssetsView,
-  TabSelector
+  TabSelector,
+  MoreView,
+  TextHeader,
+  Collabs,
+  CollabItem
 };

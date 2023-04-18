@@ -21,8 +21,7 @@ const DropdownButton: FC<Props> = (props: Props) => {
           ? "cursor-not-allowed opacity-20"
           : "hover:bg-dark cursor-pointer "
       }`}
-      // whileTap={{ scale: 0.97 }}
-      {...smallClickAnimation}
+      whileHover={{ scale: 1.02 }}
       disabled={componentProps.disabled}
     >
       <p className="bg-clip-text bg-orange-gradient text-transparent uppercase">

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction, FC, useContext } from "react";
 import { ViewContext, slideLeft, slideRight } from "@constants";
+import { TextHeader } from "@components";
 import Image from "next/image";
 
 interface Props {
@@ -21,9 +22,7 @@ const AboutView: FC<Props> = (props: Props) => {
         className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4 scale-90 lg:scale-100"
         {...slideRight(showView)}
       >
-        <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-          About
-        </h2>
+        <TextHeader>About</TextHeader>
         <p className="font-secondary text-sm md:text-base 3xl:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

@@ -47,7 +47,9 @@ const PageLayout: FC<Props> = (props: Props) => {
 
         <Header headerType={headerType} />
         <motion.main
-          className={`flex flex-col h-full w-full ${mainClass} overflow-x-clip`}
+          className={`flex flex-col h-full w-full ${mainClass} overflow-x-clip ${
+            footer ? "mb-16 md:mb-auto mt-4 md:mt-0" : ""
+          }`}
           {...enterAnimation}
         >
           {children}

@@ -1,10 +1,10 @@
-import { PageLayout, IconBar } from "@components";
+import { PageLayout, MoreView } from "@components";
 import { NextPage } from "next";
 
 const More: NextPage = () => {
   return (
-    <PageLayout>
-      <div className="w-full h-full flex flex-col items-center">More</div>
+    <PageLayout headerType="scroll">
+      <MoreView />
     </PageLayout>
   );
 };

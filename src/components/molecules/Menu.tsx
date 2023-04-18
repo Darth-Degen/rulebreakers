@@ -65,14 +65,14 @@ const Menu: FC<Props> = (props: Props) => {
           >
             <div className="absolute left-1/2 top-[45%] transform -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start uppercase text-4xl sm:text-6xl gap-5">
               <NavItem href="/about">About</NavItem>
-              <NavItem href="/assets">Assets</NavItem>
               <NavItem href="/rulebreakers">RULEBREAKERS</NavItem>
-              <NavItem
+              <NavItem href="/assets">Assets</NavItem>
+              {/* <NavItem
                 href="https://twitter.com/rulebreakers___"
                 isExternal={true}
               >
                 MARKETPLACE
-              </NavItem>
+              </NavItem> */}
               <NavItem href="/more">MORE</NavItem>
             </div>
             <IconBar className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-3" />

@@ -1,37 +1,21 @@
+import { FC, useState, HTMLAttributes } from "react";
 import {
-  Dispatch,
-  SetStateAction,
-  FC,
-  useContext,
-  useState,
-  useRef,
-  useCallback,
-  useEffect,
-  HTMLAttributes,
-} from "react";
-import {
-  ViewContext,
   rulebreakers,
   enterAnimation,
   midExitAnimation,
   midClickAnimation,
 } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
-import { useWindowSize } from "@hooks";
 import { Dropdown, ImageShimmer, TabSelector } from "@components";
 import { Rulebreakers } from "@types";
 import download from "downloadjs";
 import Image from "next/image";
 
 const AssetsView: FC = () => {
-  const { setGalleryModalId } = useContext(ViewContext);
-
   const [activeTab, setActiveTab] = useState<number>(0);
   const [selectedAsset, setSelectedAsset] = useState<
     Rulebreakers | undefined
   >();
-
-  const mainImage = `/images/assets/pfp/pencilz.png`;
 
   const handleSelect = (item: Rulebreakers): void => {
     setSelectedAsset(item);
@@ -61,7 +45,7 @@ const AssetsView: FC = () => {
 
   return (
     <motion.div
-      className="w-full h-full flex flex-col items-center justify-start sm:px-10 mt-32 lg:mt-24 3xl:mt-32 "
+      className="w-full h-full flex flex-col items-center justify-start px-6 sm:px-10 mt-28 xl:mt-0"
       {...enterAnimation}
     >
       <Dropdown
@@ -70,7 +54,7 @@ const AssetsView: FC = () => {
         collections={rulebreakers}
       />
 
-      <div className="flex flex-col items-center justify-evenly 3xl:justify-center gap-10 md:gap-2 3xl:gap-14 h-full">
+      <div className="flex flex-col items-center justify-evenly 3xl:justify-center gap-10 md:gap-2 3xl:gap-14 h-full pt-6 md:pt-0">
         <TabSelector
           tabs={["pfp crop", "banner", "wallpaper"]}
           activeTab={activeTab}
@@ -137,7 +121,7 @@ const Asset: FC<Props> = (props: Props) => {
         className={className}
       />
       <motion.div
-        className="cursor-pointer"
+        className="cursor-pointer pt-2"
         {...midClickAnimation}
         onClick={() => download(src)}
       >
