@@ -25,6 +25,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   hover?: boolean;
   fill?: boolean; //fill & objectFit or width & height
   objectFit?: string;
+  imageClass?: string;
 }
 
 const ImageShimmer: FC<Props> = (props: Props) => {
@@ -37,10 +38,13 @@ const ImageShimmer: FC<Props> = (props: Props) => {
     hover = false,
     fill = false,
     objectFit = "cover",
+    imageClass = "",
     className,
     ...componentProps
   } = props;
+
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+
   return (
     <motion.div
       className={`relative rounded overflow-hidden ${className}`}
@@ -77,7 +81,7 @@ const ImageShimmer: FC<Props> = (props: Props) => {
             //@ts-ignore
             style={{ objectFit: objectFit }}
             alt={alt}
-            className={`rounded`}
+            className={`rounded ${imageClass}`}
             onLoadingComplete={() => setImageLoaded(true)}
           />
         )}
@@ -87,7 +91,7 @@ const ImageShimmer: FC<Props> = (props: Props) => {
             width={width}
             height={height}
             alt={alt}
-            className={`rounded`}
+            className={`rounded ${imageClass}`}
             onLoadingComplete={() => setImageLoaded(true)}
           />
         )}

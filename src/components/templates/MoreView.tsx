@@ -1,119 +1,144 @@
-import { FC, useContext, useState, HTMLAttributes } from "react";
+import {
+  FC,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import {
   ViewContext,
-  rulebreakers,
   enterAnimation,
   midExitAnimation,
-  midClickAnimation,
+  collabs,
+  editions,
 } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
-import { useWindowSize } from "@hooks";
-import { TextHeader, ImageShimmer, TabSelector } from "@components";
-import { Rulebreakers } from "@types";
-import download from "downloadjs";
-import Image from "next/image";
+import {
+  TextHeader,
+  TabSelector,
+  Collabs,
+  GalleryArrowButton,
+} from "@components";
+import { Rulebreakers, Collab, Edition } from "@types";
 
-const MoreView: FC = () => {
+interface Props {
+  setAssets?: Dispatch<SetStateAction<boolean[]>>;
+  pageSize: number;
+  activeTab: number;
+  setActiveTab: Dispatch<SetStateAction<number>>;
+}
+
+const MoreView: FC<Props> = (props: Props) => {
+  const { setAssets, pageSize, activeTab, setActiveTab } = props;
   const { setGalleryModalId } = useContext(ViewContext);
 
-  const [activeTab, setActiveTab] = useState<number>(0);
   const [selectedAsset, setSelectedAsset] = useState<
     Rulebreakers | undefined
   >();
 
-  const mainImage = `/images/assets/pfp/pencilz.png`;
+  //pagination
+  const [pageNum, setPageNum] = useState<number>(1);
+  const [data, setData] = useState<Collab[] | Edition[]>(collabs);
 
-  const handleSelect = (item: Rulebreakers): void => {
-    setSelectedAsset(item);
+  const back = (): void => {
+    if (pageNum === 1) return;
+    setPageNum((prevState) => prevState - 1);
+  };
+  const next = (): void => {
+    const _data = getDataSet();
+    if (data && pageNum === Math.ceil(_data.length / pageSize)) return;
+    setPageNum((prevState) => prevState + 1);
   };
 
-  const getSrc = (id: number, phone?: boolean): string => {
-    let src = "";
-    switch (id) {
-      case 0:
-        src = `/images/assets/pfp/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilz"
-        }.png`;
-        break;
-      case 1:
-        src = `/images/assets/banner/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilz"
-        }.png`;
-        break;
-      case 2:
-        src = `/images/assets/${phone ? "phone" : "laptop"}/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilz"
-        }.png`;
-        break;
-    }
-    return src;
-  };
+  const getDataSet = useCallback(() => {
+    return activeTab === 0 ? collabs : editions;
+  }, [activeTab]);
+
+  //handles tab switch
+  const handleSwitch = useCallback(() => {
+    if (activeTab === 0 || activeTab === 1) setPageNum(1);
+  }, [activeTab]);
+
+  useEffect(() => {
+    handleSwitch();
+  }, [handleSwitch]);
+
+  //handles pagination
+  const handlePagination = useCallback(() => {
+    const start = (pageNum - 1) * pageSize;
+    const end = pageSize * pageNum;
+
+    let _data = getDataSet();
+    _data = _data?.slice(start, end);
+
+    setData(_data);
+  }, [pageNum, pageSize, getDataSet]);
+
+  useEffect(() => {
+    handlePagination();
+  }, [handlePagination]);
 
   return (
     <motion.div
-      className="w-full h-full flex flex-col items-center justify-start sm:px-10 mt-32 lg:mt-24 3xl:mt-32 "
+      className="w-full h-full flex flex-col items-center justify-start sm:px-10 mt-28 lg:mt-24 3xl:mt-32 gap-4"
       {...enterAnimation}
     >
       <TextHeader>More</TextHeader>
 
-      <div className="flex flex-col items-center justify-evenly 3xl:justify-center gap-10 md:gap-2 3xl:gap-14 h-full pt-6 md:pt-0">
+      <div className="flex flex-col h-full items-center justify-between 3xl:justify-center gap-10 md:gap-6 3xl:gap-14 pt-6">
         <TabSelector
           tabs={["collabs", "editions"]}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
-        <div className="flex flex-col gap-2 items-center">
-          <AnimatePresence mode="wait">
-            {activeTab === 0 && (
-              <Asset
-                key={0}
-                src={getSrc(activeTab)}
-                className="h-[40vh] lg:h-[45vh] w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
-              />
-            )}
-            {activeTab === 1 && (
-              <Asset
-                key={1}
-                src={getSrc(activeTab) ?? `/images/assets/banner/pencilz.png`}
-                className="h-[40vh] lg:h-[45vh] w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
-              />
-            )}
-          </AnimatePresence>
+        {/*  gallery  */}
+        <div className="flex gap-4 items-center">
+          <GalleryArrowButton
+            direction="left"
+            onClick={() => back()}
+            disabled={pageNum === 1}
+            className="hidden lg:flex"
+          />
+
+          <div className="flex flex-col gap-2 items-center">
+            <AnimatePresence mode="wait">
+              {activeTab === 0 && (
+                <motion.div {...midExitAnimation} key="collab">
+                  <Collabs
+                    collabs={data}
+                    setImageModal={(e) =>
+                      console.log("setImageModal collab", e)
+                    }
+                    setAssets={setAssets}
+                  />
+                </motion.div>
+              )}
+              {activeTab === 1 && (
+                <motion.div {...midExitAnimation} key="editions">
+                  <Collabs
+                    collabs={data}
+                    setImageModal={(e) =>
+                      console.log("setImageModal editions", e)
+                    }
+                    setAssets={setAssets}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <GalleryArrowButton
+            direction="right"
+            onClick={() => next()}
+            disabled={
+              data && Math.ceil(getDataSet().length / pageSize) === pageNum
+            }
+            className="hidden lg:flex"
+          />
         </div>
       </div>
-    </motion.div>
-  );
-};
-
-interface Props extends HTMLAttributes<HTMLDivElement> {
-  key?: number;
-  src: string;
-}
-const Asset: FC<Props> = (props: Props) => {
-  const { key = 99, src, className } = props;
-  return (
-    <motion.div className="flex flex-col items-center" key={key}>
-      <ImageShimmer
-        key={0}
-        src={src}
-        height={300}
-        width={300}
-        alt="asset"
-        animation={midExitAnimation}
-        className={className}
-      />
-      <motion.div
-        className="cursor-pointer pt-2"
-        {...midClickAnimation}
-        onClick={() => download(src)}
-      >
-        <Image
-          src="/images/icons/download.png"
-          height={40}
-          width={40}
-          alt="menu"
-        />
-      </motion.div>
     </motion.div>
   );
 };

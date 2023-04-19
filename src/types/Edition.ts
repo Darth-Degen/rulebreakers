@@ -6,4 +6,5 @@ export interface Edition {
   image_path:string;
   exchange_art_url: string;
   twitter_url: string;
+  isVideo?:boolean;
 }

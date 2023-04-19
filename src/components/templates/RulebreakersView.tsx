@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, FC, useContext } from "react";
 import { ViewContext } from "@constants";
-import { BrkrsLanding, Gallery } from "@components";
+import { BrkrsLanding, Gallery, TextHeader } from "@components";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useWindowSize } from "@hooks";
 
@@ -30,9 +30,7 @@ const RulebreakersView: FC<Props> = (props: Props) => {
         className="h-[60vh] md:h-[85vh] flex flex-col justify-start items-center gap-4 w-screen md:mt-52"
         style={{ y: showTransform ? y : 0 }}
       >
-        <h2 className="text-8xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0 my-10 px-5">
-          gallery
-        </h2>
+        <TextHeader>gallery</TextHeader>
         <Gallery />
       </motion.div>
     </div>

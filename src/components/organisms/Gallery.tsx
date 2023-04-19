@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
-import { ButtonHTMLAttributes, FC, useContext, useRef, useState } from "react";
+import { FC, useContext, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
-import { ImageShimmer } from "@components";
+import { ImageShimmer, GalleryArrowButton } from "@components";
 import { rulebreakers, ViewContext, imageSlideAnimation } from "@constants";
 
 const Gallery: FC = () => {
@@ -122,46 +121,4 @@ const Gallery: FC = () => {
   );
 };
 
-interface ArrowProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  direction: string; //keyof typeof ArrowDegrees;
-}
-
-const GalleryArrowButton: FC<ArrowProps> = (props: ArrowProps) => {
-  const { direction = "right", ...componentProps } = props;
-
-  const midClickAnimation = {
-    whileTap: { scale: componentProps.disabled ? 1 : 0.95 },
-    transition: { duration: 0.15 },
-  };
-
-  return (
-    <button {...componentProps} className="h-min">
-      <motion.div
-        {...midClickAnimation}
-        className={`md:m-5 z-10  ${
-          direction === "right" ? "-right-0 md:-right-16" : "left-0 md:-left-16"
-        }
-        ${
-          componentProps.disabled ? "opacity-30" : "cursor-pointer "
-        } transition-opacity duration-200  `}
-      >
-        {direction === "left" ? (
-          <ImageShimmer
-            src="/images/icons/arrow_left.png"
-            width={69}
-            height={69}
-            alt="Left Arrow"
-          />
-        ) : (
-          <ImageShimmer
-            src="/images/icons/arrow_right.png"
-            width={69}
-            height={69}
-            alt="Right Arrow"
-          />
-        )}
-      </motion.div>
-    </button>
-  );
-};
 export default Gallery;

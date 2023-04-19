@@ -36,25 +36,31 @@ const PageLayout: FC<Props> = (props: Props) => {
   return (
     <ViewContext.Provider value={value}>
       <div
-        className={`flex flex-col justify-between overflow-none   ${
-          fixed ? "absolute inset-0" : "sm:absolute sm:inset-0"
+        className={`flex flex-col lg:min-h-screen h-full justify-between overflow-none  ${
+          fixed ? "absolute inset-0" : ""
         }`}
       >
         <PageHead
           title="BRKRS"
           description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
         />
-
+        {/* header */}
         <Header headerType={headerType} />
+
+        {/* body */}
         <motion.main
           className={`flex flex-col h-full w-full ${mainClass} overflow-x-clip ${
-            footer ? "mb-16 md:mb-auto mt-4 md:mt-0" : ""
+            footer ? "mb-8 md:mb-auto mt-4 md:mt-0" : ""
           }`}
           {...enterAnimation}
         >
           {children}
         </motion.main>
+
+        {/* footer */}
         {footer && <Footer />}
+
+        {/* modals */}
         {assets && <SplashScreen assets={assets} />}
         <AnimatePresence mode="wait">
           {galleryModalId !== -1 && (

@@ -1,14 +1,14 @@
-import { Collab } from "@types";
+import { Edition } from "@types";
 
-export const collabs: Collab[] = [
+export const editions: Edition[] = [
   {
-    id: 0,
-    image_path:"/images/collabs/adam.mp4",
-    name:"Adam Ape",
+    id: 0, 
+    image_path:"/images/collabs/observer.mp4",
+    name:"Observer",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
-    twitter_url:"https://twitter.com/adam_ape_",
+    twitter_url:"https://twitter.com/",
     isVideo: true,
-    exchange_art_url:"https://exchange.art/single/35XGMeBrJe1SDM5Hbbs8mK72Mc68xVUuScNvazk23eHa"  
+    exchange_art_url:"https://exchange.art/single/BB74ktLKARwcoK1PKp71NxMJ6qr5qnSeBEsdtWbpPVbM"   
   },
   {
     id: 1,
@@ -20,12 +20,12 @@ export const collabs: Collab[] = [
   },
   {
     id: 2,
-    image_path:"/images/collabs/observer.mp4",
-    name:"Observer",
+    image_path:"/images/collabs/adam.mp4",
+    name:"Adam Ape",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
-    twitter_url:"https://twitter.com/",
+    twitter_url:"https://twitter.com/adam_ape_",
     isVideo: true,
-    exchange_art_url:"https://exchange.art/single/BB74ktLKARwcoK1PKp71NxMJ6qr5qnSeBEsdtWbpPVbM"   
+    exchange_art_url:"https://exchange.art/single/35XGMeBrJe1SDM5Hbbs8mK72Mc68xVUuScNvazk23eHa" 
   },
   {
     id: 3,

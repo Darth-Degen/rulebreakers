@@ -1,23 +1,23 @@
-import { Dispatch, FC, SetStateAction, useState } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExchangeIcon, TwitterIcon } from "@components";
 import { Collab } from "@types";
 
 interface CollabItemProps {
   index: number;
   item: Collab;
   setImageModal: Dispatch<SetStateAction<string>>;
+  setAssets?: Dispatch<SetStateAction<boolean[]>>;
 }
 
 const CollabItem: FC<CollabItemProps> = (props: CollabItemProps) => {
-  const { index, item, setImageModal } = props;
+  const { index, item, setImageModal, setAssets } = props;
   return (
     <div
-      className={`rounded-lg md:rounded relative flex flex-col items-center w-full gap-3 py-1`}
+      className={`rounded-lg md:rounded relative flex flex-col items-center w-full gap-3 py-1 overflow-hidden`}
     >
       <motion.div
-        className="medium-frame relative cursor-pointer w-[250px] h-[250px] overflow-hidden"
+        className="relative cursor-pointer w-[175px] h-[175px] overflow-hidden"
         onClick={(e) => {
           e.stopPropagation();
           setImageModal(item.image_path);
@@ -34,30 +34,16 @@ const CollabItem: FC<CollabItemProps> = (props: CollabItemProps) => {
           <Image
             src={item.image_path}
             alt={`Colab-${index}`}
-            // height={300}
-            // width={300}
             style={{ objectFit: "cover" }}
             fill
+            onLoadingComplete={() =>
+              setAssets && setAssets((prevState) => [(prevState[index] = true)])
+            }
           />
         )}
-        {item.exchange_art_url && item.twitter_url && (
-          <div className="absolute top-1.5 right-1.5 md:top-2.5 md:right-2.5 z-10 flex gap-1">
-            <div className=" transition-all duration-100` hover:outline hover:outline-white rounded-full">
-              <TwitterIcon url={item.twitter_url} />
-            </div>
-            <div
-              className={`cursor-pointer hover:outline hover:outline-white rounded-full transition-all duration-100`}
-              onClick={() =>
-                window.open(item.exchange_art_url, "_blank", "noreferrer")
-              }
-            >
-              <ExchangeIcon size={25} />
-            </div>
-          </div>
-        )}
       </motion.div>
-      <p className="hh-name text-center w-full text-[9px] md:text-[10px] max-w-[200px]">
-        {item.description}
+      <p className="text-center w-full max-w-[200px] font-secondary ">
+        {item.name}
       </p>
     </div>
   );

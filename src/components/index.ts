@@ -25,6 +25,7 @@ const TabBarItem = dynamic(() => import("./atoms/TabBarItem"));
 const Underline = dynamic(() => import("./atoms/Underline"));
 const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
 const TextHeader = dynamic(() => import("./atoms/TextHeader"));
+const GalleryArrowButton = dynamic(() => import("./atoms/GalleryArrowButton"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const Logo = dynamic(() => import("./molecules/Logo"));
@@ -102,5 +103,6 @@ export {
   MoreView,
   TextHeader,
   Collabs,
-  CollabItem
+  CollabItem,
+  GalleryArrowButton,
 };

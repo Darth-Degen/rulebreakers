@@ -45,7 +45,7 @@ const AssetsView: FC = () => {
 
   return (
     <motion.div
-      className="w-full h-full flex flex-col items-center justify-start px-6 sm:px-10 mt-28 xl:mt-0"
+      className="w-full h-full flex flex-col items-center justify-start px-6 sm:px-10 mt-28 lg:mt-24 3xl:mt-32"
       {...enterAnimation}
     >
       <Dropdown
