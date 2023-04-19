@@ -37,8 +37,15 @@ const CollabItem: FC<CollabItemProps> = (props: CollabItemProps) => {
             style={{ objectFit: "cover" }}
             fill
             onLoadingComplete={() =>
-              setAssets && setAssets((prevState) => [(prevState[index] = true)])
+              setAssets && setAssets((prevState) => [(prevState[0] = true)])
             }
+            // onLoadingComplete={() =>
+            //   setAssets &&
+            //   setAssets((prevState) => [
+            //     ...prevState,
+            //     (prevState[index] = true),
+            //   ])
+            // }
           />
         )}
       </motion.div>
