@@ -3,7 +3,7 @@ import { Edition } from "@types";
 export const editions: Edition[] = [
   {
     id: 0, 
-    image_path:"/images/collabs/observer.mp4",
+    image_path:"/images/editions/observer.mp4",
     name:"Observer",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/",
@@ -12,7 +12,7 @@ export const editions: Edition[] = [
   },
   {
     id: 1,
-    image_path:"/images/collabs/blinx.png",
+    image_path:"/images/editions/blinx.png",
     name:"Hyblinxx",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/hyblinxx",
@@ -20,7 +20,7 @@ export const editions: Edition[] = [
   },
   {
     id: 2,
-    image_path:"/images/collabs/adam.mp4",
+    image_path:"/images/editions/adam.mp4",
     name:"Adam Ape",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/adam_ape_",
@@ -29,7 +29,7 @@ export const editions: Edition[] = [
   },
   {
     id: 3,
-    image_path:"/images/collabs/rgb.png",
+    image_path:"/images/editions/rgb.png",
     name:"RGB",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -37,7 +37,7 @@ export const editions: Edition[] = [
   },
   {
     id: 4,
-    image_path:"/images/collabs/rupture.png",
+    image_path:"/images/editions/rupture.png",
     name:"Rupture",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -45,7 +45,7 @@ export const editions: Edition[] = [
   },
   {
     id: 5,
-    image_path:"/images/collabs/scum.png",
+    image_path:"/images/editions/scum.png",
     name:"Scum",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/SCUMSOL", 
@@ -53,7 +53,7 @@ export const editions: Edition[] = [
   },
   {
     id: 6,
-    image_path:"/images/collabs/sdnt.png",
+    image_path:"/images/editions/sdnt.png",
     name:"SDNT",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -61,7 +61,7 @@ export const editions: Edition[] = [
   },
   {
     id: 7,
-    image_path:"/images/collabs/utopia.png",
+    image_path:"/images/editions/utopia.png",
     name:"Utopia",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -69,7 +69,7 @@ export const editions: Edition[] = [
   },
   {
     id: 8,
-    image_path:"/images/collabs/zenom.gif",
+    image_path:"/images/editions/zenom.gif",
     name:"Zen0m",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/zen0m", 
@@ -77,7 +77,7 @@ export const editions: Edition[] = [
   },
   {
     id: 9,
-    image_path:"/images/collabs/gatesofhell.png",
+    image_path:"/images/editions/gatesofhell.png",
     name:"Gates of Hell",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -85,7 +85,7 @@ export const editions: Edition[] = [
   },
   {
     id: 10,
-    image_path:"/images/collabs/katabasis.png",
+    image_path:"/images/editions/katabasis.png",
     name:"Katabasis",
     description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
     twitter_url:"https://twitter.com/HotHeadsNFT", 

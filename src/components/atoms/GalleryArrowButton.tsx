@@ -22,7 +22,9 @@ const GalleryArrowButton: FC<ArrowProps> = (props: ArrowProps) => {
           direction === "right" ? "-right-0 md:-right-16" : "left-0 md:-left-16"
         }
         ${
-          componentProps.disabled ? "opacity-30" : "cursor-pointer "
+          componentProps.disabled
+            ? "opacity-20 cursor-not-allowed"
+            : "cursor-pointer "
         } transition-opacity duration-200  `}
       >
         {direction === "left" ? (

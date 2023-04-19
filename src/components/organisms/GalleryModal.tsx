@@ -7,7 +7,7 @@ import {
   useCallback,
   useContext,
 } from "react";
-import { ImageShimmer, Modal } from "@components";
+import { ImageShimmer, Modal, ModalContent } from "@components";
 import { midClickAnimation, rulebreakers, ViewContext } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
 import download from "downloadjs";
@@ -129,24 +129,11 @@ const GalleryModal: FC<Props> = (props: Props) => {
           )}
         </div>
         {/* col 2 - text */}
-        <div className="flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10 lg:mt-6">
-          <h2 className="text-5xl whitespace-nowrap sm:text-7xl bg-clip-text bg-orange-gradient text-transparent uppercase -mr-1 md:mr-0">
-            {brkr.name}
-          </h2>
-          <p className="font-secondary text-sm md:text-base  ">
-            {brkr.description}
-          </p>
-          <motion.div className="cursor-pointer" {...midClickAnimation}>
-            <a href={""} rel="noreferrer" target="_blank">
-              <ImageShimmer
-                src="/images/icons/exchange.png"
-                height={80}
-                width={80}
-                alt="menu"
-              />
-            </a>
-          </motion.div>
-        </div>
+        <ModalContent
+          header={brkr.name}
+          description={brkr.description}
+          exchangeUrl={brkr.exchange}
+        />
       </div>
     </Modal>
   );

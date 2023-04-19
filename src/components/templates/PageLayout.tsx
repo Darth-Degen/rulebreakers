@@ -5,6 +5,7 @@ import {
   Footer,
   SplashScreen,
   GalleryModal,
+  CollabModal,
 } from "@components";
 import { enterAnimation, ViewContext } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
@@ -28,10 +29,18 @@ const PageLayout: FC<Props> = (props: Props) => {
     assets = [],
   } = props;
 
-  //context for splash screen & modal
+  //context for splash screen & modals
   const [showView, setShowView] = useState<boolean>(false);
   const [galleryModalId, setGalleryModalId] = useState<number>(-1);
-  const value = { showView, setShowView, galleryModalId, setGalleryModalId };
+  const [collabModal, setCollabModal] = useState({ id: -1, type: "" });
+  const value = {
+    showView,
+    setShowView,
+    galleryModalId,
+    setGalleryModalId,
+    collabModal,
+    setCollabModal,
+  };
 
   return (
     <ViewContext.Provider value={value}>
@@ -65,9 +74,17 @@ const PageLayout: FC<Props> = (props: Props) => {
         <AnimatePresence mode="wait">
           {galleryModalId !== -1 && (
             <GalleryModal
+              key="gallery-modal"
               imageId={galleryModalId}
               setImageId={setGalleryModalId}
-              key="gallery-modal"
+            />
+          )}
+          {collabModal.id !== -1 && (
+            <CollabModal
+              key="collab-modal"
+              id={collabModal.id}
+              type={collabModal.type}
+              setCollab={setCollabModal}
             />
           )}
         </AnimatePresence>

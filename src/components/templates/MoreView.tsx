@@ -1,6 +1,5 @@
 import {
   FC,
-  useContext,
   useState,
   useEffect,
   useCallback,
@@ -8,7 +7,6 @@ import {
   SetStateAction,
 } from "react";
 import {
-  ViewContext,
   enterAnimation,
   midExitAnimation,
   collabs,
@@ -21,26 +19,20 @@ import {
   Collabs,
   GalleryArrowButton,
 } from "@components";
-import { Rulebreakers, Collab, Edition } from "@types";
+import { Collab, Edition } from "@types";
 
 interface Props {
-  setAssets?: Dispatch<SetStateAction<boolean[]>>;
   pageSize: number;
   activeTab: number;
   setActiveTab: Dispatch<SetStateAction<number>>;
 }
 
 const MoreView: FC<Props> = (props: Props) => {
-  const { setAssets, pageSize, activeTab, setActiveTab } = props;
-  const { setGalleryModalId } = useContext(ViewContext);
-
-  const [selectedAsset, setSelectedAsset] = useState<
-    Rulebreakers | undefined
-  >();
+  const { pageSize, activeTab, setActiveTab } = props;
 
   //pagination
   const [pageNum, setPageNum] = useState<number>(1);
-  const [data, setData] = useState<Collab[] | Edition[]>(collabs);
+  const [data, setData] = useState<Collab[] | Edition[]>(editions);
 
   const back = (): void => {
     if (pageNum === 1) return;
@@ -53,7 +45,7 @@ const MoreView: FC<Props> = (props: Props) => {
   };
 
   const getDataSet = useCallback(() => {
-    return activeTab === 0 ? collabs : editions;
+    return activeTab === 0 ? editions : collabs;
   }, [activeTab]);
 
   //handles tab switch
@@ -89,7 +81,7 @@ const MoreView: FC<Props> = (props: Props) => {
 
       <div className="flex flex-col h-full items-center justify-between 3xl:justify-center gap-10 md:gap-6 3xl:gap-14 pt-6">
         <TabSelector
-          tabs={["collabs", "editions"]}
+          tabs={["editions", "collabs"]}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
@@ -105,25 +97,13 @@ const MoreView: FC<Props> = (props: Props) => {
           <div className="flex flex-col gap-2 items-center">
             <AnimatePresence mode="wait">
               {activeTab === 0 && (
-                <motion.div {...midExitAnimation} key="collab">
-                  <Collabs
-                    collabs={data}
-                    setImageModal={(e) =>
-                      console.log("setImageModal collab", e)
-                    }
-                    setAssets={setAssets}
-                  />
+                <motion.div {...midExitAnimation} key="editions">
+                  <Collabs collabs={data} />
                 </motion.div>
               )}
               {activeTab === 1 && (
-                <motion.div {...midExitAnimation} key="editions">
-                  <Collabs
-                    collabs={data}
-                    setImageModal={(e) =>
-                      console.log("setImageModal editions", e)
-                    }
-                    setAssets={setAssets}
-                  />
+                <motion.div {...midExitAnimation} key="collab">
+                  <Collabs collabs={data} />
                 </motion.div>
               )}
             </AnimatePresence>

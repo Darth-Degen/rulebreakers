@@ -23,22 +23,17 @@ const More: NextPage = () => {
   }, [activeTab, winWidth]);
 
   //set number of assets on load
-  useEffect(() => {
-    let _assets: boolean[] = [];
-    for (let i = 0; i < pageSize; i++) {
-      _assets.push(false);
-    }
-    setAssets(_assets);
-  }, []);
-
-  useEffect(() => {
-    console.log("assets ", assets);
-  }, [assets]);
+  // useEffect(() => {
+  //   let _assets: boolean[] = [];
+  //   for (let i = 0; i < pageSize; i++) {
+  //     _assets.push(false);
+  //   }
+  //   setAssets(_assets);
+  // }, []);
 
   return (
     <PageLayout headerType="scroll" assets={assets}>
       <MoreView
-        setAssets={setAssets}
         pageSize={pageSize}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
