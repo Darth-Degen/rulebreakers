@@ -19,17 +19,15 @@ const AboutView: FC<Props> = (props: Props) => {
     >
       {/* content */}
       <motion.div
-        className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4 scale-90 lg:scale-100"
+        className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4  "
         {...slideRight(showView)}
       >
         <TextHeader>About</TextHeader>
         <p className="font-secondary text-sm md:text-base 3xl:text-xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint.
+          A community of those who aren&apos;t afraid to break the rules
+          sometimes. Maybe a little rough around the edges. Who defy the norms
+          of society. Doing things their own way. Punks, Creatives, Brutes,
+          Thieves, Vandals.... BRKRS. A 1/1 PFP experiment by PENCILX.
         </p>
       </motion.div>
       {/* image */}
