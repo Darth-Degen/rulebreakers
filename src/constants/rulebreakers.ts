@@ -3,7 +3,7 @@ import { Rulebreakers } from "@types";
 export const rulebreakers: Rulebreakers[] = [
   {
     id: 0,
-    name:"pencilz",
+    name:"pencilx",
     src: "/images/rulebreakers/000.png",
     extras:[],
     description:
