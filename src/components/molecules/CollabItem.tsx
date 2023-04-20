@@ -19,7 +19,7 @@ const CollabItem: FC<CollabItemProps> = (props: CollabItemProps) => {
       type: item.image_path.includes("/editions/") ? "editions" : "collabs",
     });
   };
-
+  console.log("item.image_path ", item.image_path);
   return (
     <div
       className={`rounded-lg md:rounded relative flex flex-col items-center w-full gap-3 py-1 overflow-hidden`}

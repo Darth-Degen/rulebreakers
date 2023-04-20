@@ -3,7 +3,7 @@ import { Edition } from "@types";
 export const editions: Edition[] = [
   {
     id: 0, 
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/",
@@ -11,7 +11,7 @@ export const editions: Edition[] = [
   },
   {
     id: 1,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/hyblinxx",
@@ -19,7 +19,7 @@ export const editions: Edition[] = [
   },
   {
     id: 2,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/adam_ape_",
@@ -27,7 +27,7 @@ export const editions: Edition[] = [
   },
   {
     id: 3,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -35,7 +35,7 @@ export const editions: Edition[] = [
   },
   {
     id: 4,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -43,7 +43,7 @@ export const editions: Edition[] = [
   },
   {
     id: 5,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/SCUMSOL", 
@@ -51,7 +51,7 @@ export const editions: Edition[] = [
   },
   {
     id: 6,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -59,7 +59,7 @@ export const editions: Edition[] = [
   },
   {
     id: 7,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -67,7 +67,7 @@ export const editions: Edition[] = [
   },
   {
     id: 8,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/zen0m", 
@@ -75,7 +75,7 @@ export const editions: Edition[] = [
   },
   {
     id: 9,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -106,7 +106,7 @@ export const editions: Edition[] = [
   },
   {
     id: 13,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -114,7 +114,7 @@ export const editions: Edition[] = [
   },
   {
     id: 14,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
@@ -122,7 +122,7 @@ export const editions: Edition[] = [
   },
   {
     id: 15,
-    image_path:"/images/editions/X.png",
+    image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/SCUMSOL", 

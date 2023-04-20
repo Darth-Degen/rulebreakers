@@ -3,7 +3,7 @@ import { Collab } from "@types";
 export const collabs: Collab[] = [
   {
     id: 0, 
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/",
@@ -11,7 +11,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 1,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/",
@@ -19,7 +19,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 2,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/",
@@ -27,7 +27,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 3,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -35,7 +35,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 4,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -43,7 +43,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 5,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/SCUMSOL", 
@@ -51,7 +51,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 6,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -59,7 +59,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 7,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -67,7 +67,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 8,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -75,7 +75,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 9,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -83,14 +83,14 @@ export const collabs: Collab[] = [
   },
   {
     id: 10,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
     exchange_art_url:"" 
   },{
     id: 11,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/",
@@ -98,7 +98,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 12,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/",
@@ -106,7 +106,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 13,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -114,7 +114,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 14,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
@@ -122,7 +122,7 @@ export const collabs: Collab[] = [
   },
   {
     id: 15,
-    image_path:"/images/collabs/X.png",
+    image_path:"/images/collabs/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/", 
