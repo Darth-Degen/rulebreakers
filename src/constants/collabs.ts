@@ -47,7 +47,7 @@ export const collabs: Collab[] = [
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/SCUMSOL", 
-    exchange_art_url:"" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 6,
