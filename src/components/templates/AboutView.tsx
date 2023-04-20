@@ -19,11 +19,11 @@ const AboutView: FC<Props> = (props: Props) => {
     >
       {/* content */}
       <motion.div
-        className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-4  "
+        className="flex flex-col items-center justify-center gap-8 xl:gap-4 text-center max-w-[550px] px-2"
         {...slideRight(showView)}
       >
         <TextHeader>About</TextHeader>
-        <p className="font-secondary text-sm md:text-base 3xl:text-xl">
+        <p className="font-secondary text-sm md:text-base 3xl:text-xl px-3 max-w-[500px]">
           A community of those who aren&apos;t afraid to break the rules
           sometimes. Maybe a little rough around the edges. Who defy the norms
           of society. Doing things their own way. Punks, Creatives, Brutes,

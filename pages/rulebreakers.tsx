@@ -6,7 +6,7 @@ const Rulebreakers: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false, false]);
 
   return (
-    <PageLayout headerType={"scroll"} mainClass="!h-auto" assets={assets}>
+    <PageLayout headerType={"fixed"} mainClass="!h-auto" assets={assets}>
       <RulebreakersView setAssets={setAssets} />
     </PageLayout>
   );

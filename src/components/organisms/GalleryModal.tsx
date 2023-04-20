@@ -56,7 +56,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
         setImageId(-1);
       }}
     >
-      <div className="flex gap-3 flex-col-reverse lg:flex-row items-center justify-center h-full w-full mt-10 lg:mt-0 p-10 overflow-y-auto lg:overflow-hidden">
+      <div className="flex gap-3 flex-col-reverse lg:flex-row items-center justify-around h-full w-full mt-10 lg:mt-0 p-10 overflow-y-auto lg:overflow-hidden">
         {/* col 1 - images */}
         <div className="flex flex-col gap-4 items-center justify-center h-full mt-4 lg:mt-12 mb-64 lg:mb-0">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-6">
@@ -115,7 +115,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
           {/* download */}
           {src && (
             <motion.div
-              className="cursor-pointer"
+              className="cursor-pointer lg:ml-24"
               {...midClickAnimation}
               onClick={() => download(src)}
             >

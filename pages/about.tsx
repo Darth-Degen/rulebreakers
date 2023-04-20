@@ -8,10 +8,7 @@ const About: NextPage = () => {
   const [winWidth, winHeight] = useWindowSize();
 
   return (
-    <PageLayout
-      headerType={winWidth < 768 ? "scroll" : "absolute"}
-      assets={assets}
-    >
+    <PageLayout headerType="absolute" assets={assets}>
       <AboutView setAssets={setAssets} />
     </PageLayout>
   );

@@ -39,7 +39,7 @@ const Footer: FC = () => {
       // {...midEnterAnimation}
       style={{ y }}
     >
-      <div className="flex flex-col sm:flex-row items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-center gap-2 md:gap-4">
         <motion.div className="sm:w-1/3" {...enterAnimation}>
           <Link href="/">
             <Image
@@ -80,7 +80,7 @@ const Footer: FC = () => {
             </a>
           </div>
         </div>
-        <div className="sm:w-1/3 flex justify-end gap-2">
+        <div className="hidden md:flex md:w-1/3  justify-end gap-2">
           {/* exp */}
           <motion.div
             className="flex xl:w-1/4 justify-end "

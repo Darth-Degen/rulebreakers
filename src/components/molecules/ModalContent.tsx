@@ -13,7 +13,7 @@ interface ContentProps {
 const ModalContent: FC<ContentProps> = (props: ContentProps) => {
   const { header, description, exchangeUrl, twitterUrl } = props;
   return (
-    <div className="flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10 lg:mt-6">
+    <div className="flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10  mt-4 lg:mt-12">
       <TextHeader> {header}</TextHeader>
       <p className="font-secondary text-sm md:text-base  ">{description}</p>
       {exchangeUrl && exchangeUrl.length > 0 && (
@@ -21,8 +21,8 @@ const ModalContent: FC<ContentProps> = (props: ContentProps) => {
           <a href={exchangeUrl} rel="noreferrer" target="_blank">
             <ImageShimmer
               src="/images/icons/exchange.png"
-              height={80}
-              width={80}
+              height={50}
+              width={50}
               alt="menu"
             />
           </a>
