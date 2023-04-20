@@ -38,6 +38,7 @@ const AssetsView: FC = () => {
         src = `/images/assets/${phone ? "phone" : "laptop"}/${
           selectedAsset?.name.replace(" ", "-") ?? "pencilz"
         }.png`;
+        console.log("src ", src);
         break;
     }
     return src;
