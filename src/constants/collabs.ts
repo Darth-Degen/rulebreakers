@@ -14,7 +14,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/hyblinxx",
+    twitter_url:"https://twitter.com/",
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts"  
   },
   {
@@ -22,7 +22,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/adam_ape_",
+    twitter_url:"https://twitter.com/",
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -30,7 +30,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -38,7 +38,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -54,7 +54,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -62,7 +62,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -70,7 +70,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/zen0m", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -78,7 +78,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -86,14 +86,14 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"" 
   },{
     id: 11,
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/hyblinxx",
+    twitter_url:"https://twitter.com/",
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts"  
   },
   {
@@ -101,7 +101,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/adam_ape_",
+    twitter_url:"https://twitter.com/",
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -109,7 +109,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -117,7 +117,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -125,7 +125,7 @@ export const collabs: Collab[] = [
     image_path:"/images/collabs/X.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/SCUMSOL", 
+    twitter_url:"https://twitter.com/", 
     exchange_art_url:"" 
   },
 ];

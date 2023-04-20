@@ -52,6 +52,9 @@ const PageLayout: FC<Props> = (props: Props) => {
         <PageHead
           title="BRKRS"
           description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
+          // url="https://rulebreakers.xyz/"
+          url="https://rulebreakers.vercel.app/"
+          twitter="rulebreakers___"
         />
         {/* header */}
         <Header headerType={headerType} />
