@@ -54,9 +54,9 @@ const AssetsView: FC = () => {
         collections={rulebreakers}
       />
 
-      <div className="flex flex-col items-center justify-evenly 3xl:justify-center gap-10 md:gap-2 3xl:gap-14 h-full pt-6 md:pt-0">
+      <div className="flex flex-col items-center justify-center 3xl:justify-center gap-10 md:gap-2 3xl:gap-14 h-full pt-6 md:pt-0">
         <TabSelector
-          tabs={["pfp crop", "banner", "wallpaper"]}
+          tabs={["full png", "banner", "wallpaper"]}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
@@ -121,7 +121,7 @@ const Asset: FC<Props> = (props: Props) => {
         className={className}
       />
       <motion.div
-        className="cursor-pointer pt-2"
+        className="cursor-pointer pt-4"
         {...midClickAnimation}
         onClick={() => download(src)}
       >

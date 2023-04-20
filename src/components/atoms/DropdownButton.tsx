@@ -34,9 +34,9 @@ const DropdownButton: FC<Props> = (props: Props) => {
       >
         {/* <ArrowIcon color={"#d1d5db"} /> */}
         <Image
-          src="/images/icons/arrow_left.png"
-          width={50}
-          height={50}
+          src="/images/icons/arrow_down.png"
+          width={40}
+          height={40}
           alt="Left Arrow"
         />
       </motion.div>

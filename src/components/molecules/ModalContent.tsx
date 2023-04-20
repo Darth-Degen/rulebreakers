@@ -16,16 +16,18 @@ const ModalContent: FC<ContentProps> = (props: ContentProps) => {
     <div className="flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10 lg:mt-6">
       <TextHeader> {header}</TextHeader>
       <p className="font-secondary text-sm md:text-base  ">{description}</p>
-      <motion.div className="cursor-pointer" {...midClickAnimation}>
-        <a href={exchangeUrl} rel="noreferrer" target="_blank">
-          <ImageShimmer
-            src="/images/icons/exchange.png"
-            height={80}
-            width={80}
-            alt="menu"
-          />
-        </a>
-      </motion.div>
+      {exchangeUrl && exchangeUrl.length > 0 && (
+        <motion.div className="cursor-pointer" {...midClickAnimation}>
+          <a href={exchangeUrl} rel="noreferrer" target="_blank">
+            <ImageShimmer
+              src="/images/icons/exchange.png"
+              height={80}
+              width={80}
+              alt="menu"
+            />
+          </a>
+        </motion.div>
+      )}
     </div>
   );
 };

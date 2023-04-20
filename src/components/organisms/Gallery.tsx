@@ -10,10 +10,6 @@ const Gallery: FC = () => {
   const animationRef = useRef<string>("");
   const { setGalleryModalId } = useContext(ViewContext);
 
-  useEffect(() => {
-    console.log(imageIndex), [imageIndex];
-  });
-
   const back = (): void => {
     animationRef.current = "right";
     setImageIndex((prevState) => {
@@ -54,7 +50,6 @@ const Gallery: FC = () => {
       />
       <div className="flex gap-8 ">
         {rulebreakers.map((image, index) => {
-          console.log(`/images/rulebreakers/${formatImageSrc(imageIndex)}.png`);
           return (
             <>
               {index === rulebreakers[imageIndex].id && (

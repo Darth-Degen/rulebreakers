@@ -20,6 +20,11 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
     [0, showTransform ? winHeight * 2 : 0],
     [0, showTransform ? winHeight * 1.25 : 0]
   );
+  const y2 = useTransform(
+    scrollY,
+    [0, showTransform ? winHeight * 2 : 0],
+    [0, showTransform ? winHeight * 1.75 : 0]
+  );
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
@@ -67,7 +72,13 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
         </motion.div>
       </motion.div>
       {/* scroll arrows */}
-      <motion.div {...enterAnimation}>
+      <motion.div
+        initial={{ opacity: 1 }}
+        style={{
+          y: y2,
+          opacity,
+        }}
+      >
         <Image
           src="/images/scrollnow.png"
           width={200}
@@ -79,7 +90,13 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
           className="absolute left-1/2 top-1/3 transform -translate-x-1/2 md:left-auto sm:top-auto sm:right-0 sm:bottom-0 "
         />
       </motion.div>
-      <motion.div {...enterAnimation}>
+      <motion.div
+        initial={{ opacity: 1 }}
+        style={{
+          y: y2,
+          opacity,
+        }}
+      >
         <Image
           src="/images/scrollnow.png"
           width={200}

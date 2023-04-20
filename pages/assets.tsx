@@ -3,7 +3,10 @@ import { NextPage } from "next";
 
 const Assets: NextPage = () => {
   return (
-    <PageLayout headerType="scroll">
+    <PageLayout
+      headerType="scroll"
+      mainClass=" md:!h-[90vh] lg:!h-[80vh] xl:!h-[90vh]"
+    >
       <AssetsView />
     </PageLayout>
   );

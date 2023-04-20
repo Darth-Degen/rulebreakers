@@ -35,9 +35,6 @@ const GalleryModal: FC<Props> = (props: Props) => {
   useEffect(() => {
     setItem(type === "editions" ? editions[id] : collabs[id]);
   }, [id, type]);
-  useEffect(() => {
-    console.log(type, item);
-  }, [id, item, type]);
 
   return (
     <Modal

@@ -11,7 +11,7 @@ const TabSelector: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row flex-wrap items-center lg:items-start justify-center w-full gap-1 md:gap-4 ${className} `}
+      className={`flex flex-col md:flex-row flex-wrap items-center lg:items-start justify-center w-full gap-1 md:gap-4 px-10 ${className} `}
     >
       {tabs.map((item: string, index) => (
         <div
