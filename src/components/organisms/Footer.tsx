@@ -80,7 +80,7 @@ const Footer: FC = () => {
             </a>
           </div>
         </div>
-        <div className="hidden md:flex md:w-1/3  justify-end gap-2">
+        <div className="hidden sm:flex sm:w-1/3  justify-end gap-2">
           {/* exp */}
           <motion.div
             className="flex xl:w-1/4 justify-end "
