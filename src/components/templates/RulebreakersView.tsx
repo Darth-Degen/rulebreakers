@@ -27,7 +27,7 @@ const RulebreakersView: FC<Props> = (props: Props) => {
         style={{ y: y2 }}
       ></motion.div>
       <motion.div
-        className="h-[60vh] md:h-[85vh] flex flex-col justify-start items-center gap-4 w-screen md:mt-52"
+        className="h-[60vh] md:h-[85vh] flex flex-col justify-center items-center gap-4 w-screen md:mt-52"
         style={{ y: showTransform ? y : 0 }}
       >
         <TextHeader>gallery</TextHeader>

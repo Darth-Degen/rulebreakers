@@ -1,14 +1,18 @@
-import { FC, useContext, useRef, useState } from "react";
+import { FC, useContext, useEffect, useRef, useState } from "react";
 import { useWindowSize } from "@hooks";
 import { ImageShimmer, GalleryArrowButton } from "@components";
 import { rulebreakers, ViewContext, imageSlideAnimation } from "@constants";
 
 const Gallery: FC = () => {
-  const [imageIndex, setImageIndex] = useState<number>(1);
+  const [imageIndex, setImageIndex] = useState<number>(0);
   const [winWidth, winHeight] = useWindowSize();
 
   const animationRef = useRef<string>("");
   const { setGalleryModalId } = useContext(ViewContext);
+
+  useEffect(() => {
+    console.log(imageIndex), [imageIndex];
+  });
 
   const back = (): void => {
     animationRef.current = "right";
@@ -50,13 +54,12 @@ const Gallery: FC = () => {
       />
       <div className="flex gap-8 ">
         {rulebreakers.map((image, index) => {
+          console.log(`/images/rulebreakers/${formatImageSrc(imageIndex)}.png`);
           return (
             <>
-              {index + 1 === rulebreakers[imageIndex].id && (
+              {index === rulebreakers[imageIndex].id && (
                 <ImageShimmer
-                  src={`/images/rulebreakers/${formatImageSrc(
-                    imageIndex + 1
-                  )}.png`}
+                  src={`/images/rulebreakers/${formatImageSrc(imageIndex)}.png`}
                   alt="brkrs"
                   height={300}
                   width={300}
@@ -67,14 +70,14 @@ const Gallery: FC = () => {
                     animationRef.current
                   )}
                   hover
-                  onClick={() => setGalleryModalId(imageIndex + 1)}
+                  onClick={() => setGalleryModalId(imageIndex)}
                 />
               )}
               {winWidth >= 768 &&
                 index + 1 === rulebreakers[imageIndex].id + 1 && (
                   <ImageShimmer
                     src={`/images/rulebreakers/${formatImageSrc(
-                      imageIndex + 2
+                      imageIndex + 1
                     )}.png`}
                     alt="brkrs"
                     height={300}
@@ -86,14 +89,14 @@ const Gallery: FC = () => {
                       animationRef.current
                     )}
                     hover
-                    onClick={() => setGalleryModalId(imageIndex + 2)}
+                    onClick={() => setGalleryModalId(imageIndex + 1)}
                   />
                 )}
               {winWidth >= 1024 &&
                 index + 1 === rulebreakers[imageIndex].id + 2 && (
                   <ImageShimmer
                     src={`/images/rulebreakers/${formatImageSrc(
-                      imageIndex + 3
+                      imageIndex + 2
                     )}.png`}
                     alt="brkrs"
                     height={300}
@@ -105,7 +108,7 @@ const Gallery: FC = () => {
                       animationRef.current
                     )}
                     hover
-                    onClick={() => setGalleryModalId(imageIndex + 3)}
+                    onClick={() => setGalleryModalId(imageIndex + 2)}
                   />
                 )}
             </>

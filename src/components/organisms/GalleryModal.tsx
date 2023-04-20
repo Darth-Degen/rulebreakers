@@ -26,7 +26,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
 
   const folder = formatImageSrc(imageId);
   const mainImage = `/images/rulebreakers/${folder}.png`;
-  const brkr = rulebreakers[imageId - 1];
+  const brkr = rulebreakers[imageId];
 
   const { galleryModalId } = useContext(ViewContext);
 
@@ -79,18 +79,18 @@ const GalleryModal: FC<Props> = (props: Props) => {
                 <ImageShimmer
                   key={index}
                   src={`/images/rulebreakers/${folder}/${formatImageSrc(
-                    index + 1
+                    index
                   )}.png`}
                   alt="BRKRS"
                   width={75}
                   height={75}
                   className={`cursor-pointer ${
-                    selected === index + 1
+                    selected === index
                       ? "outline outline-light-orange outline-offset-2"
                       : ""
                   }`}
                   hover
-                  onClick={() => setSelected(index + 1)}
+                  onClick={() => setSelected(index)}
                 />
               ))}
             </div>
