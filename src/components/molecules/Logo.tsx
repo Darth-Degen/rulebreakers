@@ -13,7 +13,7 @@ const Logo: FC = () => {
       <Link href="/">
         <motion.div {...midClickAnimation}>
           <Image
-            src="/images/logo_sm.png"
+            src="/images/logo.png"
             height={216 / 2.75}
             width={216 / 2.75}
             alt="BRKR"
