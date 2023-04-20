@@ -26,17 +26,17 @@ const AssetsView: FC = () => {
     switch (id) {
       case 0:
         src = `/images/assets/image/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilz"
+          selectedAsset?.name.replace(" ", "-") ?? "pencilx"
         }.png`;
         break;
       case 1:
         src = `/images/assets/banner/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilz"
+          selectedAsset?.name.replace(" ", "-") ?? "pencilx"
         }.png`;
         break;
       case 2:
         src = `/images/assets/${phone ? "phone" : "laptop"}/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilz"
+          selectedAsset?.name.replace(" ", "-") ?? "pencilx"
         }.png`;
         console.log("src ", src);
         break;
@@ -74,7 +74,7 @@ const AssetsView: FC = () => {
             {activeTab === 1 && (
               <Asset
                 key={1}
-                src={getSrc(activeTab) ?? `/images/assets/banner/pencilz.png`}
+                src={getSrc(activeTab) ?? `/images/assets/banner/pencilx.png`}
                 className="h-[38vh]  w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
               />
             )}
@@ -87,7 +87,7 @@ const AssetsView: FC = () => {
                 <Asset
                   src={
                     getSrc(activeTab, true) ??
-                    `/images/assets/phone/pencilz.png`
+                    `/images/assets/phone/pencilx.png`
                   }
                   className="h-[38vh]  w-screen md:w-[20vh] -z-10 py-10 px-2 !self-center"
                 />
