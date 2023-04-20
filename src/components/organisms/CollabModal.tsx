@@ -43,7 +43,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
         setCollab((prevState) => ({ ...prevState, id: -1 }));
       }}
     >
-      <div className="flex gap-3 flex-col-reverse lg:flex-row items-center justify-center h-full w-full mt-10 lg:mt-0 p-10 overflow-y-auto lg:overflow-hidden">
+      <div className="flex gap-3 flex-col-reverse lg:flex-row items-center justify-evenly h-full w-full mt-10 lg:mt-0 p-10 overflow-y-auto lg:overflow-hidden">
         {/* col 1 - images */}
         <div className="flex flex-col gap-4 items-center justify-center h-full mt-4 lg:mt-12 mb-64 lg:mb-0">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-6">
@@ -58,8 +58,8 @@ const GalleryModal: FC<Props> = (props: Props) => {
                   {item.image_path.endsWith(".mp4") ||
                   item.image_path.endsWith(".mov") ? (
                     <video
-                      width="400"
-                      height="400"
+                      width="350"
+                      height="350"
                       controls
                       loop
                       className="rounded"
@@ -70,8 +70,8 @@ const GalleryModal: FC<Props> = (props: Props) => {
                     <ImageShimmer
                       src={item.image_path}
                       alt="BRKRS"
-                      width={500}
-                      height={400}
+                      width={350}
+                      height={350}
                       className="max-h-[450px]"
                     />
                   )}
@@ -101,6 +101,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
             header={item.name}
             description={item.description}
             exchangeUrl={item.exchange_art_url}
+            className="mb-10"
           />
         )}
       </div>

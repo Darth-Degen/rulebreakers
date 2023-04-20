@@ -60,6 +60,7 @@ const AssetsView: FC = () => {
           tabs={["full pfp", "banner", "wallpaper"]}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
+          className="lg:ml-14 2xl:ml-16"
         />
         <div className="flex flex-col gap-2 items-center">
           <AnimatePresence mode="wait">

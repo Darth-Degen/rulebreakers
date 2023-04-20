@@ -105,7 +105,7 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
           onLoadingComplete={() =>
             setAssets && setAssets((prevState) => [(prevState[1] = true)])
           }
-          className="hidden md:block absolute left-0 bottom-0"
+          className="hidden md:block absolute left-0 -bottom-10"
         />
       </motion.div>
     </div>

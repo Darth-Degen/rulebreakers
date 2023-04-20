@@ -32,7 +32,7 @@ const More: NextPage = () => {
   // }, []);
 
   return (
-    <PageLayout headerType="scroll" assets={assets}>
+    <PageLayout headerType="absolute" assets={assets}>
       <MoreView
         pageSize={pageSize}
         activeTab={activeTab}
