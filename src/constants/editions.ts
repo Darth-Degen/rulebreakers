@@ -21,7 +21,7 @@ export const editions: Edition[] = [
     id: 2,
     image_path:"/images/editions/x.png",
     name:"X",
-    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx yourabitch xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/adam_ape_",
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
