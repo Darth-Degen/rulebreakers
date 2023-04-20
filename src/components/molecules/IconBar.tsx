@@ -11,7 +11,11 @@ const IconBar: FC<Props> = (props: Props) => {
   return (
     <div className={`flex items-center justify-center gap-4 ${className}`}>
       <motion.div className="cursor-pointer" {...midClickAnimation}>
-        <a href={""} rel="noreferrer" target="_blank">
+        <a
+          href={"https://discord.gg/4RTbsVnJ"}
+          rel="noreferrer"
+          target="_blank"
+        >
           <Image
             src="/images/icons/discord.png"
             height={144 / 2.5}
@@ -36,7 +40,11 @@ const IconBar: FC<Props> = (props: Props) => {
       </motion.div>
       {showExchange && (
         <motion.div className="cursor-pointer" {...midClickAnimation}>
-          <a href={""} rel="noreferrer" target="_blank">
+          <a
+            href={"https://exchange.art/series/RULE%20BREAKERS/nfts"}
+            rel="noreferrer"
+            target="_blank"
+          >
             <Image
               src="/images/icons/exchange.png"
               height={144 / 2.5}

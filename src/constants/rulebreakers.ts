@@ -11,28 +11,28 @@ export const rulebreakers: Rulebreakers[] = [
     exchange: "https://exchange.art/single/EsEx9Z22gNC1XphzKJjJEoubUr2insnisxduUXbzePoZ"
   },{
     id: 1,
-    name:"XXXXX",
+    name:"X",
     src: "/images/rulebreakers/001.png",
     extras:[],
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
   },{
     id: 2,
-    name:"XXXXX",
+    name:"XX",
     src: "/images/rulebreakers/002.png",
     extras:[],
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
   },{
     id: 3,
-    name:"XXXXX",
+    name:"XXX",
     src: "/images/rulebreakers/003.png",
     extras:[],
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
   },{
     id: 4,
-    name:"XXXXX",
+    name:"XXXX",
     src: "/images/rulebreakers/004.png",
     extras:[],
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",

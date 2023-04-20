@@ -25,7 +25,7 @@ const AssetsView: FC = () => {
     let src = "";
     switch (id) {
       case 0:
-        src = `/images/assets/pfp/${
+        src = `/images/assets/image/${
           selectedAsset?.name.replace(" ", "-") ?? "pencilz"
         }.png`;
         break;
@@ -54,7 +54,7 @@ const AssetsView: FC = () => {
         collections={rulebreakers}
       />
 
-      <div className="flex flex-col items-center justify-center 3xl:justify-center gap-10 md:gap-2 3xl:gap-14 h-full pt-6 md:pt-0">
+      <div className="flex flex-col items-center justify-center 3xl:justify-center gap-10 md:gap-2 xl:gap-5 3xl:gap-14 h-full pt-6 md:pt-0">
         <TabSelector
           tabs={["full png", "banner", "wallpaper"]}
           activeTab={activeTab}
