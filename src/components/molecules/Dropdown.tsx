@@ -49,7 +49,7 @@ const Dropdown: FC<Props> = (props: Props) => {
       <AnimatePresence mode="wait">
         {didHover && (
           <motion.div
-            className="absolute z-10 left-1/2 transform -translate-x-1/2"
+            className="absolute z-10 left-1/2 transform -translate-x-1/2 uppercase"
             key="dropdown-list"
             variants={dropdownAnimations}
             initial="hidden"

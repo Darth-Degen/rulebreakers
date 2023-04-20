@@ -57,7 +57,7 @@ const AssetsView: FC = () => {
 
       <div className="flex flex-col items-center justify-center 3xl:justify-center gap-10 md:gap-2 xl:gap-5 3xl:gap-14 h-full pt-6 md:pt-0">
         <TabSelector
-          tabs={["full png", "banner", "wallpaper"]}
+          tabs={["full pfp", "banner", "wallpaper"]}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
