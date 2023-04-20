@@ -55,7 +55,7 @@ const AssetsView: FC = () => {
         collections={rulebreakers}
       />
 
-      <div className="flex flex-col items-center justify-center 3xl:justify-center gap-10 md:gap-2 xl:gap-5 3xl:gap-14 h-full pt-6 md:pt-0">
+      <div className="flex flex-col items-center justify-center 3xl:justify-center gap-10 md:gap-2 lg:gap-12 3xl:gap-14 h-full pt-6 md:pt-0">
         <TabSelector
           tabs={["full pfp", "banner", "wallpaper"]}
           activeTab={activeTab}
@@ -67,14 +67,14 @@ const AssetsView: FC = () => {
               <Asset
                 key={0}
                 src={getSrc(activeTab)}
-                className="h-[40vh] lg:h-[45vh] w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
+                className="h-[38vh]  w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
               />
             )}
             {activeTab === 1 && (
               <Asset
                 key={1}
                 src={getSrc(activeTab) ?? `/images/assets/banner/pencilz.png`}
-                className="h-[40vh] lg:h-[45vh] w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
+                className="h-[38vh]  w-screen md:w-[80vh] -z-10 py-10 px-2 !self-center"
               />
             )}
             {activeTab === 2 && (
@@ -88,11 +88,11 @@ const AssetsView: FC = () => {
                     getSrc(activeTab, true) ??
                     `/images/assets/phone/pencilz.png`
                   }
-                  className="h-[40vh] lg:h-[45vh] w-screen md:w-[20vh] -z-10 py-10 px-2 !self-center"
+                  className="h-[38vh]  w-screen md:w-[20vh] -z-10 py-10 px-2 !self-center"
                 />
                 <Asset
                   src={getSrc(activeTab) ?? `/images/assets/pfp/laptop.png`}
-                  className="h-[40vh] lg:h-[45vh] w-screen md:w-[60vh] -z-10 py-10 px-2 !self-center"
+                  className="h-[38vh]  w-screen md:w-[60vh] -z-10 py-10 px-2 !self-center"
                 />
               </motion.div>
             )}

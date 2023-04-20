@@ -34,7 +34,7 @@ const CollabItem: FC<CollabItemProps> = (props: CollabItemProps) => {
       >
         {!imageLoaded && (
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded opacity-40"
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-custom-dark-gray via-custom-black to-custom-dark-gray rounded opacity-40"
             style={{
               backgroundSize: "200% 100%",
               animation: "shimmer 1.5s ease-in-out infinite",

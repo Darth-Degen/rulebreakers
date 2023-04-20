@@ -77,7 +77,7 @@ const MoreView: FC<Props> = (props: Props) => {
       className="w-full h-full flex flex-col items-center justify-start sm:px-10 mt-28 lg:mt-24 3xl:mt-32 gap-4"
       {...enterAnimation}
     >
-      <TextHeader>More</TextHeader>
+      <TextHeader className="opacity-60">More</TextHeader>
 
       <div className="flex flex-col h-full items-center justify-between 3xl:justify-center gap-10 md:gap-6 3xl:gap-14 pt-6">
         <TabSelector

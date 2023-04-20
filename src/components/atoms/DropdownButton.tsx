@@ -13,7 +13,7 @@ const DropdownButton: FC<Props> = (props: Props) => {
 
   return (
     <motion.button
-      className={`relative flex flex-col md:whitespace-nowrap text-6xl lg:text-7xl rounded-xl items-center transition-colors duration-500  ${
+      className={`relative flex flex-col md:whitespace-nowrap text-6xl lg:text-7xl rounded-xl items-center transition-colors duration-500 opacity-60  ${
         isActive ? "text-white" : "text-white"
       }
       ${
