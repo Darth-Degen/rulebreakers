@@ -7,7 +7,7 @@ export const rulebreakers: Rulebreakers[] = [
     src: "/images/rulebreakers/000.png",
     extras:[],
     description:
-      "amco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint.",
+      "Head honcho. Breaker of rules & apple pencil tips. Severe ADHD. Enjoys drinking coffee, creating art, crashing cars & setting them alight. Quite handsome also.",
     exchange: "https://exchange.art/single/EsEx9Z22gNC1XphzKJjJEoubUr2insnisxduUXbzePoZ"
   },{
     id: 1,
