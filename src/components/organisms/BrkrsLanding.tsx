@@ -87,7 +87,7 @@ const BrkrsLanding: FC<Props> = (props: Props) => {
           onLoadingComplete={() =>
             setAssets && setAssets((prevState) => [(prevState[1] = true)])
           }
-          className="absolute left-1/2 top-1/3 transform -translate-x-1/2 md:-translate-x-0 md:left-auto sm:top-auto sm:right-0 sm:bottom-0 "
+          className="absolute left-1/2 top-1/3 transform -translate-x-1/2 md:-translate-x-0 md:left-auto sm:top-auto sm:right-0 sm:-bottom-10 "
         />
       </motion.div>
       <motion.div
