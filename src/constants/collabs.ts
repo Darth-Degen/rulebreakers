@@ -2,93 +2,130 @@ import { Collab } from "@types";
 
 export const collabs: Collab[] = [
   {
-    id: 0,
-    image_path:"/images/collabs/adam.mp4",
-    name:"Adam Ape",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
-    twitter_url:"https://twitter.com/adam_ape_",
-    isVideo: true,
-    exchange_art_url:"https://exchange.art/single/35XGMeBrJe1SDM5Hbbs8mK72Mc68xVUuScNvazk23eHa"  
+    id: 0, 
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/",
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts"   
   },
   {
     id: 1,
-    image_path:"/images/collabs/blinx.png",
-    name:"Hyblinxx",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/hyblinxx",
-    exchange_art_url:"https://exchange.art/single/4vB3AQQ1WNyFhmDLgDshV1mbptrmBxzBRqaG3faWRdzb"  
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts"  
   },
   {
     id: 2,
-    image_path:"/images/collabs/observer.mp4",
-    name:"Observer",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
-    twitter_url:"https://twitter.com/",
-    isVideo: true,
-    exchange_art_url:"https://exchange.art/single/BB74ktLKARwcoK1PKp71NxMJ6qr5qnSeBEsdtWbpPVbM"   
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/adam_ape_",
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 3,
-    image_path:"/images/collabs/rgb.png",
-    name:"RGB",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
-    exchange_art_url:"https://exchange.art/single/2Gr2wxYFJLp2F54svtcm4L6zSNre1yVUmPXKZu7tdGqS" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 4,
-    image_path:"/images/collabs/rupture.png",
-    name:"Rupture",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
-    exchange_art_url:"https://exchange.art/single/8B8AZiRT4LCzoSMbsTAVpBYm4ntCPiipgGU1coh9xMe3" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 5,
-    image_path:"/images/collabs/scum.png",
-    name:"Scum",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/SCUMSOL", 
-    exchange_art_url:"https://exchange.art/single/EZ7HMtZKHgbuYZmchVJjLU8N5rpVuFSSqhPUDFA3y7ZF" 
+    exchange_art_url:"" 
   },
   {
     id: 6,
-    image_path:"/images/collabs/sdnt.png",
-    name:"SDNT",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
-    exchange_art_url:"https://exchange.art/single/DjNnqpuUjh5EV997CwEfuiG8Bschnm8uTq3qqGkf6Wtp" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 7,
-    image_path:"/images/collabs/utopia.png",
-    name:"Utopia",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
-    exchange_art_url:"https://exchange.art/single/3pcEKugt4SdB3HCyC1tXdZUuUeT4pZmXRCtYPwNjX7rz" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 8,
-    image_path:"/images/collabs/zenom.gif",
-    name:"Zen0m",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/zen0m", 
-    exchange_art_url:"https://exchange.art/single/HZmmCbFAquwmLgiuXJz6xs47jiZfULYz2usbnNPAKXk4" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 9,
-    image_path:"/images/collabs/gatesofhell.png",
-    name:"Gates of Hell",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
-    exchange_art_url:"https://exchange.art/series/Gates%20of%20Hell/nfts" 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
     id: 10,
-    image_path:"/images/collabs/katabasis.png",
-    name:"Katabasis",
-    description: "lorem ipsume thou art deeze nuts cunt fucker santos domingos epubis enum",
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     twitter_url:"https://twitter.com/HotHeadsNFT", 
-    exchange_art_url:"https://exchange.art/series/The%20Underworld%20Chronicles/nfts" 
+    exchange_art_url:"" 
+  },{
+    id: 11,
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/hyblinxx",
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts"  
+  },
+  {
+    id: 12,
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/adam_ape_",
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
+  },
+  {
+    id: 13,
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
+  },
+  {
+    id: 14,
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
+  },
+  {
+    id: 15,
+    image_path:"/images/collabs/X.png",
+    name:"X",
+    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    twitter_url:"https://twitter.com/SCUMSOL", 
+    exchange_art_url:"" 
   },
 ];

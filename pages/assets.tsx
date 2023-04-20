@@ -5,7 +5,7 @@ const Assets: NextPage = () => {
   return (
     <PageLayout
       headerType="scroll"
-      mainClass=" md:!h-[90vh] lg:!h-[80vh] xl:!h-[90vh]"
+      mainClass=" md:!h-[90vh] lg:!h-[80vh] 2xl:!h-[90vh]"
     >
       <AssetsView />
     </PageLayout>
