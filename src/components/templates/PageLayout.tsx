@@ -43,19 +43,19 @@ const PageLayout: FC<Props> = (props: Props) => {
   };
 
   return (
-    <ViewContext.Provider value={value}>
-      <div
-        className={`flex flex-col lg:min-h-screen h-full justify-between overflow-none  ${
-          fixed ? "absolute inset-0" : ""
-        }`}
-      >
-        <PageHead
-          title="BRKRS"
-          description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
-          url="https://rulebreakers.xyz/"
-          // url="https://rulebreakers.vercel.app/"
-          twitter="rulebreakers___"
-        />
+    <div
+      className={`flex flex-col lg:min-h-screen h-full justify-between overflow-none  ${
+        fixed ? "absolute inset-0" : ""
+      }`}
+    >
+      <PageHead
+        title="BRKRS"
+        description="unconventional. unorthodox. unphased. 1/1 pfp experiment by pencilxart"
+        url="https://rulebreakers.xyz/"
+        // url="https://rulebreakers.vercel.app/"
+        twitter="rulebreakers___"
+      />
+      <ViewContext.Provider value={value}>
         {/* header */}
         <Header headerType={headerType} />
 
@@ -91,8 +91,8 @@ const PageLayout: FC<Props> = (props: Props) => {
             />
           )}
         </AnimatePresence>
-      </div>
-    </ViewContext.Provider>
+      </ViewContext.Provider>
+    </div>
   );
 };
 export default PageLayout;
