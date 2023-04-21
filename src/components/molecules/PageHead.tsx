@@ -13,22 +13,39 @@ const PageHead: FC<Props> = (props: Props) => {
 
   return (
     <Head>
+      {/* <title>{title}</title>
+      <meta name="description" content={description} />
+      <link rel="icon" href="/favicon.ico" /> */}
+      {/* twitter */}
+      {/* <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={`@${twitter}`} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${url}meta.png`} />
+      <meta property="twitter:url" content={url} /> */}
+      {/* <!-- Open Graph / Facebook --> */}
+      {/* <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={`/meta.png`} /> */}
+
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="icon" href="/favicon.ico" />
       {/* twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={`@${twitter}`} />
+      <meta name="twitter:site" content="@rulebreakers___" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${url}meta.png`} />
-      <meta property="twitter:url" content={url} />
+      <meta name="twitter:image" content="https://rulebreakers.xyz/meta.png" />
+      <meta property="twitter:url" content={`https://rulebreakers.xyz`} />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content="https://rulebreakers.xyz" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`/meta.png`} />
+      <meta property="og:image" content="/meta.png" />
     </Head>
   );
 };
