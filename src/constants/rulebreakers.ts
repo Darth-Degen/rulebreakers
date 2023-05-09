@@ -11,18 +11,18 @@ export const rulebreakers: Rulebreakers[] = [
     exchange: "https://exchange.art/single/EsEx9Z22gNC1XphzKJjJEoubUr2insnisxduUXbzePoZ"
   },{
     id: 1,
-    name:"X",
+    name:"Billy",
     src: "/images/rulebreakers/001.png",
     extras:[],
-    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
+    description: "A bit rough around the edges. does things his own way. loves to get into brawls & likes his pancakes with maple syrup.",
+    exchange: "https://exchange.art/single/ExjxH1dXZ1oEQj3pJ7YjGPqZzF87rbs8oz1zADscHbKK"
   },{
     id: 2,
-    name:"XX",
+    name:"Marvin",
     src: "/images/rulebreakers/002.png",
     extras:[],
-    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
+    description: "Locked up in the big house for years Marv missed the simple things in life. Escape plan devised. Escape plan succeeded. nothing is sweeter than victory & your favourite cookie + ice cream from your childhood parlour.",
+    exchange: "https://exchange.art/single/DABrRJnT8vbCNEoXiBYZK3uKRYy4WjzBf9eShsuyHGXn"
   },{
     id: 3,
     name:"XXX",
