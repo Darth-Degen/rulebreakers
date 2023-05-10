@@ -11,14 +11,14 @@ export const rulebreakers: Rulebreakers[] = [
     exchange: "https://exchange.art/single/EsEx9Z22gNC1XphzKJjJEoubUr2insnisxduUXbzePoZ"
   },{
     id: 1,
-    name:"Billy",
+    name:"billy",
     src: "/images/rulebreakers/001.png",
     extras:[],
     description: "A bit rough around the edges. does things his own way. loves to get into brawls & likes his pancakes with maple syrup.",
     exchange: "https://exchange.art/single/ExjxH1dXZ1oEQj3pJ7YjGPqZzF87rbs8oz1zADscHbKK"
   },{
     id: 2,
-    name:"Marvin",
+    name:"marvin",
     src: "/images/rulebreakers/002.png",
     extras:[],
     description: "Locked up in the big house for years Marv missed the simple things in life. Escape plan devised. Escape plan succeeded. nothing is sweeter than victory & your favourite cookie + ice cream from your childhood parlour.",
