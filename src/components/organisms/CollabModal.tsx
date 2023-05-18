@@ -26,7 +26,7 @@ interface Props {
   setCollab: Dispatch<SetStateAction<{ id: number; type: string }>>;
 }
 
-const GalleryModal: FC<Props> = (props: Props) => {
+const CollabModal: FC<Props> = (props: Props) => {
   const { id, type, setCollab } = props;
   const { collabModal } = useContext(ViewContext);
 
@@ -109,4 +109,4 @@ const GalleryModal: FC<Props> = (props: Props) => {
   );
 };
 
-export default GalleryModal;
+export default CollabModal;

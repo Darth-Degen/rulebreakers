@@ -20,8 +20,8 @@ const GalleryModal: FC<Props> = (props: Props) => {
   const { imageId, setImageId } = props;
 
   const [selected, setSelected] = useState<number>(0);
-  const [src, setSrc] = useState<string>();
-
+  // const [src, setSrc] = useState<string>();
+  const src = rulebreakers[imageId].src;
   const formatImageSrc = (id: number): string => `${id < 10 ? "00" : "0"}${id}`;
 
   const folder = formatImageSrc(imageId);
@@ -30,24 +30,26 @@ const GalleryModal: FC<Props> = (props: Props) => {
 
   const { galleryModalId } = useContext(ViewContext);
 
-  const getImage = useCallback((): string => {
-    const image = formatImageSrc(selected);
-    let src = "";
-    switch (selected) {
-      case 0:
-        src = `/images/rulebreakers/${folder}.png`;
-        break;
-      default:
-        src = `/images/rulebreakers/${folder}/${image}.png`;
-        break;
-    }
-    return src;
-  }, [folder, selected]);
+  // const getImage = useCallback((): string => {
+  //   const image = formatImageSrc(selected);
+  //   let src = "";
+  //   switch (selected) {
+  //     case 0:
+  //       src = `/images/rulebreakers/${folder}.png`;
+  //       break;
+  //     default:
+  //       src = `/images/rulebreakers/${folder}/${image}.png`;
+  //       break;
+  //   }
+  //   return src;
+  // }, [folder, selected]);
 
-  useEffect(() => {
-    const image = getImage();
-    setSrc(image);
-  }, [getImage, selected]);
+  // useEffect(() => {
+  //   const image = getImage();
+  //   setSrc(image);
+  // }, [getImage, selected]);
+
+  console.log("rulebreakers[imageId].src ", rulebreakers[imageId].src);
 
   return (
     <Modal
