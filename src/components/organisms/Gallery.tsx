@@ -54,7 +54,7 @@ const Gallery: FC = () => {
             <>
               {index === rulebreakers[imageIndex].id && (
                 <ImageShimmer
-                  src={`/images/rulebreakers/${formatImageSrc(imageIndex)}.png`}
+                  src={rulebreakers[imageIndex].src}
                   alt="brkrs"
                   height={300}
                   width={300}
@@ -71,9 +71,7 @@ const Gallery: FC = () => {
               {winWidth >= 768 &&
                 index + 1 === rulebreakers[imageIndex].id + 1 && (
                   <ImageShimmer
-                    src={`/images/rulebreakers/${formatImageSrc(
-                      imageIndex + 1
-                    )}.png`}
+                    src={rulebreakers[imageIndex + 1].src}
                     alt="brkrs"
                     height={300}
                     width={300}
@@ -90,9 +88,7 @@ const Gallery: FC = () => {
               {winWidth >= 1024 &&
                 index + 1 === rulebreakers[imageIndex].id + 2 && (
                   <ImageShimmer
-                    src={`/images/rulebreakers/${formatImageSrc(
-                      imageIndex + 2
-                    )}.png`}
+                    src={rulebreakers[imageIndex + 2].src}
                     alt="brkrs"
                     height={300}
                     width={300}

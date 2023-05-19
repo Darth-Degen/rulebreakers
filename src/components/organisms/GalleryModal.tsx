@@ -25,7 +25,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
   const formatImageSrc = (id: number): string => `${id < 10 ? "00" : "0"}${id}`;
 
   const folder = formatImageSrc(imageId);
-  const mainImage = `/images/rulebreakers/${folder}.png`;
+  const mainImage = rulebreakers[imageId].src; //`/images/rulebreakers/${folder}.png`;
   const brkr = rulebreakers[imageId];
 
   const { galleryModalId } = useContext(ViewContext);
@@ -48,8 +48,6 @@ const GalleryModal: FC<Props> = (props: Props) => {
   //   const image = getImage();
   //   setSrc(image);
   // }, [getImage, selected]);
-
-  console.log("rulebreakers[imageId].src ", rulebreakers[imageId].src);
 
   return (
     <Modal
