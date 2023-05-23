@@ -33,8 +33,8 @@ export const rulebreakers: Rulebreakers[] = [
   },
   {
     id: 4,
-    name:"XXXX",
-    src: "/images/rulebreakers/004.png",
+    name:"slater",
+    src: "/images/assets/image/slater.png",
     extras:[],
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
     exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
