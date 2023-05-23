@@ -36,7 +36,7 @@ export const rulebreakers: Rulebreakers[] = [
     name:"slater",
     src: "/images/assets/image/slater.png",
     extras:[],
-    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+    description: "Highschool dropout. knows how to make a banger playlist. lives off redbull & cheap mi goreng. will grind across your forehead.",
     exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
   },
   // {
