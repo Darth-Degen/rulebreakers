@@ -16,7 +16,10 @@ const ModalContent: FC<ContentProps> = (props: ContentProps) => {
     <div
       className={`flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10  mt-4 lg:mt-12 ${className}`}
     >
-      <TextHeader> {header}</TextHeader>
+      <TextHeader className="whitespace-nowrap text-[3.75rem] md:text-7xl ">
+        {" "}
+        {header}
+      </TextHeader>
       <p className="font-secondary text-sm md:text-base  ">{description}</p>
       {exchangeUrl && exchangeUrl.length > 0 && (
         <motion.div className="cursor-pointer" {...midClickAnimation}>

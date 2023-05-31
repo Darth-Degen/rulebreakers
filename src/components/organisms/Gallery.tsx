@@ -88,7 +88,7 @@ const Gallery: FC = () => {
               {winWidth >= 1024 &&
                 index + 1 === rulebreakers[imageIndex].id + 2 && (
                   <ImageShimmer
-                    src={rulebreakers[imageIndex + 2].src}
+                    src={rulebreakers[imageIndex + 2].src ?? ""}
                     alt="brkrs"
                     height={300}
                     width={300}

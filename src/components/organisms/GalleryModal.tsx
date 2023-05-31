@@ -19,35 +19,25 @@ interface Props {
 const GalleryModal: FC<Props> = (props: Props) => {
   const { imageId, setImageId } = props;
 
+  const brkr = rulebreakers[imageId];
+  const mainImage = rulebreakers[imageId].src;
+
   const [selected, setSelected] = useState<number>(0);
-  // const [src, setSrc] = useState<string>();
-  const src = rulebreakers[imageId].src;
+  const [src, setSrc] = useState<string>(mainImage);
   const formatImageSrc = (id: number): string => `${id < 10 ? "00" : "0"}${id}`;
 
   const folder = formatImageSrc(imageId);
-  const mainImage = rulebreakers[imageId].src; //`/images/rulebreakers/${folder}.png`;
-  const brkr = rulebreakers[imageId];
 
   const { galleryModalId } = useContext(ViewContext);
 
-  // const getImage = useCallback((): string => {
-  //   const image = formatImageSrc(selected);
-  //   let src = "";
-  //   switch (selected) {
-  //     case 0:
-  //       src = `/images/rulebreakers/${folder}.png`;
-  //       break;
-  //     default:
-  //       src = `/images/rulebreakers/${folder}/${image}.png`;
-  //       break;
-  //   }
-  //   return src;
-  // }, [folder, selected]);
-
-  // useEffect(() => {
-  //   const image = getImage();
-  //   setSrc(image);
-  // }, [getImage, selected]);
+  //sets main image on selection
+  useEffect(() => {
+    if (selected === 0) {
+      setSrc(mainImage);
+    } else {
+      setSrc(`/images/rulebreakers/${folder}/${brkr.extras[selected - 1].src}`);
+    }
+  }, [brkr.extras, folder, mainImage, selected]);
 
   return (
     <Modal
@@ -75,24 +65,28 @@ const GalleryModal: FC<Props> = (props: Props) => {
                 hover
                 onClick={() => setSelected(0)}
               />
-              {brkr?.extras.map((item, index) => (
-                <ImageShimmer
-                  key={index}
-                  src={`/images/rulebreakers/${folder}/${formatImageSrc(
-                    index
-                  )}.png`}
-                  alt="BRKRS"
-                  width={75}
-                  height={75}
-                  className={`cursor-pointer ${
-                    selected === index
-                      ? "outline outline-light-orange outline-offset-2"
-                      : ""
-                  }`}
-                  hover
-                  onClick={() => setSelected(index)}
-                />
-              ))}
+              {brkr?.extras.map((item, index) => {
+                // console.log(
+                //   "folder ",
+                //   `/images/rulebreakers/${folder}/${item}.png`
+                // );
+                return (
+                  <ImageShimmer
+                    key={index}
+                    src={`/images/rulebreakers/${folder}/${item.src}`}
+                    alt="BRKRS"
+                    width={75}
+                    height={75}
+                    className={`cursor-pointer ${
+                      selected === index + 1
+                        ? "outline outline-light-orange outline-offset-2"
+                        : ""
+                    }`}
+                    hover
+                    onClick={() => setSelected(index + 1)}
+                  />
+                );
+              })}
             </div>
             {/* main image */}
             <AnimatePresence mode="wait">
@@ -130,9 +124,17 @@ const GalleryModal: FC<Props> = (props: Props) => {
         </div>
         {/* col 2 - text */}
         <ModalContent
-          header={brkr.name}
-          description={brkr.description}
-          exchangeUrl={brkr.exchange}
+          header={selected === 0 ? brkr.name : brkr.extras[selected - 1].name}
+          description={
+            selected === 0
+              ? brkr.description
+              : brkr.extras[selected - 1].description
+          }
+          exchangeUrl={
+            selected === 0
+              ? brkr.exchange
+              : brkr.extras[selected - 1].exchangeURL
+          }
         />
       </div>
     </Modal>
