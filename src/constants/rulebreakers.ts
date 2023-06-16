@@ -125,10 +125,110 @@ export const rulebreakers: Rulebreakers[] = [
       "Highschool dropout. knows how to make a banger playlist. lives off redbull & cheap mi goreng. will grind across your forehead.",
     exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts",
   },
+  {
+    id: 5,
+    name:"happy",
+    src: "/images/assets/image/happy.png",
+    extras:[
+    {
+      name: "jax",
+      description:"Programmed to kick ass. looks cute but will bite your face off.",
+      src: "jax.png",
+      exchangeURL: "https://exchange.art/single/CG2iWXvg1cHenVrQWtuWHwDrpogr2zmWYhf5enR8wZMD",
+    },{
+      name: "knuckles",
+      description:"Absolute madman. someone you do not want to owe money to. loving father. I recommend you stay well away from his daughters though.",
+      src: "knuckles.png",
+      exchangeURL: "https://exchange.art/single/96E6gMdpGSsn9kDtriiQZAEeCTAub1FMnSZxXE6h1k3B",
+    },
+  ],
+    description: "Always misbehaving. always happy. always getting into trouble. just like his cousin, you may know him, Bender.",
+    exchange: "https://exchange.art/single/GUH7QpRc3cuDtVdDUJiiNTMUQezmhjiWCMxCA3boThwP"
+  },
+  {
+    id: 5,
+    name:"bzerk",
+    src: "/images/assets/image/bzerk.png",
+    extras:[
+    {
+      name: "blade",
+      description:"Good with a sword. better in bed. pretty much nocturnal. super high IQ. scared of spiders.",
+      src: "blade.png",
+      exchangeURL: "https://exchange.art/single/8Zy8yRhx2dVnszKSbJcq1zGz5mShrqjq48CY9KJ9ecfn",
+    },{
+      name: "micky",
+      description:"The bomb.com at flipping patties. even better at flipping yo girl around on his lunch break. always hands out extra sauce.",
+      src: "micky.png",
+      exchangeURL: "https://exchange.art/single/6kMdAY6Tfck6XujhfsewfVB3N1L91ave4tXo4ExwD5Aa",
+    },
+  ],
+    description: "Brawler. kicks ass first. takes names later. once brought a chainsaw to a kids birthday party. loves classical music.",
+    exchange: "https://exchange.art/single/DxbyJBuWjuw7CXEA4avE79Nhs8a3xb9WusPJU1GrxMED"
+  },
+  {
+    id: 5,
+    name:"fat hugo",
+    src: "/images/assets/image/fat-hugo.png",
+    extras:[
+    {
+      name: "reed",
+      description:"A sweet man. a criminal man. most talented car thief in Brooklyn. will never pass up the opportunity to impress a woman with flowers.",
+      src: "reed.png",
+      exchangeURL: "https://exchange.art/single/EB7YCQyEQ4P28DXYzi76i3BAzXvabLgwfZeUofpjseef",
+    },{
+      name: "stoney",
+      description:"Read his name and have a guess what he's all about. has 420 tatted on his left ass cheek. thinks of himself as a king & a ladies man.",
+      src: "stoney.png",
+      exchangeURL: "https://exchange.art/single/76Su7g2VYmV2bZ4jvmSH3n1WXyYuqAzjvrG9ooT1kWxq",
+    },
+  ],
+    description: "Bossman. shot caller. top of the food chain. collects fine jewellery, rare stamps & his rival's fingers.",
+    exchange: "https://exchange.art/single/7P727a4BkU6CvMchni1Asphy4uttMyCk19Vyk8MwBpb9"
+  },
   // {
   //   id: 5,
   //   name:"XXXX",
-  //   src: "/images/rulebreakers/004.png",
+  //   src: "/images/assets/image/slater.png",
+  //   extras:[
+  //   {
+  //     name: "",
+  //     description:"",
+  //     src: "",
+  //     exchangeURL: "",
+  //   },{
+  //     name: "",
+  //     description:"",
+  //     src: "",
+  //     exchangeURL: "",
+  //   },
+  // ],
+  //   description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+  //   exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
+  // },
+  // {
+  //   id: 5,
+  //   name:"XXXX",
+  //   src: "/images/assets/image/slater.png",
+  //   extras:[
+  //   {
+  //     name: "",
+  //     description:"",
+  //     src: "",
+  //     exchangeURL: "",
+  //   },{
+  //     name: "",
+  //     description:"",
+  //     src: "",
+  //     exchangeURL: "",
+  //   },
+  // ],
+  //   description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
+  //   exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
+  // },
+  // {
+  //   id: 5,
+  //   name:"XXXX",
+  //   src: "/images/assets/image/slater.png",
   //   extras:[
   //   {
   //     name: "",
