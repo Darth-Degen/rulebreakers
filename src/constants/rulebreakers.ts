@@ -146,7 +146,7 @@ export const rulebreakers: Rulebreakers[] = [
     exchange: "https://exchange.art/single/GUH7QpRc3cuDtVdDUJiiNTMUQezmhjiWCMxCA3boThwP"
   },
   {
-    id: 5,
+    id: 6,
     name:"bzerk",
     src: "/images/assets/image/bzerk.png",
     extras:[
@@ -166,7 +166,7 @@ export const rulebreakers: Rulebreakers[] = [
     exchange: "https://exchange.art/single/DxbyJBuWjuw7CXEA4avE79Nhs8a3xb9WusPJU1GrxMED"
   },
   {
-    id: 5,
+    id: 7,
     name:"fat hugo",
     src: "/images/assets/image/fat-hugo.png",
     extras:[
@@ -185,26 +185,26 @@ export const rulebreakers: Rulebreakers[] = [
     description: "Bossman. shot caller. top of the food chain. collects fine jewellery, rare stamps & his rival's fingers.",
     exchange: "https://exchange.art/single/7P727a4BkU6CvMchni1Asphy4uttMyCk19Vyk8MwBpb9"
   },
-  // {
-  //   id: 5,
-  //   name:"XXXX",
-  //   src: "/images/assets/image/slater.png",
-  //   extras:[
-  //   {
-  //     name: "",
-  //     description:"",
-  //     src: "",
-  //     exchangeURL: "",
-  //   },{
-  //     name: "",
-  //     description:"",
-  //     src: "",
-  //     exchangeURL: "",
-  //   },
-  // ],
-  //   description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-  //   exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
-  // },
+  {
+    id: 8,
+    name:"nanaz",
+    src: "/images/assets/image/nanaz.png",
+    extras:[
+    {
+      name: "lil franklin",
+      description:"Just a chill guy. not too crazy. not too sane. loves to play tennis. only for the single moms of course. may slang a bit of devils dandruff here and there.",
+      src: "lil-franklin.png",
+      exchangeURL: "https://exchange.art/single/CW6oCzqLBPxRjEGPwHDwvMLQeDRJQXotbjE42z7tmSft",
+    },{
+      name: "ronnie racks",
+      description:"Enjoys the finer things in life. hookers and cocaine that is. sits by his pool in Miami all day. has racks on racks on racks.",
+      src: "ronnie-racks.png",
+      exchangeURL: "https://exchange.art/single/3Ky33oJo2dSMqiT6LpF9NVPHPYfF1JnsPu93B8nam1As",
+    },
+  ],
+    description: "Some may say he's a bit bananas. will go apeshit on your ass. loves old-school hip-hop & armed robbery. pimp chimp.",
+    exchange: "https://exchange.art/single/CHgEwZ2poAFLPLLBCWT6esXAgMXoX2FRKCX33hue4jPb"
+  },
   // {
   //   id: 5,
   //   name:"XXXX",
