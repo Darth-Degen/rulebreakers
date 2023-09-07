@@ -205,28 +205,108 @@ export const rulebreakers: Rulebreakers[] = [
     description: "Some may say he's a bit bananas. will go apeshit on your ass. loves old-school hip-hop & armed robbery. pimp chimp.",
     exchange: "https://exchange.art/single/CHgEwZ2poAFLPLLBCWT6esXAgMXoX2FRKCX33hue4jPb"
   },
+  {
+    id: 9,
+    name:"JEETER",
+    src: "/images/assets/image/jeeter.png",
+    extras:[
+    {
+      name: "CHAD",
+      description:"Obviously an absolute Chad. very good at skiing, fighting & stealing. hasn't paid for gas in 4 months. loves a bit of Dave's hot chicken.",
+      src: "CHADFINAL.png",
+      exchangeURL: "https://exchange.art/single/3Ri4pyzyC6VTqwAc9kjtB3DFoRNkLqGxEKfsuao6roxq",
+    },{
+      name: "VINNY",
+      description:"The cousin that always gets you in trouble. bit of a shady character. steals people's bikes, but only for a few hours then returns them. wears fake jewellery to impress the ladies.",
+      src: "VINNYFINAL.png",
+      exchangeURL: "https://exchange.art/single/kuyqLXHvPiqu6yFkdT1zcrq4rxVZ6GteNxMMztmo1o5",
+    },
+  ],
+    description: "Straight up boss. always gets shit done. motto is: kick ass first. eat carne asada fries later. loves a cheeky jeeter. tough as nails but also the best human you'll ever meet.",
+    exchange: "https://exchange.art/single/97Q14KDrYmkShuzPRj9unWhqko6MmyscuZ6TB4XWrDkH"
+  },
+  {
+    id: 10,
+    name:"DEDDIE",
+    src: "/images/assets/image/deddie.png",
+    extras:[
+    {
+      name: "SKITTLEZ",
+      description:"Not known as a giver of fucks. operates on his own frequency. always down for a good time. main interests are fine jewellery, gambling & big booty Latinas.",
+      src: "SKITTLEZFINAL.png",
+      exchangeURL: "https://exchange.art/single/JBhrz5EWhrg8grzPULwTXY8n71jnVPiCNecyKpQCcnZn",
+    },{
+      name: "SLAAT",
+      description:"An undead menace. roams around at night. loves system of a down. great singer. fingers are his favourite snack.",
+      src: "SLAATFINAL.png",
+      exchangeURL: "https://exchange.art/single/2TevdkbPzQfFJcM2txfhBNxfN3UcYUG2QrRiyWdpWVFf",
+    },
+  ],
+    description: "Unconventional. unfazed. undead. a real punk mfer. taken more bites out of humans than burgers.",
+    exchange: "https://exchange.art/single/FgL9ufTVfj5UmheweaXMbibFkEFLCVXyM5QG8UciVMBL"
+  },
+  {
+    id: 11,
+    name:"CLINT",
+    src: "/images/assets/image/clint.png",
+    extras:[
+    {
+      name: "CHEETA",
+      description:"Flashy & Dangerous. has a large jewellery collection. also has a large criminal record. loves gold. gold teeth, gold guns & a gold toothbrush. loves classical music & bubble baths.",
+      src: "CHEETAFINAL.png",
+      exchangeURL: "https://exchange.art/single/GELZSq9Z9G3kxqrBdm4PJW9vh9WG3cTHQeUjsKK17CKe",
+    },{
+      name: "TAZ",
+      description:"A gentleman. a businessman. an illegal one of course. favourite color is pink. smokes like a chimney & sings like Beyonce",
+      src: "TAZFINAL.png",
+      exchangeURL: "https://exchange.art/single/HbStjuK1d9HE86yc5ZiEB5CEJsNXTiaVv3JSPjSunnze",
+    },
+  ],
+    description: "Mischief is his middle name. literally. a dual bat-wielding menace who loves heavy metal, animal planet & a strawberry sundae.",
+    exchange: "https://exchange.art/single/D1RUdh7Pow35g7n3EeBysd3FNWbXvGFaoVhavBZLXguR"
+  },
+  {
+    id: 12,
+    name:"TY",
+    src: "/images/assets/image/ty.png",
+    extras:[
+    {
+      name: "MURDOC",
+      description:"The epitome of badass. real punk mfer. rides a stolen Harley. always picks fights at the bar. hasn't changed his socks in a while. Whitney Houston is his guilty pleasure.",
+      src: "MURDOCFINAL.png",
+      exchangeURL: "https://exchange.art/single/CAJU4sFnMN9HXK4DNakJVtQRbpNTkXNyzMviYXwGE5xn",
+    },{
+      name: "TURQ",
+      description:"Not quite sure where he came from. super talented at everything. can put together a banger playlist. loves waffles and his little laser gun.",
+      src: "TURQFINAL.png",
+      exchangeURL: "https://exchange.art/single/AVK2k4jTbGviKvUqpdaft5XbsWzrx2H6Q4VnctgGTJ27",
+    },
+  ],
+    description: "Swift. street-smart. considers himself the most handsome crim on the streets. also considers himself a hypebeast. stolen goods of course. ski mask always at the ready, because you never know when an opportunity will arise. loves old-school hip-hop & almond croissants.",
+    exchange: "https://exchange.art/single/H3gUjnSVQyb34CkD3UjkcZ2UJ4FM6L5Arra3W2FVFErB"
+  },
+  {
+    id: 13,
+    name:"SANCHEZ",
+    src: "/images/assets/image/sanchez.png",
+    extras:[
+    {
+      name: "GUAVA",
+      description:"He just has fun. doesn't take life too seriously. does a lil bitta pimpin'. a lil bitta dealin'. if he robs you he'll joke while he is doing it, to keep it fun. always wears pink & purple.",
+      src: "GUAVAFINAL.png",
+      exchangeURL: "https://exchange.art/single/74Hd5nXRVgTCM4aGQ25BmkemUCar9mqAvKsKBG4Je8K2",
+    },{
+      name: "SKITZO",
+      description:"Deranged. unhinged. got locked up for a string of bad crimes. spent 3 years in solitary confinement. escaped prison. now he is free. running around causing havoc. and absolute menace to society.",
+      src: "SKITZOFINAL.png",
+      exchangeURL: "https://exchange.art/single/3EiMywHXoDTzjQTEXQLLpbPRvfgGMN7ZyJkDt4uonR9L",
+    },
+  ],
+    description: "The biggest rule breaker in all Universes. super genius. alcoholic. short-tempered. asshole. loves causing trouble on inter-dimensional adventures with his grandson. once fucked a planet.",
+    exchange: "https://exchange.art/single/6FhQeskG3JmnnsQWXdZargsK8oqefr5rvr7rFZKQmetr"
+  },
   // {
-  //   id: 5,
-  //   name:"XXXX",
-  //   src: "/images/assets/image/slater.png",
-  //   extras:[
-  //   {
-  //     name: "",
-  //     description:"",
-  //     src: "",
-  //     exchangeURL: "",
-  //   },{
-  //     name: "",
-  //     description:"",
-  //     src: "",
-  //     exchangeURL: "",
-  //   },
-  // ],
-  //   description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-  //   exchange: "https://exchange.art/series/RULE%20BREAKERS/nfts"
-  // },
-  // {
-  //   id: 5,
+  //   id: 14,
   //   name:"XXXX",
   //   src: "/images/assets/image/slater.png",
   //   extras:[
