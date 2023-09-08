@@ -11,11 +11,11 @@ export const editions: Edition[] = [
   },
   {
     id: 1,
-    image_path:"/images/editions/x.png",
-    name:"X",
-    description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/hyblinxx",
-    exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts"  
+    image_path:"/images/editions/head-in-the-clouds.png",
+    name:"HEAD IN THE CLOUDS",
+    description: "Five minds, floating within their own sea of emotions. unified in a sky we all share.",
+    twitter_url:"https://twitter.com/rulebreakers___",
+    exchange_art_url:"https://exchange.art/editions/FJtydTmEBcfwfcrB5ZkvyTYyiix5K2Hhe7rHQBJYEcLc"  
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const editions: Edition[] = [
     image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/rulebreakers___", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -38,7 +38,7 @@ export const editions: Edition[] = [
     image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/rulebreakers___", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -46,7 +46,7 @@ export const editions: Edition[] = [
     image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/SCUMSOL", 
+    twitter_url:"https://twitter.com/rulebreakers___", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -54,7 +54,7 @@ export const editions: Edition[] = [
     image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/rulebreakers___", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   },
   {
@@ -62,7 +62,7 @@ export const editions: Edition[] = [
     image_path:"/images/editions/x.png",
     name:"X",
     description: "xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx xxxxxxxxx",
-    twitter_url:"https://twitter.com/HotHeadsNFT", 
+    twitter_url:"https://twitter.com/rulebreakers___", 
     exchange_art_url:"https://exchange.art/series/RULE%20BREAKERS/nfts" 
   }
 ];

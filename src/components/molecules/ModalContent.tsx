@@ -16,7 +16,7 @@ const ModalContent: FC<ContentProps> = (props: ContentProps) => {
     <div
       className={`flex flex-col items-center justify-center h-full gap-8 text-center max-w-[400px] lg:px-10  mt-4 lg:mt-12 ${className}`}
     >
-      <TextHeader className="whitespace-nowrap text-[3.75rem] md:text-7xl ">
+      <TextHeader className=" text-[3.75rem] md:text-7xl ">
         {" "}
         {header}
       </TextHeader>
