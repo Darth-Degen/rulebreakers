@@ -26,17 +26,17 @@ const AssetsView: FC = () => {
     switch (id) {
       case 0:
         src = `/images/assets/image/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilx"
+          selectedAsset?.name.replace(" ", "-").toLowerCase() ?? "pencilx"
         }.png`;
         break;
       case 1:
         src = `/images/assets/banner/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilx"
+          selectedAsset?.name.replace(" ", "-").toLowerCase() ?? "pencilx"
         }.png`;
         break;
       case 2:
         src = `/images/assets/${phone ? "phone" : "laptop"}/${
-          selectedAsset?.name.replace(" ", "-") ?? "pencilx"
+          selectedAsset?.name.replace(" ", "-").toLowerCase() ?? "pencilx"
         }.png`;
         console.log("src ", src);
         break;
