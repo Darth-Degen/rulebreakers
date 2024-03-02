@@ -305,6 +305,71 @@ export const rulebreakers: Rulebreakers[] = [
     description: "The biggest rule breaker in all Universes. super genius. alcoholic. short-tempered. asshole. loves causing trouble on inter-dimensional adventures with his grandson. once fucked a planet.",
     exchange: "https://exchange.art/single/6FhQeskG3JmnnsQWXdZargsK8oqefr5rvr7rFZKQmetr"
   },
+  {
+    id: 14,
+    name:"CRACKS",
+    src: "/images/assets/image/cracks.jpg",
+    extras:[],
+    description: "Bad to the bone. runs an underground fight club. can't talk about it. does armed robberies with his friends for fun. gives back to the homeless. has a matte black Cadillac with skulls painted down the side. always armed. always causing trouble. loves trap music & cool jackets.    ",
+    exchange: "https://exchange.art/single/7dnqhC7bHJP13DMazEKKzPFLrLtCk5Vy1WquWi57YFag"
+  },
+  {
+    id: 15,
+    name:"BRODY",
+    src: "/images/assets/image/brody.jpg",
+    extras:[],
+    description: "College dropout. ex Soundcloud rapper. makes his money from stealing car stereos & backyard boxing matches. very street smart. can flip a BMX bike. claims to a rare rock collection. great singer.",
+    exchange: "https://exchange.art/single/2n5Pr985zQc1Hatv7UK3FhxaNmUCzorzskGgnbYeLWiK"
+  },
+  {
+    id: 16,
+    name:"Sly",
+    src: "/images/assets/image/sly.jpg",
+    extras:[],
+    description: "A Sorcerer of the Street. holds all the secrets that blow through the dark alleys at night. appears on any corner if you whisper his name 3 times. knowledge. power. danger. can grant your desires if they're used for sin, or can make your life a living hell.",
+    exchange: "https://exchange.art/single/G7aGuMH7hMzyWTSgQdXS1642dssdpuTiUVXKjrKSwp8y"
+  },
+  {
+    id: 17,
+    name:"TRICKS",
+    src: "/images/assets/image/tricks.jpg",
+    extras:[],
+    description: "A wise & mystical dealer from the West. lots of tricks up his sleeve. majors in Pharmacology, Chemistry, Biochemistry & Mycology. can cook up any delicious potion you desire. a very well-respected member of his community. holds the keys to the 5th dimension.",
+    exchange: "https://exchange.art/single/5m8XMnvvAyJbqLdiVxUjUE21rmCBV7YDk1iH8QVqn9X6"
+  },
+  {
+    id: 18,
+    name:"RACHEL",
+    src: "/images/assets/image/rachel.jpg",
+    extras:[],
+    description: "Main character energy all day every day. and absolute baddie. a man-eater who always gets what she wants. rides a vintage cafe racer. loves romantic novels, cigarettes & any movie starring Uma Thurman.    ",
+    exchange: "https://exchange.art/single/91iV37D7jpy4Xi2aLPfidxQhP2WJw2g2ye77Q5PpXvnU"
+  },
+  {
+    id: 19,
+    name:"CARTER",
+    src: "/images/assets/image/carter.jpg",
+    extras:[],
+    description: "A real dangerous mfer. street fights are his forte. kicks ass first. doesn't bother with names. a bit hot-headed. collects the fingers of those who try to screw him over. also collects rare nat geo magazines. but one guy you do not wanna f*** with.    ",
+    exchange: "https://exchange.art/single/4ofPP1xikpEq5hYuShUVoWdQGiFfFc889kzSXS8HdP1F"
+  },
+  {
+    id: 20,
+    name:"RIOT",
+    src: "/images/assets/image/riot.jpg",
+    extras:[],
+    description: "One crazy mfer. always on the front lines. never misses an opportunity to throw a grenade or Molotov cocktail at the police. nicknamed Riot because he never misses one. also never gets caught. no one knows his true identity. temper like a firecracker...",
+    exchange: "https://exchange.art/single/B52cUcxgzjahu14WSSUGptFPJvUDeuQsg7MsiLmSqwu4"
+  },
+
+  // {
+  //   id: 21,
+  //   name:"",
+  //   src: "/images/assets/image/",
+  //   extras:[],
+  //   description: "",
+  //   exchange: "https://exchange.art/single/"
+  // },
   // {
   //   id: 14,
   //   name:"XXXX",

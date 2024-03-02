@@ -52,7 +52,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
           <div className="flex flex-col-reverse lg:flex-row items-center gap-6">
             {/* picker */}
             <div className="flex flex-row lg:flex-col gap-4 h-full justify-center">
-              <ImageShimmer
+              {/* <ImageShimmer
                 src={mainImage}
                 alt="BRKRS"
                 width={75}
@@ -64,8 +64,8 @@ const GalleryModal: FC<Props> = (props: Props) => {
                 }`}
                 hover
                 onClick={() => setSelected(0)}
-              />
-              {brkr?.extras.map((item, index) => {
+              /> */}
+              {/* {brkr?.extras.map((item, index) => {
                 // console.log(
                 //   "folder ",
                 //   `/images/rulebreakers/${folder}/${item}.png`
@@ -86,7 +86,7 @@ const GalleryModal: FC<Props> = (props: Props) => {
                     onClick={() => setSelected(index + 1)}
                   />
                 );
-              })}
+              })} */}
             </div>
             {/* main image */}
             <AnimatePresence mode="wait">
